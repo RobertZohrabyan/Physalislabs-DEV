@@ -1,0 +1,290 @@
+body {
+  background-color: #000;
+  /*color: #fff;*/
+  font-family: 'Familjen Grotesk', sans-serif;
+}
+
+.infographic-section {
+  position: relative;
+  height: 150vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid green;
+  overflow: hidden;
+}
+
+.robot-container {
+  position: relative;
+  background-image: url('../images/Kenji-drivedown.png');
+  background-size: 55%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100vh;
+  border: 1px solid green;
+}
+
+.robot {
+  position: relative;
+  border: 1px solid green;
+}
+
+.cogwheel {
+  position: absolute; 
+  width: 30px; 
+  height: 30px;
+  background-image: url('../images/gear.png');
+  background-size: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+.cogwheel::before,
+.cogwheel::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  background-color: white;
+}
+
+.cogwheel:hover {
+  transform: rotate(360deg);
+}
+
+/* Adjust cogwheel positions */
+.cogwheel-1 {
+  top: 429px;
+  left: 460px;
+}
+
+.cogwheel-2 {
+  top: 270px;
+  left: 450px;
+}
+
+.cogwheel-3 {
+  top: 90px;
+  left: 707px;
+}
+
+.cogwheel-4 {
+  top: 270px;
+  left: 740px;
+}
+
+.cogwheel-5 {
+  top: 200px;
+  left: 590px;
+}
+
+.cogwheel-6 {
+  top: 320px;
+  left: 600px;
+}
+
+.cogwheel-7 {
+  top: 420px;
+  left: 710px;
+}
+
+.info-line {
+  text-align: center;
+  position: relative;
+  border: 1px solid green;
+  display: flex;
+  width: 100%;
+  height: 40vh;
+  margin-top: 650px;
+}
+
+.info {
+  display: inline-block;
+  cursor: pointer;
+  margin: 20px;
+  padding: 10px;
+  transition: color 0.3s ease;
+  width: 125px;
+  opacity: 0;
+  visibility: inherit;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+  text-align: left;
+  color: #fff;
+  position: relative;
+}
+
+.info:hover {
+  color: grey;
+}
+
+.info-line .info:nth-child(1) {
+  animation: revealUp 0.5s ease forwards;
+  animation-delay: 0s;
+}
+
+.info-line .info:nth-child(2) {
+  animation: revealUp 0.5s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.info-line .info:nth-child(3) {
+  animation: revealUp 0.5s ease forwards;
+  animation-delay: 1s;
+}
+
+.info-line .info:nth-child(4) {
+  animation: revealUp 0.5s ease forwards;
+  animation-delay: 1.5s;
+}
+
+.info-line .info:nth-child(5) {
+  animation: revealUp 0.5s ease forwards;
+  animation-delay: 2s;
+}
+
+.info-line .info:nth-child(6) {
+  animation: revealUp 0.5s ease forwards;
+  animation-delay: 2.5s;
+}
+
+.info-line .info:nth-child(7) {
+  animation: revealUp 0.5s ease forwards;
+  animation-delay: 3s;
+}
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.info > span {
+  display: block;
+  position: relative;
+  font-family: 'Familjen Grotesk', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.info p {
+  display: none;
+  margin-top: 10px;
+  overflow: hidden;
+  width: 125px;
+  text-align: left;
+  position: relative;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 5px;
+  color: rgba(255,255,255,.5);
+  text-transform: none;
+}
+
+.info:hover p {
+  display: block;
+}
+
+.infographic-logo {
+  position: absolute;
+  width: 220px;
+  height: 120px;
+  display: none;
+  top: -100px; 
+  left: 20%;
+  transform: translateX(-50%);
+}
+
+.info:hover .infographic-logo {
+  display: block;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  width: 200px; 
+  height: 200px;
+  border: 1px solid green;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/* Adjust modal positions */
+#modal-1 {
+  left: 50px;
+  top: 370px;
+}
+
+#modal-2 {
+  left: 100px;
+  top: 150px;
+}
+
+#modal-3 {
+  left: 200px;
+  top: 10px;
+}
+
+#modal-4 {
+  left: 800px;
+  top: 10px;
+}
+
+#modal-5 {
+  left: 200px;
+  top: 10px;
+}
+
+#modal-6 {
+  left: 900px;
+  top: 350px;
+}
+
+#modal-7 {
+  left: 900px;
+  top: 200px;
+}
+
+.modal img {
+  width: 200px;
+  height: 200px;
+}
+
+.modal video {
+  width: 200px;
+  height: 200px;
+}
+
+.modal-content {
+  /*padding: 20px;*/
+}
+
+.modal-content h2 {
+  color: #000;
+  font-size: 18px;
+}
+
+.modal-content p {
+  margin-top: 5px;
+  font-size: 14px;
+  font-size: 11px;
+  font-weight: 200;
+  margin-bottom: 3px;
+  color: #000;
+  text-transform: none;
+}
+
+.modal-content img {
+  width: 200px;
+  height: 200px;
+  border: 1px solid green;
+  margin: 0 auto;
+}

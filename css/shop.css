@@ -1,0 +1,493 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Familjen Grotesk', sans-serif;
+}
+
+.shop_page_container {
+  max-width: 960px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 100px;
+  position: relative;
+}
+
+.product-small-img img {
+  height: 92px;
+  margin: 10px 0;
+  cursor: pointer;
+  display: block;
+  opacity: .6;
+}
+
+.product-small-img img:hover {
+  opacity: 1;
+}
+
+.product-small-img {
+  float: left;
+  margin-right: 20px;
+}
+
+.product {
+  float: left;
+}
+
+.img-container {
+  float: right;
+  padding: 10px;
+}
+
+.img-container img {
+  height: 500px;
+}
+
+/* Right block */
+.kenji_shop_info-block {
+  float: right;
+  width: calc(100% - 500px);
+  margin-top: 40px;
+}
+
+.kenji_shop_info-block h2 {
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 45px;
+  margin-bottom: 5px;
+}
+
+.kenji_shop_info-block p {
+  font: 14px/24px sans-serif;
+  margin-bottom: 10px;
+  text-transform: lowercase;
+}
+
+.price-blocks {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.price-block {
+  margin-right: 20px;
+  margin: 10px;
+}
+
+.price-block h3 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+}
+
+.price-block p {
+  font-size: 12px;
+}
+
+.price-block:first-child p {
+  font-size: inherit;
+}
+
+.price-block:last-child p {
+  font-size: inherit;
+}
+
+.price-block:last-child {
+  margin-right: 0;
+}
+
+.separator {
+  width: 1px;
+  background-color: #ccc
+}
+
+.learn-more {
+  margin-top: 20px;
+}
+
+.learn-more p {
+  margin-bottom: 5px;
+}
+
+.learn-more p,
+.specifications p {
+  text-decoration: underline;
+  padding-bottom: 1px;
+  margin-bottom: 1px;
+}
+
+
+
+
+/* New section styles */
+.neum_wrapper {
+  width: 100%;
+  height: 100vh;
+  /*display: flex;*/
+  align-items: center;
+  justify-content: center;
+}
+
+.neum_card {
+  width: 900px;
+  height: 700px;
+  background-color: #282B30;
+  border-radius: 1rem;
+  box-shadow: 30px 30px 50px -10px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 30px;
+}
+
+.neum_question {
+  height: 100%;
+  background: #202326;
+  border-radius: 1rem;
+  width: 400px;
+  padding: 5px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.neum_question .neum_num {
+  color: #ff5555;
+}
+
+.neum_question p {
+  font-size: 2.2rem;
+}
+
+.neum_filter > * {
+  width: 450px;
+}
+
+.neum_filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px; /* added by Robert */
+}
+
+.neum_filter > h2 {
+  margin-top: 30px;
+}
+
+.neum_filter > p {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #99a;
+}
+
+.neum_cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.neum_cards input {
+  display: none;
+}
+
+.neum_cards label {
+  background: #1D2024;
+  width: 120px;
+  height: 120px;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  cursor: pointer;
+  box-shadow: inset 0px 0px 20px -10px black;
+  color: grey;
+  position: relative;
+  transition: ease .3s;
+  margin: 10px;
+}
+
+.neum_cards label::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: .375rem;
+  font-size: 1.3rem;
+}
+
+.neum_cards label i {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.neum_cards input:checked + label {
+  box-shadow: 10px 10px 20px -5px rgba(0, 0, 0, 0.6);
+  background: linear-gradient(135eg, #2F3238, #222428);
+  color: #fff;
+}
+
+.neum_cards input:checked + label::after {
+  content: '🗸';
+  background: linear-gradient(90deg, #E5847E, #BD3930);
+  color: #fff;
+}
+
+.neum_selectedGoals {
+  margin: 15px;
+}
+
+.neum_selectedGoals p {
+  color: .#99a;
+  margin: 5px;
+  margin-left: 1px;
+}
+
+.neum_inputs {
+  margin-top: 15px;
+}
+
+.neum_inputs input {
+  outline: none;
+  border: 1px solid transparent;
+  background-color: #1D2024;
+  line-height: 40px;
+  border-radius: .5rem;
+  color: #fff;
+  padding: 0 20px;
+  font-size: 1rem;
+  -moz-apperance: textfield;
+  apperance: textfield;
+  margin: 0;
+  box-shadow: inset 0px 0px 15px -5px rgba(0, 0, 0, 0.5);
+}
+
+.neum_inputs input::-webkit-inner-spin-button {
+  -webkit-apperance: none;
+}
+
+.neum_actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.neum_actions button {
+  width: 140px;
+  height: 45px;
+  color: #fff;
+  font-weight: bold;
+  background: linear-gradient(135deg, #2F3238, #222428);
+  border: none;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4), inset 10px 10px 20px -30px #fff;
+  border-radius: .375rem;
+  cursor: pointer;
+}
+
+.neum_actions button:nth-child(2) {
+  background: #ff5555;
+}
+
+/* CSS for the contact form */
+.quote-form {
+    position: relative;
+    max-width: 960px;
+    margin: 800px auto;
+    padding: 20px;
+    background-color: #282B30;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-title {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+label {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="text"],
+textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.quote-form-response {
+    display: none;
+}
+
+.success-message,
+.error-message {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.success-message {
+    background-color: #4CAF50;
+}
+
+.error-message {
+    background-color: #ff5555;
+}
+
+.form a {
+  width: 20%;
+  height: 20%;
+}
+
+
+
+.kenji_shop_price_section {
+  background-color: #24141c;
+  color: #cccccc;
+  font-family: "Nunito", sans-serif;
+  width: 70%;
+  border-radius: 7px;
+  padding: 5%;
+  margin: 5% auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+
+  &_content {
+    padding: 5% 10%;
+    flex: 1;
+
+    h2 {
+      font-weight: 600;
+    }
+
+    h4 {
+      font-weight: 400;
+    }
+
+    span {
+      font-weight: 200;
+    }
+
+    h4 {
+      margin: 0;
+    }
+
+    ul {
+      padding-inline-start: 7%;
+      margin: 20% 0;
+
+      li {
+        font-weight: 200;
+      }
+    }
+
+    button {
+      outline: none;
+      border: none;
+      background: #aa2b33;
+      color: #ffffff;
+      width: 100%;
+      height: 50px;
+      border-radius: 5px;
+      font-family: "Nunito", sans-serif;
+      cursor: pointer;
+    }
+
+    &:nth-of-type(1) {
+      button {
+        background: transparent;
+        border: 1px solid #aa2b33;
+        color: #aa2b33;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .flex {
+    flex-direction: column;
+
+    &_content {
+      border-right: none;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+.physalislabs_shop_kenji_container {
+  background-color: #000;
+  color: #cccccc;
+  font-family: "Nunito", sans-serif;
+  width: 70%;
+  border-radius: 7px;
+  padding: 5%;
+  margin: 5% auto;
+}
+
+.kenji_price_info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.physalislabs_shop_kenji_robot_card {
+  padding: 5% 10%;
+  flex: 1;
+}
+
+.physalislabs_shop_kenji_robot_card.flex-item-left {
+  border-right: 1px solid #fff;
+}
+
+.physalislabs_shop_kenji_robot_card h2 {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.physalislabs_shop_kenji_robot_card h4 {
+  font-weight: 400;
+  margin: 0;
+}
+
+.physalislabs_shop_kenji_robot_card span {
+  font-weight: 200;
+}
+
+.physalislabs_shop_kenji_robot_card ul {
+  padding-inline-start: 7%;
+  margin: 20% 0;
+}
+
+.physalislabs_shop_kenji_robot_card ul li {
+  font-weight: 200;
+  text-transform: lowercase;
+}

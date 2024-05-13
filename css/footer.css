@@ -1,0 +1,50 @@
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Familjen Grotesk', sans-serif;
+	background: #000;
+	color: #fff;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+ul {
+	list-style: none;
+}
+
+/* Footer */
+footer {
+	position: relative;
+	padding: 55px 0;
+	border: 1px solid green;
+}
+
+footer ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+footer ul li {
+	margin-right: 30px;
+	color: #aaa;
+	text-transform: uppercase;
+	font-size: 13px;
+	line-height: 2.5;
+}
+
+footer ul li a {
+	color: #fff;
+	transition: color 0.6s;
+}
+
+footer ul li a:hover {
+	color: #aaa;
+}

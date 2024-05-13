@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    font-family: 'Familjen Grotesk', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: #000;
+    color: #fff;
+}
+
+/* Styles for the mission block section */
+.kenji_mission_block_section {
+    position: relative;
+    height: 130vh;
+    overflow: hidden;
+    border: 1px solid green;
+}
+
+/* Styles for the left side of the mission block */
+.kenji_mission_block_left {
+    float: left;
+    width: 50%; /* Make left side 50% width */
+}
+
+/* Styles for the image */
+.kenji_mission_block_left img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* Styles for the right side of the mission block */
+.kenji_mission_block_right {
+    float: right;
+    width: calc(50% - 20px); /* Adjust width for padding */
+    padding: 10px;
+    overflow-y: auto; /* Add vertical scrollbar if content overflows */
+}
+
+/* Heading styles */
+.kenji_mission_block_right h4 {
+    font-size: 22px;
+    font-weight: 700;
+    font-style: normal;
+    text-align: left;
+    color: #fff;
+    background: #000;
+    font-family: 'Familjen Grotesk', sans-serif;
+}
+
+.kenji_mission_block_right h2 {
+    font: 16px/26px sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    color: #fff;
+    background: #000;
+    font-family: 'Familjen Grotesk', sans-serif;
+    margin-top: 5px;
+}
+
+.kenji_mission_block_right p {
+    font: 14px/24px sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-transform: none;
+    text-align: left;
+    color: #fff;
+    background: #000;
+    font-family: 'Familjen Grotesk', sans-serif;
+    max-width: 550px;
+}
+
+/* Styles for the tabs container */
+.kenji_mission_block_tabs {
+    display: flex;
+    margin-bottom: 25px;
+    padding: 10px;
+    align-items: flex-start;
+}
+
+/* Styles for individual tabs */
+.kenji_mission_block_tab {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    margin: 10px 5px 15px;
+    cursor: pointer;
+    color: #969696;
+}
+
+.kenji_mission_block_tab::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.kenji_mission_block_tab:hover::after {
+    width: 100%;
+}
+
+/* Active tab styles */
+.kenji_mission_block_tab.active {
+    color: #fff;
+}
+
+/* Hover effect on tabs */
+.kenji_mission_block_tab:hover {
+    color: #fff;
+}
+
+/* Styles for the table */
+.kenji_mission_block_table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.kenji_mission_block_table td {
+    padding: 10px; /* Add padding to table cells */
+    border-bottom: 1px solid #fff; /* Add bottom border */
+}
+
+.left {
+    text-align: left; 
+    padding-left: 0;
+}
+
+.right {
+    text-align: right;
+    padding-right: 0; 
+}
+
+/* Styles for the buttons container */
+.kenji_mission_block_buttons {
+    margin-top: 20px;
+}
+
+/* Styles for buttons */
+.kenji_mission_block_buttons a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    min-width: 130px;
+    padding: 15px 50px;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    overflow: hidden;
+    color: #fff;
+    background: #000;
+}
+
+/* Styles for button hover effect */
+.kenji_mission_block_buttons a:hover span {
+    color: #000;
+}
+
+.kenji_mission_block_buttons a .hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    color: #000;
+    z-index: -1;
+    transform: translateY(100%);
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.kenji_mission_block_buttons a:hover .hover {
+    transform: translateY(0);    
+}
+
+/* Styles for table */
+table {
+    border-collapse: collapse;
+    width: 960px;  /* Adjust the width as needed */
+    border-bottom: 1px solid #fff;
+    width: 92%;
+}
+
+table tr td {
+    border-bottom: 1px solid #fff;
+    padding: 10px;
+}
+
+
+/* Buttons */
+/* Buttons are the same only added some styles for the kenji mission block */
+.kenji_mission_block_buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: flex-start; /* Align buttons to the left */
+}
+
+.kenji_mission_block_buttons .btn {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    min-width: 130px;
+    padding: 15px 50px;
+    margin-top: 10px;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.kenji_mission_block_buttons .btn:hover span {
+    color: #000;
+}
+
+.kenji_mission_block_buttons .btn .hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    color: #000;
+    z-index: -1;
+    transform: translateY(100%);
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.kenji_mission_block_buttons .btn:hover .hover {
+    transform: translateY(0);   
+}

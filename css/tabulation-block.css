@@ -1,0 +1,193 @@
+/* Block in Kenjix1 page where is information with three tabs on the left side and image o nthe right side */
+/* General styles */
+body {
+    font-family: 'Familjen Grotesk', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Styles for the mission block section */
+.kenji_statistic_tab_section {
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+    display: flex; 
+    height: 100vh;
+    border: 1px solid green;
+}
+
+.kenji_statistic_tab_right {
+    width: 50%;
+    padding: 20px;
+    float: right;
+}
+
+.kenji_statistic_tab_left {
+    width: 70%;
+    padding: 20px;
+    float: left;
+}
+
+.kenji_statistic_tab_right img {
+    width: 50%; 
+    height: auto;
+    position: absolute;
+    bottom: 50%;
+    right: 3%;
+    transform: translateY(50%);
+}
+
+.kenji_statistic_tab_tabs {
+    display: flex;
+    margin-bottom: 25px;
+    margin-left: -15px;
+    padding: 10px;
+    align-items: flex-start;
+}
+
+.kenji_statistic_tab_left_content {
+    color: #fff;
+    max-width: 80%;
+}
+
+/* Styles for the tabs and tab content */
+.kenji_statistic_tab_tabs {
+    display: flex;
+    margin-bottom: 25px;
+    margin-left: -15px;
+    padding: 10px;
+    align-items: flex-start;
+}
+
+.kenji_statistic_tab_tab {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    margin: 10px 5px 15px;
+    cursor: pointer;
+    color: #969696;
+}
+
+.kenji_statistic_tab_tab::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.kenji_statistic_tab_tab:hover::before,
+.kenji_statistic_tab_tab.active:hover::before {
+    width: 100%;
+}
+
+.kenji_statistic_tab_tab.active {
+    color: #fff;
+    border-bottom: none; /* Remove border for active tab */
+}
+
+.kenji_statistic_tab_tab:hover {
+    color: #fff;
+}
+
+.kenji_statistic_tab_tab_content {
+    display: none;
+}
+
+.kenji_statistic_tab_tab_content.active {
+    display: block;
+}
+
+.kenji_statistic_tab_table {
+    border-collapse: collapse;
+    width: 90%;
+    margin-top: 20px;
+}
+
+.kenji_statistic_tab_table td {
+    padding: 5px;
+    border-bottom: 1px solid #fff;
+}
+
+.kenji_statistic_tab_table span {
+    font-weight: normal;
+    font-size: 14px;
+    color: #979797;
+}
+
+.kenji_statistic_tab_tab_content_table {
+    width: 90%;
+    margin-top: 20px;
+}
+
+.left {
+    text-align: left; 
+    padding-left: 0;
+}
+
+.right {
+    text-align: right;
+    padding-right: 0; 
+}
+
+.kenji_statistic_tab_right h4 {
+    font: 46px/50px Familjen Grotesk, sans-serif;
+    font-weight: 700;
+    font-size: 46px;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.kenji_statistic_tab_left h2 {
+    font: 16px/26px sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    color: #fff;
+    background: #000;
+    font-family: 'Familjen Grotesk', sans-serif;
+    margin-top: 5px;
+}
+
+.kenji_statistic_tab_left p {
+    font: 12px/22px sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-transform: none;
+    text-align: left;
+    color: #fff;
+    background: #000;
+    font-family: 'Familjen Grotesk', sans-serif;
+}
+
+/* Styles for the paragraph and table in tab content */
+.kenji_statistic_tab_tab_content_text p {
+    font-size: 85%;
+    word-wrap: break-word;
+    max-width: calc(100% - 150px); 
+    margin-top: -40px;
+}
+
+.kenji_statistic_tab_left_content h4 {
+    font: 46px/50px Familjen Grotesk, sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-transform: uppercase;        
+}
+
+        /* Separator  */
+.separator {
+    width: 2px;
+    height: 15px;
+    background-color: #979797;
+    margin: 15px 10px; 
+}
