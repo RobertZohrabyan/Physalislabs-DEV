@@ -760,6 +760,12 @@ section.rocket .rocket-body span.active:nth-child(1) {
 	.section-gallery {
         height: 600px;
     }
+	.our_suppliers_logo_row {
+		justify-content: center !important;
+	}
+	.our_suppliers_logo_row a {
+		justify-content: center;
+	}
 }
 
 @media(max-width: 600px){
@@ -827,6 +833,27 @@ section.rocket .rocket-body span.active:nth-child(1) {
 		text-transform: none;
 		font-size: 12px;
 	}
+
+	.section_video {
+		justify-content: flex-start;
+		padding-top: 100px;
+		height: 70vh;
+	}
+
+	.section_video .section-inner {
+		position: static;
+		padding: 30px 20px;
+	}
+
+	.section_video .scroll-arrow {
+		margin-top: 30px;
+		position: static;
+		text-align: center;
+	}
+	.section-a {
+		height: 70vh;
+	}
+
 }
 
 /* section kenji information*/
@@ -1147,6 +1174,11 @@ a {
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 20px;
+}
+
+.our_suppliers_logo_row a {
+	display: flex;
+	align-items: center;
 }
 
 .our_suppliers_logo_row img {
