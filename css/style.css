@@ -79,7 +79,7 @@ section {
 	margin-bottom: 5px;
 	font-weight: 300;
 	animation: fadeInUp 0.5s ease-in-out;
-	animation-fill-mode: both; //stop from showing at start of the animation
+	animation-fill-mode: both; 
 }
 
 .section-inner h2 {
@@ -87,7 +87,7 @@ section {
 	font-weight: 700;
 	margin-bottom: 20px;
 	animation: fadeInUp 0.5s ease-in-out 0.2s;
-	animation-fill-mode: both; //stop from showing at start of the animation
+	animation-fill-mode: both; 
 }
 
 .section-inner h1 {
@@ -97,7 +97,7 @@ section {
 
 .section-inner a {
 	animation: fadeInUp 0.5s ease-in-out 0.4s;
-	animation-fill-mode: both; //stop from showing at start of the animation
+	animation-fill-mode: both; 
 }
 
 	/* Background images */
@@ -433,11 +433,16 @@ code {
     }
 
 	.techdoc_nav_links {
+		margin-top: 10px;
 		flex-direction: row;
 	}
 
+	.techdoc_nav_link:first-child {
+		padding-left: 0px;
+	}
+
 	.techdoc_nav_link {
-		padding: 8px;
+		padding: 7px;
 	}
 
     .techdoc_navbar_header h1 {
@@ -446,14 +451,15 @@ code {
 
     .techdoc_main_doc {
         margin-left: 25px;
-		padding-top: 100px;
+		padding-top: 120px;
     }
 	.techdoc_nav_link:hover {
 		font-weight: 700;
 		transform: translateX(0px);
 		border-bottom: 2px solid white;
+	}
 }
-			/*Documentation END*/
+
 section.rocket {
     display: grid;
     grid-template-columns: 1fr 100px 1fr;
@@ -588,7 +594,7 @@ section.rocket .right-block .block.engines img {
 
 section.rocket .right-block .block.marine {
     padding-top: 100px;
-    wodth: 70%;
+    width: 70%;
 }
 
 section.rocket .right-block .block.marine h2 {
@@ -1270,5 +1276,3 @@ a {
     margin: 10px;
   }
 }
-
-
