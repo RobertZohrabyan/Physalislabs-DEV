@@ -189,9 +189,6 @@
 
 /* Responsive Design */
 @media (max-width: 991px){
-	body{
-		background: #03a9f5;
-	}
 	.contactUs {
 		padding: 20px;
 		grid-template-columns: 1fr;
@@ -218,5 +215,15 @@
 	.map {
 		min-height: 300px;
 		padding: 0;
+	}
+
+	.contact.info,
+	.contact.form,
+	.contact.map {
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+	.contactUs {
+		padding-top: 80px;
 	}
 }
