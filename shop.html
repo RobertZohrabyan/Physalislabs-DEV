@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <title>PhysalisLabs</title>
+    <title>PhysalisLabs Shop</title>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/hamburger.css">
@@ -31,13 +31,11 @@
         <ul>
             <li><a href="kenji-x1.html">Kenji X1</a></li>
             <li><a href="geo-lab.html">Geo-Lab</a></li>
-            <li><a href="#">Documentation</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="shop.html">Contact</a></li>
-
-            <li class="mobile-only"><a href="kenji-x1.html">Kenji X1</a></li>
-            <li class="mobile-only"><a href="geo-lab.html">Geo-Lab</a></li>
-            <li class="mobile-only"><a href="team.html">Team</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="contact-us.html">Contact</a></li>
+            <li><a href="shop.html">Shop</a></li>
             <li class="mobile-only"><a href="#">Project 1</a></li>
             <li class="mobile-only"><a href="#">Project 2</a></li>
             <li class="mobile-only"><a href="#">Project 3</a></li>
@@ -52,14 +50,18 @@
         </div>
         <nav class="desktop-main-menu">
             <ul>
-                <li><a href="kenji-x1.html">Kenji X1</a></li>
-                <li><a href="geo-lab.html">Geo-Lab</a></li>
-                <!-- <li><a href="#">Custom Assembly</a></li>
-                <li><a href="#">Project 1</a></li>-->
+                <li class="has-submenu">
+                    <a href="#">Projects</a>
+                    <ul class="submenu">
+                        <li><a href="kenji-x1.html">Kenji X1</a></li>
+                        <li><a href="geo-lab.html">Geo-Lab</a></li>
+                        <li><a href="#">Torch</a></li>
+                    </ul>
+                </li>
                 <li><a href="documentation.html">Documentation</a></li> 
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact-us.html">Contact</a></li>
                 <li><a href="team.html">Team</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
                 <li><a href="shop.html">Shop</a></li>
             </ul>
         </nav>
@@ -75,14 +77,54 @@
                     <!-- Shop -->
     <section"> <!-- style="min-height: 330vh; -->
         <div class="shop_page_container">
-            <script>
+            <div class="main-wrapper">
+                <div class="container">
+                    <div class="product-div">
+                        <div class="product-div-left">
+                            <div class="img-container">
+                                <img id="imageBox" src="images/w1.png" alt="watch">
+                            </div>
+                            <div class="product-small-img">
+                                <img src="images/w2.png" onclick="myFunction(this)">
+                                <img src="images/w3.png" onclick="myFunction(this)">
+                                <img src="images/w4.png" onclick="myFunction(this)">
+                                <img src="images/w5.png" onclick="myFunction(this)">
+                                <img src="images/w6.png" onclick="myFunction(this)">
+                            </div>
+                        </div>
+                        <div class="product-div-right">
+                            <div class="kenji_shop_info-block">
+                                <h2>Kenji X1</h2>
+                                <h2>Developer Kit</h2>
+                                <p>Lorem ipsum dolor sit amet is a Latin phrase that translates to "the pain of an average man." The phrase is used as a placeholder in web development because it is a common, standard way to fill up space with text</p>
+                                <div class="price-blocks">
+                                    <div class="price-block">
+                                        <h3>$100</h3>
+                                        <p>Self-assembly kit</p>
+                                    </div>
+                                    <div class="separator"></div>
+                                    <div class="price-block">
+                                        <h3>$150</h3>
+                                        <p>Assembled Kenji X1</p>
+                                    </div>
+                                </div>
+                                <div class="additional">
+                                    <a href="#">Learn more</a>
+                                    <a href="#">Specifications</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <script>
               function myFunction(smallImg) {
                 var fullImg = document.getElementById("imageBox");
                 fullImg.src = smallImg.src;
               }
-            </script>
+            </script>-->
             <!-- Content goes here -->
-            <div class="product">
+            <!-- <div class="product">
               <div class="product-small-img">
                 <img src="./images/shop/Kenji-11.jpg" onclick="myFunction(this)">
                 <img src="./images/shop/2.jpg" onclick="myFunction(this)">
@@ -93,10 +135,10 @@
               <div class="img-container">
                 <img id="imageBox" src="./images/shop/Kenji-6.jpg">
               </div>
-            </div>
+            </div> -->
           
 
-          <div class="kenji_shop_info-block">
+          <!-- <div class="kenji_shop_info-block">
             <div>
               <h2>Kenji X1</h2>
               <h2>Developer Kit</h2>
@@ -117,7 +159,7 @@
               <p>Learn more</p>
               <p>Specifications</p>
             </div>
-          </div>
+          </div> --> 
 
             <!-- <div class="neum_wrapper">
                 <div class="neum_card">
