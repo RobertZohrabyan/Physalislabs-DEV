@@ -1,107 +1,15 @@
-/* General styles */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Familjen Grotesk', sans-serif;
-}
 
-/* Section styles */
-section {
-    position: relative;
-    height: 100vh;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-transform: uppercase;
-    overflow: hidden;
-}
-
-/* Callout styles */
-.kenjix1_point_dots_callouts {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-}
-
-.kenjix1_point_dot_callout {
-    width: 200px;
-    height: 150px;
-    display: none;
-    padding: 20px;
-    border: 1px solid #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    box-sizing: border-box;
-    overflow: hidden;
-    transition: opacity 0.3s ease;
-    position: absolute;
-}
-
-/* Example positioning for callouts */
-.callout-one {
-    top: 400px; 
-    left: 90px;
-}
-
-.callout-two {
-    top: 220px;
-    left: 106px;
-}
-
-.callout-three {
-    top: 60px;
-    left: 212px;
-}
-
-.callout-four {
-    top: 60px;
-    left: 992px;
-}
-
-.callout-five {
-    top: 220px;
-    left: 1028px;
-}
-
-.callout-six {
-    top: 400px;
-    left: 955px;
-}
-
-.kenjix1-callout.is-active, .dot.is-active:hover + .kenjix1-callout {
-    display: block;
-}
-
-.kenjix1_point_dot_callout h3 {
-    margin: 0 0 10px;
-    font-size: 20px;
-}
-
-.kenjix1_point_dot_callout p {
-    margin: 0;
-    font-size: 12px;
-    font-weight: 200;
-    text-transform: none;
-}
-
-/* Dot styles */
-.kenjix1_point_dot_wrap {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
 
 .kenjix1_point_dot {
     position: absolute;
     cursor: pointer;
     width: 15px;
     height: 15px;
+    border: 1px solid #fff;
     border-radius: 50%;
     background-color: #ADD8E6;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: breathe 5s infinite alternate;
 }
 
 /* Left side dots */
@@ -137,13 +45,13 @@ section {
 }
 
 .kenjix1_point_dot:hover {
-    background-color: #777; /* #ADD8E6 Light blue color */
+    background-color: #777;
     transform: scale(1.2);
     border: 1px solid #fff;
 }
 
 .kenjix1_point_dot.is-active {
-    background-color: #777; /* #ADD8E6 Light blue color */
+    background-color: #777;
     transform: scale(1.2);
     border: 1px solid #ADD8E6;
 }
@@ -152,15 +60,17 @@ section {
 .kenjix1_point_dot::before, .kenjix1_point_dot::after {
     content: '';
     position: absolute;
-    background-color: #FFFFFF; /* White color for the lines */
-    z-index: -1; /* Ensure the lines are behind the dot */
+    background-color: #FFFFFF;
+    z-index: -1;
+    animation: none;
 }
 
 .kenjix1_point_dot.is-active::before, .kenjix1_point_dot.is-active::after {
     content: '';
     position: absolute;
-    background-color: #ADD8E6; /* Light blue color for the active dot */
-    z-index: -1; /* Ensure the lines are behind the dot */
+    background-color: #ADD8E6;
+    z-index: -1;
+    animation: none;
 }
 
 /* Connect left dots to respective callouts */
@@ -181,66 +91,66 @@ section {
 }
 
 .kenjix1_point_dot.left-2::before {
-    width: 152px; /* Adjust length of the line */
-    height: 1px; /* Adjust thickness of the line */
-    top: 8px; /* Adjust position of the line */
-    right: 15px; /* Adjust position of the line */
-    transform: rotate(0deg); /* Adjust angle of the line */
+    width: 152px; 
+    height: 1px; /
+    top: 8px; 
+    right: 15px; 
+    transform: rotate(0deg);
 }
 
 .kenjix1_point_dot.left-3::before {
-    width: 100px; /* Adjust length of the angled portion */
-    height: 1px; /* Adjust thickness of the line */
+    width: 100px; 
+    height: 1px; 
     top: -35px;
     left: -80px;
-    transform: rotate(45deg); /* Adjust angle of the line */
+    transform: rotate(45deg); 
 }
 
 .kenjix1_point_dot.left-3::after {
-    width: 100px; /* Adjust length of the angled portion */
-    height: 1px; /* Adjust thickness of the line */
-    top: 10px; /* Adjust position of the line */
-    left: 100px; /* Adjust position of the line */
-    transform: rotate(45deg); /* Adjust angle of the line */
+    width: 100px; 
+    height: 1px; 
+    top: 10px; 
+    left: 100px;
+    transform: rotate(45deg); 
 }
 
 /* Straight portion */
 .kenjix1_point_dot.left-3::after {
-    width: 100px; /* Adjust length of the straight portion */
-    height: 1px; /* Adjust thickness of the line */
+    width: 100px;
+    height: 1px; 
     top: -70px;
     left: -165px;
-    transform: rotate(0deg); /* Ensure the straight portion is not rotated */
+    transform: rotate(0deg);
 }
 
 /* Connect right dots to respective callouts */
 .kenjix1_point_dot.right-1::before {
-    width: 200px; /* Adjust length of the line */
-    height: 1px; /* Adjust thickness of the line */
+    width: 200px; 
+    height: 1px; 
     top: 10px;
     left: 20px;
     transform: rotate(0deg);
 }
 
 .kenjix1_point_dot.right-2::before {
-    width: 200px; /* Adjust length of the line */
-    height: 1px; /* Adjust thickness of the line */
+    width: 200px;
+    height: 1px;
     top: 10px;
     left: 20px;
     transform: rotate(0deg);
 }
 
 .kenjix1_point_dot.right-3::before {
-    width: 100px; /* Adjust length of the line */
-    height: 1px; /* Adjust thickness of the line */
+    width: 100px; 
+    height: 1px; 
     top: 53px;
     left: 77px;
     transform: rotate(0deg);
 }
 
 .kenjix1_point_dot.right-3::after {
-    width: 70px; /* Adjust length of the angled portion */
-    height: 1px; /* Adjust thickness of the line */
+    width: 70px;
+    height: 1px; 
     top: 36px;
     left: 12px;
     transform: rotate(30deg);
