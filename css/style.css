@@ -362,7 +362,7 @@ section {
 }
 
 .techdoc_nav_links {
-    font-size: 20px;
+    font-size: 16px;
     display: flex;
     flex-direction: column;
 }
@@ -371,7 +371,7 @@ section {
     text-decoration: none;
     color: #fff;
     border-bottom: 1px solid gray;
-    padding: 10px;
+    padding: 8px;
     transition: transform 0.3s ease-in-out;
 }
 
