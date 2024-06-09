@@ -726,6 +726,9 @@ section.rocket .rocket-body span.active:nth-child(1) {
 	font-weight: 300;
 }
 
+.kenji_information-inner a:not(:first-of-type) {
+	margin-right: 0px;
+}
 		/* Animations */
 @keyframes moveInSpace {
     50% {
@@ -776,7 +779,17 @@ section.rocket .rocket-body span.active:nth-child(1) {
 	.kenji_information-inner {
 	    position: absolute;
 		top: 50%;
-		left: 20%;
+	}
+	.kenji_information-inner a {
+		padding: 12px 18px;
+	}
+	.kenji_information-inner a:first-of-type {
+		margin-right: 10px;
+	}
+	
+	.kenji_information-inner .vertical-line{
+		height: 60%;
+		margin-bottom: 25px;
 	}
 }
 
@@ -804,12 +817,6 @@ section.rocket .rocket-body span.active:nth-child(1) {
 	section.kenji_information {
 	    
 	}*/
-
-	.kenji_information-inner {
-	    position: absolute;
-		top: 50%;
-		left: 30%;
-	}
 
 		/* Gallery */
 	.section-gallery {
@@ -914,6 +921,9 @@ section.rocket .rocket-body span.active:nth-child(1) {
 /* section kenji information*/
 
 section.kenji_information {
+	display: flex;
+    align-items: self-end;
+    justify-content: center;
     position: relative;
     height: 55vh;
     background-position: center center;
@@ -925,9 +935,6 @@ section.kenji_information {
 }
 
 .kenji_information-inner {
-    position: absolute;
-    top: 50%;
-    left: 33%; /*450px*/
     transform: translate(-50%, -50%);
     max-width: 560px;
     opacity: 0;
