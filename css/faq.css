@@ -73,6 +73,10 @@ section.faq {
     transition: max-height 650ms;
 }
 
+.answer.open-answer {
+    max-height: 200px;
+}
+
 .answer::before {
     content: "";
     position: absolute;
