@@ -353,6 +353,7 @@ section {
 			/*Documentation*/
 #techdoc_navbar {
     position: fixed;
+	overflow-y: scroll;
     top: 100px;
     left: 0;
     padding: 30px;
@@ -360,6 +361,26 @@ section {
     height: 100vh;
     background-color: black;
 }
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #555;
+  }
 
 .techdoc_nav_links {
     font-size: 16px;
@@ -411,6 +432,10 @@ code {
     line-height: 3;
     border-radius: 10px;
     padding: 10px;
+}
+
+.techdoc_navbar_header:not(:first-child) h1 {
+	padding-top: 15px;
 }
 
 .techdoc_navbar_header h1 {
