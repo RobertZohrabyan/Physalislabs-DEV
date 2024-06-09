@@ -410,6 +410,14 @@ section {
   	overflow-y: scroll;
   	scroll-behavior: smooth;
   	margin-top: 100px;
+	text-align: justify;
+	padding-right: 50px;
+	line-height: 20px;
+}
+
+.techdoc_main_doc h1, .techdoc_main_doc img, .techdoc_main_doc pre {
+	margin: 22px 0;
+	display: block;
 }
 
 .techdoc_main_section {
