@@ -32,7 +32,7 @@ body {
     width: 100%;
     height: 100vh;
     object-fit: cover;
-    margin: 10px;
+    /*margin: 10px;*/
     padding: 10px;
 }
 
@@ -246,4 +246,95 @@ table tr td {
 
 .kenji_mission_block_buttons .btn:hover .hover {
     transform: translateY(0);   
+}
+
+
+@media only screen and (max-width: 960px) {
+    .kenji_mission_block_section {
+        height: auto;
+    }
+
+    .kenji_mission_block_left {
+        width: 100%;
+    }
+
+    .kenji_mission_block_right {
+        width: 100%;
+        float: none;
+        padding: 20px;
+        overflow-y: initial;
+    }
+
+    .kenji_mission_block_tabs {
+        flex-wrap: wrap;
+    }
+
+    .kenji_mission_block_tab {
+        margin: 10px 0;
+        padding: 5px;
+    }
+
+    .kenji_mission_block_tables {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .kenji_mission_block_tables .tab {
+        margin-bottom: 20px;
+    }
+
+    .kenji_mission_block_buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .kenji_mission_block_right {
+        padding: 10px;
+    }
+
+    .kenji_mission_block_buttons .btn {
+        min-width: auto;
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+
+    .kenji_mission_block_left img {
+        order: 1; /* Ensure image comes after content in the HTML flow */
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .kenji_mission_block_right {
+        padding: 8px;
+    }
+
+    .kenji_mission_block_buttons .btn {
+        padding: 10px 25px;
+        font-size: 12px;
+    }
+
+    .kenji_mission_block_left img {
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .kenji_mission_block_right {
+        padding: 8px;
+    }
+
+    .kenji_mission_block_buttons .btn {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    .kenji_mission_block_left img {
+        margin-top: 10px;
+    }
 }
