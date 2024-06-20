@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>PhysalisLabs-Article</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/hamburger.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/article.css">
+    <script src="../js/script.js"></script>
+    <script src="../js/text-animation.js"></script>
+</head>
+<body>
+    <!-- Content goes here -->
+    <div id="overlay"></div>
+    <div id="mobile-menu" class="mobile-main-menu"><!-- mobile menu -->
+        <ul>
+            <li><a href="../kenji-x1.html">Kenji X1</a></li>
+            <li><a href="../geo-lab.html">Geo-Lab</a></li>
+            <li><a href="../documentation.html">Documentation</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../team.html">Team</a></li>
+            <li><a href="../contact-us.html">Contact</a></li>
+            <li><a href="../shop.html">Shop</a></li>
+            <li class="mobile-only"><a href="#">Project 1</a></li>
+            <li class="mobile-only"><a href="#">Project 2</a></li>
+            <li class="mobile-only"><a href="#">Project 3</a></li>
+            <li class="mobile-only"><a href="#">Project 4</a></li>
+        </ul>
+    </div>
+    <header class="main-header"><!-- main header -->
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../images/logo.png" alt="PhysalisLabs" />
+            </a>
+        </div>
+        <nav class="desktop-main-menu">
+            <ul>
+                <li><a href="../kenji-x1.html">Kenji X1</a></li>
+                <li><a href="../geo-lab.html">Geo-Lab</a></li>
+                <li><a href="../documentation.html">Documentation</a></li> 
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../team.html">Team</a></li>
+                <li><a href="../contact-us.html">Contact</a></li>
+                <li><a href="../shop.html">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hamburger Menu -->
+    <button id="menu-btn" class="hamburger" type="button">
+        <span class="hamburger-top"></span>
+        <span class="hamburger-middle"></span>
+        <span class="hamburger-bottom"></span>
+    </button>
+                <!-- Article content -->
+    <main>
+        <article>
+            <h1 class="article-title">Kenji Vibration Scanning Instructable</h1>
+            <p class="article-date">28.05.2022</p>
+            <div class="article-content">
+                <p></p>
+                <!-- <img class="embedded-image" src="../images/webp-images/Kenji-6_optimized_10.jpg" alt="Sample Image"> -->
+                <h2>Introduction</h2>
+                <p>In this "Instructable" I will show you how to measure vibrations around you. You might ask: why do I need that?</p>
+                <p>Well, there are endless applications towards that, but several handy examples would be: knowing if someone is at home or not, is the motor going to breakdown soon, or if there are earthquakes and what's their magnitude, to name a few. Raising the vibrations awareness can help to design smart anti-theft systems, or predict malfunctioning before it happens and a lot more. Also it can help you to learn more practical stuff and use it, rather a pure theory as in school or university.</p>
+                <p>We will measure vibrations that are travelling from excitation source which is a running brushed DC-motor. That will give you a background to explore further and expand on other sources.</p>
+                <p>To accomplish our goal, there are several methods. One would be: to get a 3-axis accelerometer IC, and develop a PCB which then will measure the g-forces across this axes, and notify to micro-controller via SPI, or I2C. There are very sensitive ICs which are capable of measuring with up to 24-Bit resolution and require a lot of infrastructure and development to function properly, normally these would be suitable more for industrial or scientific usage. The scope of this Intractable is to work with more affordable and easy to use technology and learn something along the way. Therefore we will skip the above method and use “KenjiX1” robot and a conductive vibration scanning probe from “Physalis Labs”. Mostly all the types of sensors and probes and in general most of the IC's as well as sensors are made on basis of piezoelectric effect discovered by Pierre and Marie Curie.</p>
+                <p>The probes that utilizes KenjiX1 are easy to use, and even if they brake, you can replace it with minor effort. There are several types of probes available, and the difference is basically the probe geometry, which is then applied to the surface and is designed in a way that it creates a good contact with the surface and that way the waves are travelling with less effort through one body (surface) to the another (probe).</p>
+                <p>KenjiX1 robot can utilize several types of vibration measuring types of probes. For our tests, we will employ the flat probe (Fig.1). It’s meant to be used for surfaces which are flat or glassy, walls and everything that will fall into that category, basically on everything that is flat.</p>
+                <img class="article-image" src="../images/kenji-x1/Kenji-6.jpg" alt="Fig.1">
+                <p>Fig.1. Conductive probe with a rounded flat disc on it meant for flat surfaces.</p>
+                <hr>
+                <h2>Supplies and Consumables….</h2>
+                <h4>Instruments, Tools, and Supplies:</h4>
+                <p>----------------------------------</p>
+                <ol>
+                    <li>Laptop with terminal programs (Putty and TeraTerm) (any Linux, MacOS or Windows Machine).</li>
+                    <li>KenjiX1 open-source tele-robotics platform <a href="http://physalislabs.org/projects/kenjix1/" target="_blank">http://physalislabs.org/projects/kenjix1/</a>  Vibration measurement Probe (flat surface geometry) from <a href="http://physalislabs.org/">http://physalislabs.org/</a></li>
+                    <li>OriginLab Software for data evaluation. <a href="https://www.originlab.com/" target="_blank">https://www.originlab.com/</a></li>
+                    <li>Adjustable laboratory power supply or just batteries to power the motor.</li>
+                    <li>Brushed DC-motor.</li>
+                </ol>
+                <h4>Let's start with a short description of each step:</h4>
+                <ul>
+                    <li>Install a terminal software <a href="https://ttssh2.osdn.jp/index.html.en" target="_blank">https://ttssh2.osdn.jp/index.html.en</a> (TerraTerm, Putty, for windows, and Xterm or similar for Linux). Here I will be using TeraTerm because I am working on Windows machine at the moment. But you can just pick your favorite terminal software for your suitable machine.</li>
+                    <li>Kenji X1 platform conductive-probe (flat surface) courtesy of "Physalis Labs". You can purchase them or submit your request for trying them out through the website: <a href="http://physalislabs.org/projects/kenjix1/" target="_blank"> http://physalislabs.org/projects/kenjix1/</a>,or just back their crowdfunding campaign on Kickstarter, that way you will receive the Kenji X1  and complete kit with supercheap price, also helping out the folks at Physalis labs to spread their word around the world.</li>
+                    <li>Go to OriginLab website and download the installer, and then install the “OriginLab” software from <a href="https://www.originlab.com/" target="_blank">https://www.originlab.com/</a>. Normally it’s paid, but you can use the trial for a month. Later you can decide to keep it, to or remove it. This software is more related to Windows machines, but they have a guide how to run it on Macs here:<a href="https://www.originlab.com/index.aspx?go=Support/DocumentationAndHelpCenter/Installation/RunOriginonaMac" target="_blank"> https://www.originlab.com/index.aspx?go=Support/DocumentationAndHelpCenter/Installation/RunOriginonaMac</a>  </li>
+
+                    <li>Regular laboratory power supply which will be capable of powering any of the above mentioned motors will be fine, or just use batteries, please make sure you use the correct voltage for the motor.</li>
+                    <img class="embedded-image" src="../images/articles-images/motor_wiring.jpg" alt="Fig.2.">
+                    <p>Fig.2. Wiring the brushed DC-motor with the suitable power source.</p>
+                    <li>Brushed DC-Motor scavenged from broken electronics or other similar devices would be an option too. Make sure that the voltage of the motor and the power-supply/batteries is in working range of the motor, otherwise it will not run, or if does, will be very slow, in case of voltage being below the spec, or will run superfast and might break if being too high above the spec. That’s if for the materials and tools….Now we can finally nosedive into our study of acquiring vibration profile of running Brushed DC-motor.</li>
+                </ul>
+                <h4>Vibrations Nosedive</h4>
+                <p><strong>Vibrations are everywhere,</strong> they occur around us and in nature heavily. Therefore it is crucial to understand their source and reasons for them to occur. An ongoing monitoring of vibrations keeps awareness on possible earthquakes and other natural disasters occurrences.</p>
+                <p>On the other hand, monitoring of various vibrations and their magnitude aka amplitude can help prevent failures and down-times of machinery and complex systems which are constantly online and working around us. In power-plants, factories, production lines ongoing verification of the vibrations noise floor is needed. For all hardware, mechatronic and mechanic systems which are running, to keep the awareness on their wear and tear. Not only can it help save maintenance costs, but also painful down-times which can occur due to unexpected breakdown of such complex hardware systems and causing further issues, down the line.</p>
+                <p>Normally this topic has a huge support in physics, and other natural science disciplines, and heavy math (°_°). Here, I we will skip that and get more physical on real world applications.</p>
+                <p>Normally vibrations are measured in two domains, time and frequency.</p>
+                <img class="embedded-image" src="../images/articles-images/diagram-fig-3.png" alt="Fig.3.">
+                <p>Fig.3. Graphical representation of several excitation sources c (amplitude vs. frequency), b (amplitude vs. time), a (amplitude vs. frequency and time).</p>
+                <p>As represented in (Fig.3.) the excitation source can generate waves which can look as sinusoids, with high or low frequencies or sharp peaks which occur instantaneously. We can measure the waves incoming in two domains: time, which means the effect/wave is being observed as time changes Fig.3. (b), and the frequency, which means that we observe the effect/wave’s power as the frequency changes Fig.3.(c). You would need to apply a Fourier transform to move from Fig.3.(b) to Fig.3.(c).</p>
+                <img class="embedded-image" src="../images/articles-images/vibration_waves_illustration.jpg" alt="Fig.4.">
+                <p>Fig.4. Illustration of the vibration waves travelling through a conductive-probe from excitation source into KenjiX1.</p>
+                <p>I have created an illustration of how the waves caused by some excitation (human typing on keyboard, hammer, DC-motor etc…) are travelling through a matter (solid, liquid, gas) getting from one solid object (wall, table, metal and stairs) to another solid object, which happens to be our conductive-probe. The super flat and wide surface of the probe creates a proper contact with the other flat surface, which enables the waves to cross through with less effort, which at the same time is a prerequisite for a good signal acquisition.</p>
+                <p>Further the conductive-probe directs the signal to the KenjiX1 platform where it gets registered by the onboard CPU, or shuttled further for processing.</p>
+                <p>For measuring the vibrations remotely, I am using the KenjiX1 robot platform from Physalis Labs. It is really an awesome robotics development open-source platform which overlaps the gap between the industrial robotics farcry and the maker/tinkerer level smallish ones. More information on KenjiX1 can be found here <a href="http://physalislabs.org/projects/kenji/" target="_blank">http://physalislabs.org/projects/kenji/</a>.</p>
+                <h4>Starting Up Kenji X1…</h4>
+                <p>So far we’ve got through the introduction and the uses of vibrational waves, then we went briefly over the tools and materials to complete the task, and lastly some theory and information which will help us understand what exactly is happening behind the curtains. Now we start with the actual experimental stuff ahead. Start your laptop/PC and connect to the WLAN which is available to you and to Kenji X1.</p>
+                <img class="embedded-image" src="../images/articles-images/Kenji_WLAN_connection.jpg" alt="Fig.5.">
+                <p>Fig.5. Connecting to a WLAN available to you and to KenjiX1.</p>
+                <p>Power-up the KenjiX1 with a green illuminated switch (Fig.6.b), located on the right side of the robot. Please note, the green LED indicator should be illuminated, to be able to power – up the robot. Otherwise check if the rechargeable battery is attached. After booting is finished, and the robot is on working duty, you can find the name on your network list. Use the provided password and IP-address to connect to it.</p>               
+                <div class="articles-side-by-side">
+                    <!-- Two images side by side -->
+                    <img class="embedded-image" src="../images/articles-images/LCD_notification.jpg" alt="Fig.6.">
+                    <img class="embedded-image" src="../images/articles-images/Power_Switch.jpg" alt="Fig.6.">
+                </div>
+                <p>Fig.6. Powering-up KenjiX1.</p>
+                <p>As soon as it’s powered you will hear a booting sound, and you will be asked to “update kinetic parameters” on the LCD display (Fig.6.a). You should then on your laptop open the terminal program and start a SSH session with the provided IP-address (Fig. 7.a).</p>
+                <div class="articles-side-by-side">
+                    <!-- Two images side by side -->
+                    <img class="embedded-image" src="../images/articles-images/SSH connection_dialog.png" alt="Fig.7.">
+                    <img class="embedded-image" src="../images/articles-images/connecting_to_remote_host.png" alt="Fig.7.">
+                </div>
+                <p>Fig.7. Remote connection to KenjiX1 via SSH.</p>
+                <p>Type in the “name” and “password” (Fig.7.b) and afterwards a successful connection with the KenjiX1’s onboard SBC aka (Raspberry-Pi) will be established (Fig.8.b). Entering the username and password, will boot to Linux console (Fig.8.). From now on, you can do pretty much anything via onboard SBC of Kenji X1.</p>
+                <img class="embedded-image" src="../images/articles-images/Remote_Console.png" alt="Fig.8.">
+                <p>Fig.8. Remote Console on KenjiX1’s SBC .</p>
+                <p>We should establish one last communication node on KenjiX1 to make interacting with the robot platform fully functional. In console (Fig.8.) type-in the command “sudo minicom” and hit enter. You might hear several high pitch sounds coming out from the KenjiX1 and text appearing inside the shell. Congratulations (^_^) … now you gained access to roboDrive Engine. From this point and onwards there will be active connection to all network nodes, unless you as a user decide to break them.</p>
+                <p>Let’s make ourselves familiar with some of the roboDrive Engine’s instructions set. To view the “help/readme” info in (Fig.9.) type-in capital letter “H”. In “Run Control” we can configure the platform kinetic parameters: ground speed, tower rotation speed and so on.</p>
+                <img class="embedded-image" src="../images/articles-images/kinetics_updating_remotely.jpg" alt="Fig.9.">
+                <p>Fig.9. Updating kinetic parameters remotely.</p>
+                <p>Let’s type-in capital letter “O” to enter the menu. The first thing you’re being asked to “enter the vehicle ground speed”,” enter tower rotation angular velocity” and so on (Fig.10.) below.</p>
+                <img class="embedded-image" src="../images/articles-images/updating_kinetics_remotely.png" alt="Fig.10.">
+                <p>Fig.10. Updating kinetic parameters remotely.</p>
+                <p>Let’s enter all the needed kinetic parameters to the system as shown in (Fig.10): they take values in range (0 - 255).</p>
+                <p>- Enter vehicle ground speed = 50</p>
+                <p>- Enter tower rotation angular velocity = 5</p>
+                <p>- Enter tower vertical speed = 25</p>
+                <p>- Enter mecha-arms movement speed = 30</p>
+                <p>- Enter mecha-arms turning speed(L/R) = 30</p>
+                <p>- Enter grippers clamp speed = 20</p>                
+                <p>- Enter grippers rotation angular velocity = 10</p>
+                <p>- Done!</p>
+                <p>Okay, let’s start driving forward with a minimal speed (50) and make ourselves familiar with control:</p>
+                <img class="embedded-image" src="../images/articles-images/control_over keyboard.jpg" alt="Fig.11.">
+                <p>Fig.11. Control over the keyboard.</p>
+                <p>As illustrated in (Fig.11.), with the keys on the left (W, A, S, D, X) you can control the robot. It’s similar to PC-Gaming style, where you use your left hand to move around, and right hand for the mouse, which does the viewing around. Here is almost the same, you apply the left keys for moving around, and right keys, on the NumPad to look around up/down and and so on.</p>
+                <h4>Measuring DC-Motor’s vibrations profile</h4>
+                <p>Let’s start with measuring the vibration profile of the running DC-motor. I have prepared a test setup (Fig.12.), where the motor is powered over the Voltcraft laboratory power supply at about 10 Volts.</p>
+                <div class="video-wrapper">
+                    <iframe src="../video/Kenji_approching.gif" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p>Fig.12. Faulhaber brushed DC-motor powered over the black lab. Power-supply at 10V.</p>                
+                <p>As for now, the motor is running constantly and the shaft is spinning. Let’s consider that as an engineer we’ve got a technical task to measure the vibration profile of the brushed DC-motor remotely. In order to accomplish that task: we shall connect to robot, then we need to get robot driving close to the study object, engage onboard manipulator with the flat-surface conductive-probe and position it on the DC-motor’s frame, this is somehow similar to when pilots in space shuttle used to apply the manipulator to catch lost or malfunctioning satellites back then, and the last step get the data and evaluate it. This seems to be a lot … but we will manage it together (°_*).</p>
+                <p>Let’s start by driving KenjiX1 through my computer close to the area, where the test setup is located. In my case it is located at about 10 meters away, in facility so it will not going to take long. But it could be also that you control KenjiX1 somewhere on Solomon Islands. I am using the movement keys (Fig.11.) to drive and to navigate in space and approach the DC-motor slowly and stop somewhere at about 30-40 cm away from it (Fig. 13.).</p>
+                <div class="video-wrapper">
+                    <iframe src="../video/probe_overview.gif" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p>Fig.13. Faulhaber geared DC-motor powered with the lab. power-supply unit (black) at 10V.</p>
+                <p>It’s time to deploy the conductive-probe and connect to the DC-motor’s metallic frame. Therefore, I am sending command “V” from my remote PC to un-park Mecha-arms. It takes second or two, and now both mecha-arms are in un-parked position (state-2), which would fit the best for this task. Normally there are several states (1-4) available to the user on KenjiX1, of course you can also code new ones as well.</p>
+                <p>Only un-parking and engaging manipulators don’t make a suitable contact with the DC-motor’s frame. I will switch from driving to manipulator steering control and try to steer around left/right up/down to make it work (Fig.14.). After several attempts, I managed to touch the frame of the DC-motor with the flat surface of the conductive-probes disc.</p>
+                <div class="video-wrapper">
+                    <iframe src="../video/kenji_probe_positioning.gif" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p>Fig.14. Positioning un-parked mecha-arms in state-2.</p>
+                <p>At this moment I have managed to get a contact with the DC-motor. Now, I just apply minor corrections and fine-tune the probe position by slightly moving left to right. The mecha-arm is pushing already the conductive-probe against the DC-motor’s frame, so there is a proper connection made.</p>
+                <div class="video-wrapper">
+                    <iframe src="../video/kenji_positioning_2.gif" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p>Fig.15. Steering and minor adjustments of the mecha-arm and the conductive probe.</p>
+                <p>So far the surface to surface contact has been successfully established. Now It’s time to request data from the conductive-probe and save it inside our onboard SBC’s memory card.</p>
+                <p>There are two options here: you can either run the SBC with graphical user interface (Fig. 16.a) via “VNC Viewer” software or in console over “TeraTerm” software (Fig. 16.b), which I prefer more, but it’s just a matter of personal preference and you can do the same in both ways.</p>
+                <div class="articles-side-by-side">
+                    <!-- Two images side by side -->
+                    <img class="embedded-image" src="../images/articles-images/SBC_GUI.png" alt="Fig.16.">
+                    <img class="embedded-image" src="../images/articles-images/SBC_shell.png" alt="Fig.16.">
+                </div>
+                <p>Fig.16. SBC graphical user interface (VNC viewer) left, and console access right.</p>
+                <p>By typing-in “sudo minicom –C userdata_file” command in shell, I ask system to run a session via minicom and to log all the data in a “userdata_file.txt” file. Here we just told the system to save our data points (which will be coming soon) to the generic text file called “userdata_file.txt”. Minicom splash screen on (Fig.17.b).</p>
+                <div class="articles-side-by-side">
+                    <!-- Two videos side by side -->
+                    <div class="video-wrapper">
+                        <iframe src="../video/probe_data_strea_setup_1.gif" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="../video/probe_stream_setup_2.gif" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <p>Fig.17. Connecting to roboDrive Engine console via minicom (a) in capture mode.</p>
+                <p>The housekeeping stuff is done by now, and we can request 10K data-points from conductive-probe which currently is measuring the vibrations generated by the running DC-motor.</p>
+                <div class="articles-side-by-side">
+                    <!-- Two images side by side -->
+                    <img class="embedded-image" src="../images/articles-images/vibration_scanner.jpg" alt="Fig.18.">
+                    <img class="embedded-image" src="../images/articles-images/scanner_setup.png" alt="Fig.18.">
+                </div>
+                <p>Fig.18. Requesting 10k data-points to be streamed to us and saved onboard.</p>
+                <p>Start data stream by typing-in “V” to run “scanner setup” (Fig. 17.a). It will appear in shell (Fig.18.b) type “y” for confirmation, and then the desired amount of cycles: “10000” and hit “enter”. As soon as you hit enter, you will see the data stream burst directly inside the shell. That is the real-time data being dispatched to us and also saved onboard. Three types of data points are being registered over the time. The actual amplitude, lowest amplitude (threshold) and highest amplitude (threshold). We measure in time domain, and thus we see a “time [ms]” value on far right column. Nice!....</p>
+                <img class="embedded-image" src="https://placehold.co/600x400" alt="Fig.19.">
+                <p>Fig.19. Data streaming from conductive-probe over time.</p>
+                <p>As mentioned above the conductive-probe is sending the requested amount of measurement cycles to us. As for now, we can relax and have a cup of coffee. Depending how many measurement cycles you request the time can be longer or shorter, so after minute has passed, and the streaming is over with a message “Scan Complete”.</p>
+                <p>But all this raw numbers and cryptic look is not exactly what we were hoping for. I guess it will be much better to have something which we can view graphically, and maybe share with others or e bed in report.</p>
+                <p>Okay, if you remember, before starting the data streaming we asked the system to capture and log our interaction with KenjiX1 and save it in our file named “userdata_file.txt” which is now sitting inside the KenjiX1’s onboard SBC’s memory card.</p>
+                <h4>Setting-Up Data-Dispatch</h4>
+                <p>Let’s get that data-file transferred to our PC where currently me, or you “KenjiX1’s operator” residing now. On my PC, I can achieve that by typing inside windows PowerShell</p>
+                <p>“pscp <a href="user@192.168.8.134" target="_blank">user@192.168.8.134</a>: home/pi/userdata_file userdata_file.txt” command</p>
+                <p>Please note you should enter the provided password for the KenjiX1’s onboard SBC. The file will be copied to the “D:\Users\Arhitect” folder in my example, and on your PC, depending where your path is. In PowerShell, check it via “pwd” command where your path is. Please install “putty” software for using “pscp” aka “putty secure copy” command and much more in PowerShell. <a href="https://documentation.help/PuTTY/pscp-usage.html" target="_blank">https://documentation.help/PuTTY/pscp-usage.html</a></p>
+                <img class="embedded-image" src="../images/articles-images/getting_data_from_KenjiX1.jpg" alt="Fig.20.">
+                <p>Fig.20. Getting measurement data shipped to us via PowerShell over the network.</p>
+                <p>The file has been copied remotely to my PC and is located in directory “D:\Users\Arhitect”. Because we changed the working environment from Linux to Windows, if you open this text file, it will look “fuzzy” (^_^) (Fig.21.a.).</p>
+                <div class="articles-side-by-side">
+                    <!-- Two images side by side -->
+                    <img class="embedded-image" src="../images/articles-images/fuzzy_notepad_data.jpg" alt="Fig.21.">
+                    <img class="embedded-image" src="../images/articles-images/editing_in Notepadpp.jpg" alt="Fig.21.">
+                </div>
+                <p>Fig.21. Using Notepad++ to change the EOL termination.</p>
+                <p>We should make an “EOL” correction for Windows machines. In context-menu, click on “edit with Notepad++”, if you don’t have Notepad++, just get it from here <a href="https://notepad-plus-plus.org/downloads/" target="_blank">https://notepad-plus-plus.org/downloads/</a>.</p>
+                <div class="articles-side-by-side">
+                    <!-- Two images side by side -->
+                    <img class="embedded-image" src="../images/articles-images/Notepad++.jpg" alt="Fig.22.">
+                    <img class="embedded-image" src="../images/articles-images/changed_to_Windows_style.png" alt="Fig.22.">
+                </div>
+                <p>Fig.22. Changing the EOL conversion to Windows(CR LF).</p>
+                <p>Click to edit the file in Notepad++ and when its opened up, inside the program, go to “menu” then “edit” then “EOL Conversion” and hit “Windows(CR LF)” and save the file via “CTRL-S” and close the Notepad++. That way, we changed the “end of line” termination to the windows style. If we open the file now, it will look similar to (Fig.19.) data stream.</p>
+                <h4>Visualizing Measurement Data</h4>
+                <p>There is handful of ways to visualize measurement data, and they all are good in their own way of doing it. At the end of the day it’s up to you how you are visualizing your data. I have chosen OriginLab Pro. It is really great software which has been around since ages. Especially if you’ve worked with scientists, you might already come across, because it’s really popular in those circles.</p>
+                <p>We will start by running the software on PC and normally it will open up a new and empty book as </p>
+                <img class="embedded-image" src="../images/articles-images/origin_splashscreen.jpg" alt="Fig.23.">
+                <p>Fig.23. Running OriginLab Pro software on PC.</p>
+                <p>I will import the “userdata_file.txt” which we copied to my PC. OriginLab has an import wizard under the section “menu” then “File”. At first click once on an empty data-book and make it active, then go to import and import the file as “single ASCII” or you can also try “import wizard” if you have issues importing data through “single ASCII”.</p>
+                <div class="articles-side-by-side">
+                    <!-- Two images side by side -->
+                    <img class="embedded-image" src="../images/articles-images/OriginLab.jpg" alt="Fig.24.">
+                    <img class="embedded-image" src="../images/articles-images/OriginLab_databook.jpg" alt="Fig.24.">
+                </div>
+                <p>Fig.24. Running OriginLab Pro software on PC.</p>
+                <p>The “import wizard” gives you more options to manipulate and you can change things like the “delimiter” names, and more. You can try various scenarios to find the best options which will satisfy you the most. Eventually after successful import you can nearly see some tiny thumbnails at the top of each column we imported.</p>
+                <p>Each column has its dedicated name in OriginLab software, so as seen the columns C(Y), F(Y), I(Y), M(X) are the 3 x amplitudes from our conductive-probe, and as you remember we are working in time domain and therefore the last one is the time. You should explicitly tell the program which axes should be plotted as X-Axes and which ones as Y-Axes. I will tell the program to plot the dependency</p>
+                <p>𝑓([𝐶(𝑌) 𝐹(𝑌) 𝐼(𝑌)], 𝑀(𝑥))</p>
+                <p>Which means that “M(X)”dataset, which has all the time values inside will be plotted as X-Axes and all others “C(Y), F(Y), I(Y)” which are holding the vibration waves amplitudes as Y-Axes. For better overview I will divide down the M(X) dataset by 1000 to get time in seconds. Otherwise the values of the X-Axes are too high.</p>
+                <p>In total we will plot 4 datasets in one graph:</p>
+                <img class="embedded-image" src="../images/articles-images/Graph16.jpg" alt="Fig.25.">
+                <p>Fig.25. Running Brushed DC-motor vibration profile measured on Kenji X1 robot.</p>
+                <p>Finally, we have it … in (Fig. 25.) we visualized the measurement data and created a beautiful and informative graph from it, which you can include in your semester work, or classwork. But along the way, you also learned a lot more, and now you can navigate yourself with confidence in such complex interconnected systems and in between communicating nodes.</p>
+                <p>But wait! … (°_°)…</p>
+                <p>This is not yet the end, this is just the beginning, and now with all this knowledge in your pocket you can apply the stuff you learned here to study other interesting things, excitation sources, get creative. Spending quite some of my time to create this instructable after a regular job, so there might be places where something is written goofy, or something I forgot to mention.</p>
+                <p>I hope that you liked this instructable and could learn something new from it.</p>
+                <h4>References:</h4>
+                <ul>
+                    <li><a href="https://www.amazon.com/AVR-Programming-Learning-Software-Technology/dp/1449355781" target="_blank">https://www.amazon.com/AVR-Programming-Learning-Software-Technology/dp/1449355781</a></li>
+                    <li><a href="http://www2.me.rochester.edu/courses/ME443/Assignments/VibrationTesting.pdf" target="_blank">http://www2.me.rochester.edu/courses/ME443/Assignments/VibrationTesting.pdf</a></li>
+                    <li><a href="http://robotroom.com/" target="_blank">http://robotroom.com/</a></li>
+                </ul>
+                <div class="article-end-border"></div>
+            </div>
+        </article>
+    </main>
+                <!-- Big Footer -->
+    <div class="big-footer">
+        <div class="second-container">
+            <div class="footer-two-copyright">
+                <div>
+                    <a href="#"><img class="big-footer-logo" src="../images/logos/image_inverted_physalis_logo.png" alt=""></a>
+                </div>
+                <span>&copy; 2024 Beyond Future</span>
+            </div>
+            <div>
+                <h1>About us</h1>
+                <ul>
+                    <li><a href="#">Placeholder</a></li>
+                    <li><a href="../contact-us.html">CONTACT US</a></li>
+                    <li><a href="../blog.html">FAQs</a></li>
+                    <li><a href="#">Placeholder</a></li>
+                    <li><a href="#">Placeholder</a></li>
+                </ul>
+            </div>
+            <div>
+                <h1>Company</h1>
+                <ul>
+                    <li><a href="#">Placeholder</a></li>
+                    <li><a href="#">Placeholder</a></li>
+                    <li><a href="#">Placeholder</a></li>
+                    <li><a href="#">Placeholder</a></li>
+                    <li><a href="../blog.html">BLOG</a></li>
+                </ul>
+            </div>
+            <div class="socials">
+                <div class="big-footer-socials">
+                    <h1>Socials</h1>
+                        <a href="https://github.com/Physalis-Labs" target="_blank"><i class='bx bxl-github'></i></a>
+                        <a href="https://www.youtube.com/@physalislabs9881" target="_blank"><i class='bx bxl-youtube'></i></a>
+                        <a href="https://www.linkedin.com/company/physalis-labs/" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+                <!-- Footer -->
+    <footer>
+        <ul>
+            <li>PhysalisLabs &copy; 2024</li>
+            <li><a href="https://www.linkedin.com/company/physalis-labs/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.youtube.com/@physalislabs9881" target="_blank">YouTube</a></li>
+            <!--<li><a href="#">Instagram</a></li>
+            <li><a href="#">FLickr</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Suppliers</a></li>-->
+        <ul>
+    </footer>       
+</body>
+</html>
