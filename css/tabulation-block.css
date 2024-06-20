@@ -1,13 +1,13 @@
-/* Block in Kenjix1 page where is information with three tabs on the left side and image o nthe right side */
+/* Block in Information page where is information with three tabs on the left side and image on the right side */
 /* General styles */
 body {
     font-family: 'Familjen Grotesk', sans-serif;
     line-height: 1.6;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
 }
 
-/* Styles for the mission block section */
-.kenji_statistic_tab_section {
+/* Styles for the information block section */
+.information_block_section {
     background-color: black;
     overflow: hidden;
     position: relative;
@@ -16,19 +16,19 @@ body {
     border: 1px solid green;
 }
 
-.kenji_statistic_tab_right {
+.information_block_right {
     width: 50%;
     padding: 20px;
     float: right;
 }
 
-.kenji_statistic_tab_left {
+.information_block_left {
     width: 70%;
     padding: 20px;
     float: left;
 }
 
-.kenji_statistic_tab_right img {
+.information_block_right img {
     width: 50%; 
     height: auto;
     position: absolute;
@@ -37,7 +37,7 @@ body {
     transform: translateY(50%);
 }
 
-.kenji_statistic_tab_tabs {
+.information_block_tabs {
     display: flex;
     margin-bottom: 25px;
     margin-left: -15px;
@@ -45,13 +45,13 @@ body {
     align-items: flex-start;
 }
 
-.kenji_statistic_tab_left_content {
+.information_block_left_content {
     color: #fff;
     max-width: 80%;
 }
 
 /* Styles for the tabs and tab content */
-.kenji_statistic_tab_tabs {
+.information_block_tabs {
     display: flex;
     margin-bottom: 25px;
     margin-left: -15px;
@@ -59,7 +59,7 @@ body {
     align-items: flex-start;
 }
 
-.kenji_statistic_tab_tab {
+.information_block_tab {
     position: relative;
     display: flex;
     align-items: baseline;
@@ -69,7 +69,7 @@ body {
     color: #969696;
 }
 
-.kenji_statistic_tab_tab::before {
+.information_block_tab::before {
     content: "";
     position: absolute;
     bottom: -2px;
@@ -80,46 +80,46 @@ body {
     transition: width 0.3s ease;
 }
 
-.kenji_statistic_tab_tab:hover::before,
-.kenji_statistic_tab_tab.active:hover::before {
+.information_block_tab:hover::before,
+.information_block_tab.active:hover::before {
     width: 100%;
 }
 
-.kenji_statistic_tab_tab.active {
+.information_block_tab.active {
     color: #fff;
-    border-bottom: none; /* Remove border for active tab */
+    border-bottom: none;
 }
 
-.kenji_statistic_tab_tab:hover {
+.information_block_tab:hover {
     color: #fff;
 }
 
-.kenji_statistic_tab_tab_content {
+.information_block_tab_content {
     display: none;
 }
 
-.kenji_statistic_tab_tab_content.active {
+.information_block_tab_content.active {
     display: block;
 }
 
-.kenji_statistic_tab_table {
+.information_block_table {
     border-collapse: collapse;
     width: 90%;
     margin-top: 20px;
 }
 
-.kenji_statistic_tab_table td {
+.information_block_table td {
     padding: 5px;
     border-bottom: 1px solid #fff;
 }
 
-.kenji_statistic_tab_table span {
+.information_block_table span {
     font-weight: normal;
     font-size: 14px;
     color: #979797;
 }
 
-.kenji_statistic_tab_tab_content_table {
+.information_block_tab_content_table {
     width: 90%;
     margin-top: 20px;
 }
@@ -134,7 +134,7 @@ body {
     padding-right: 0; 
 }
 
-.kenji_statistic_tab_right h4 {
+.information_block_right h4 {
     font: 46px/50px Familjen Grotesk, sans-serif;
     font-weight: 700;
     font-size: 46px;
@@ -144,7 +144,7 @@ body {
     text-transform: uppercase;
 }
 
-.kenji_statistic_tab_left h2 {
+.information_block_left h2 {
     font: 16px/26px sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -155,7 +155,7 @@ body {
     margin-top: 5px;
 }
 
-.kenji_statistic_tab_left p {
+.information_block_left p {
     font: 12px/22px sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -167,14 +167,16 @@ body {
 }
 
 /* Styles for the paragraph and table in tab content */
-.kenji_statistic_tab_tab_content_text p {
+.information_block_tab_content_text p {
     font-size: 85%;
     word-wrap: break-word;
-    max-width: calc(100% - 150px); 
+    max-width: calc(100% - 80px); 
     margin-top: -40px;
+    text-align: justify;
+    line-height: 20px;
 }
 
-.kenji_statistic_tab_left_content h4 {
+.information_block_left_content h4 {
     font: 46px/50px Familjen Grotesk, sans-serif;
     font-size: 50px;
     font-weight: 400;
@@ -184,10 +186,116 @@ body {
     text-transform: uppercase;        
 }
 
-        /* Separator  */
+/* Separator  */
 .separator {
     width: 2px;
     height: 15px;
     background-color: #979797;
     margin: 15px 10px; 
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 960px) {
+    .information_block_section {
+        flex-direction: column;
+        height: auto;
+    }
+    .information_block_left, .information_block_right {
+        width: 100%;
+        padding: 10px;
+    }
+    .information_block_right img {
+        width: 100%;
+        position: static;
+        transform: none;
+        margin: 0 auto;
+    }
+    .information_block_left_content {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .information_block_section {
+        flex-direction: column;
+        height: auto;
+    }
+    .information_block_left, .information_block_right {
+        width: 100%;
+        padding: 5px;
+    }
+    .information_block_right img {
+        width: 100%;
+        position: static;
+        transform: none;
+        margin: 0 auto;
+    }
+    .information_block_tabs {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .information_block_tab {
+        margin: 5px 10px;
+    }
+    .information_block_left_content {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .information_block_section {
+        flex-direction: column;
+        height: auto;
+    }
+    .information_block_left, .information_block_right {
+        width: 100%;
+        padding: 5px;
+    }
+    .information_block_right img {
+        width: 100%;
+        position: static;
+        transform: none;
+        margin: 0 auto;
+    }
+    .information_block_tabs {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .information_block_tab {
+        margin: 5px 5px;
+    }
+    .information_block_left_content {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .information_block_section {
+        flex-direction: column;
+        height: auto;
+    }
+    .information_block_left, .information_block_right {
+        width: 100%;
+        padding: 5px;
+    }
+    .information_block_right img {
+        width: 100%;
+        position: static;
+        transform: none;
+        margin: 0 auto;
+    }
+    .information_block_tabs {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .information_block_tab {
+        margin: 5px 5px;
+    }
+    .information_block_left_content {
+        max-width: 100%;
+    }
 }
