@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <title>PhysalisLabs Shop</title>
+    <title>PhysalisLabs</title>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/hamburger.css">
     <link rel="stylesheet" href="css/shop.css">
-     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/shop-additional-items.css">
     <!-- Boxicons link -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <!-- Remix icons link -->
@@ -31,7 +32,9 @@
         <ul>
             <li><a href="kenji-x1.html">Kenji X1</a></li>
             <li><a href="geo-lab.html">Geo-Lab</a></li>
+            <li><a href="torch.html">Torch</a></li>
             <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="faq.html">FAQ</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="team.html">Team</a></li>
             <li><a href="contact-us.html">Contact</a></li>
@@ -55,10 +58,11 @@
                     <ul class="submenu">
                         <li><a href="kenji-x1.html">Kenji X1</a></li>
                         <li><a href="geo-lab.html">Geo-Lab</a></li>
-                        <li><a href="#">Torch</a></li>
+                        <li><a href="torch.html">Torch</a></li>
                     </ul>
                 </li>
                 <li><a href="documentation.html">Documentation</a></li> 
+                <li><a href="faq.html">FAQ</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="team.html">Team</a></li>
                 <li><a href="contact-us.html">Contact</a></li>
@@ -75,177 +79,244 @@
     </button>-->
     
                     <!-- Shop -->
-    <section"> <!-- style="min-height: 330vh; -->
-        <div class="shop_page_container">
-            <div class="main-wrapper">
-                <div class="container">
-                    <div class="product-div">
-                        <div class="product-div-left">
-                            <div class="img-container">
-                                <img id="imageBox" src="images/w1.png" alt="watch">
-                            </div>
-                            <div class="product-small-img">
-                                <img src="images/w2.png" onclick="myFunction(this)">
-                                <img src="images/w3.png" onclick="myFunction(this)">
-                                <img src="images/w4.png" onclick="myFunction(this)">
-                                <img src="images/w5.png" onclick="myFunction(this)">
-                                <img src="images/w6.png" onclick="myFunction(this)">
-                            </div>
+    <section class="product-section">
+        <div class="product-container">
+            <div class="product-wrapper">
+                <div class="product-content">
+                    <div class="product-left">
+                        <div class="image-container">
+                            <img id="mainImage" src="./images/Kenji-2.jpg" alt="Product Image">
                         </div>
-                        <div class="product-div-right">
-                            <div class="kenji_shop_info-block">
-                                <h2>Kenji X1</h2>
-                                <h2>Developer Kit</h2>
-                                <p>Lorem ipsum dolor sit amet is a Latin phrase that translates to "the pain of an average man." The phrase is used as a placeholder in web development because it is a common, standard way to fill up space with text</p>
-                                <div class="price-blocks">
-                                    <div class="price-block">
-                                        <h3>$100</h3>
-                                        <p>Self-assembly kit</p>
-                                    </div>
-                                    <div class="separator"></div>
-                                    <div class="price-block">
-                                        <h3>$150</h3>
-                                        <p>Assembled Kenji X1</p>
-                                    </div>
+                        <div class="thumbnails"><!--thumbnails-left-->
+                            <img src="./images/shop-1.png" data-src="./images/Kenji-2.jpg" onclick="changeImage(this)" onmouseover="hoverChangeImage(this)">
+                            <img src="./images/shop-2.png" data-src="./images/Kenji-5.jpg" onclick="changeImage(this)" onmouseover="hoverChangeImage(this)">
+                            <img src="./images/shop-3.png" data-src="./images/Kenji-9.jpg" onclick="changeImage(this)" onmouseover="hoverChangeImage(this)">
+                            <img src="./images/shop-4.png" data-src="./images/Kenji-11.jpg" onclick="changeImage(this)" onmouseover="hoverChangeImage(this)">
+                            <img src="./images/shop-5.png" data-src="./images/Kenji-6.jpg" onclick="changeImage(this)" onmouseover="hoverChangeImage(this)">
+                        </div>
+                    </div>
+                    <div class="product-right">
+                        <div class="product-info">
+                            <h2>Kenji X1</h2>
+                            <h3>Developer Kit</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero eu leo placerat, ac consequat purus eleifend. consectetur adipiscing elit. Nulla convallis libero eu leo placerat, ac consequat purus eleifend consectetur adipiscing elit. Nulla convallis libero eu leo placerat, ac consequat purus eleifend</p>
+                        </div>
+                        <div class="btn-group btn_line">
+                            <a href="#" class="btn_main btn_yellow_primary top-down">
+                                <div class="hover"></div>
+                                <span>Buy Now</span>
+                            </a>
+                            <a href="#" class="btn_main btn_yellow_primary right-left">
+                                <div class="hover"></div>
+                                <span>Buy Now</span>
+                            </a>
+                            <a href="#" class="btn_main btn_yellow_primary left-right">
+                                <div class="hover"></div>
+                                <span>Buy Now</span>
+                            </a>
+                        </div>
+                        <div class="price-info">
+                            <div class="price-option">
+                                <h4>$100</h4>
+                                <p>Self-assembly kit</p>
+                                <div class="btn-group">
+                                    <a href="#" class="btn_main btn_yellow_primary bottom-up">
+                                        <div class="hover"></div>
+                                        <span>Buy Now</span>
+                                    </a>
                                 </div>
-                                <div class="additional">
-                                    <a href="#">Learn more</a>
-                                    <a href="#">Specifications</a>
+                            </div>
+                            <div class="separator"></div>
+                            <div class="price-option">
+                                <h4>$150</h4>
+                                <p>Assembled Product</p>
+                                <div class="btn-group">
+                                    <a href="#" class="btn_main btn_yellow_primary top-down">
+                                        <div class="hover"></div>
+                                        <span>Buy Now</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <!-- <script>
-              function myFunction(smallImg) {
-                var fullImg = document.getElementById("imageBox");
-                fullImg.src = smallImg.src;
-              }
-            </script>-->
-            <!-- Content goes here -->
-            <!-- <div class="product">
-              <div class="product-small-img">
-                <img src="./images/shop/Kenji-11.jpg" onclick="myFunction(this)">
-                <img src="./images/shop/2.jpg" onclick="myFunction(this)">
-                <img src="./images/shop/3.jpg" onclick="myFunction(this)">
-                <img src="./images/shop/4.jpg" onclick="myFunction(this)">
-                <img src="./images/shop/5.jpg" onclick="myFunction(this)">
-              </div>
-              <div class="img-container">
-                <img id="imageBox" src="./images/shop/Kenji-6.jpg">
-              </div>
-            </div> -->
-          
-
-          <!-- <div class="kenji_shop_info-block">
-            <div>
-              <h2>Kenji X1</h2>
-              <h2>Developer Kit</h2>
-              <p>Lorem ipsum dolor sit amet is a Latin phrase that translates to "the pain of an average man." The phrase is used as a placeholder in web development because it is a common, standard way to fill up space with text</p>
-            </div>
-            <div class="price-blocks">
-              <div class="price-block">
-                <h3>$100</h3>
-                <p>Self-assembly kit</p>
-              </div>
-              <div class="separator"></div>
-              <div class="price-block">
-                <h3>$150</h3>
-                <p>Assembled Kenji X1</p>
-              </div>
-            </div>
-            <div class="learn-more">
-              <p>Learn more</p>
-              <p>Specifications</p>
-            </div>
-          </div> --> 
-
-            <!-- <div class="neum_wrapper">
-                <div class="neum_card">
-                    <div class="neum_question">
-                        <p class="neum_num">04/10</p>
-                        <p>What would you like to include?</p>
-                    </div>
-                    <div class="neum_filter">
-                        <h2>Add your current statements</h2>
-                        <p>lorem ipsum dolor sit amet</p>
-                        <div class="neum_cards">
-                            <input type="checkbox" name="house" id="house">
-                            <label for="house">
-                                <i class="fa-solid fa-house"></i>
-                                <p>House</p>
-                            </label>
-                            <input type="checkbox" name="car" id="car">
-                            <label for="car">
-                                <i class="fa-solid fa-car"></i>
-                                <p>Car</p>
-                            </label>
-                            <input type="checkbox" name="download" id="download">
-                            <label for="download">
-                                <i class="fa-solid fa-download"></i>
-                                <p>Download</p>
-                            </label>
-                            <input type="checkbox" name="coding" id="coding">
-                            <label for="coding">
-                                <i class="fa-solid fa-code"></i>
-                                <p>Coding</p>
-                            </label>
-                            <input type="checkbox" name="sliders" id="sliders">
-                            <label for="sliders">
-                                <i class="fa-solid fa-sliders"></i>
-                                <p>Sliders</p>
-                            </label>
-                            <input type="checkbox" name="binoculars" id="binoculars">
-                            <label for="binoculars">
-                                <i class="fa-solid fa-binoculars"></i>
-                                <p>Other</p>
-                            </label>
-                        </div>
-                        <div class="neum_selectedGoals">
-                            <h3>Your main saving goals</h3>
-                            <p>Set your saving progress</p>
-                        </div>
-                        <label for="money" id="fmoney">How much do you want to save each week?</label>
-                        <div class="neum_inputs">
-                            <input type="number" name="money" id="money" max="9000" placeholder="1.000$" max="">
-                        </div>
-                        <div class="neum_actions">
-                            <button>Previous</button>
-                                <button>Next</button>
+                        <div class="additional-info">
+                            <a href="#">Learn more</a>
+                            <a href="#">Specifications</a>
                         </div>
                     </div>
                 </div>
-            </div> -->
-
-               
-
-            <!-- <div class="quote-form">
-                <form id="quote-contactForm" name="quotecontactForm" method="post" action="#" class="form">
-                    <h3 class="form-title">Get a Quote</h3>
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    <label for="surname">Telephone</label>
-                    <input type="text" id="telephone" name="telephone" placeholder="Your Telephone" required>
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" placeholder="Your email address" required>
-                    <label for="message">Message *</label>
-                    <textarea id="message" name="message" placeholder="Your message" required></textarea>
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="Subject of your message">
-                    <a href="#" class="btn">
-                        <div class="hover"></div>
-                        <span>Submit</span>
-                    </a>
-                </form>
-                <div class="quote-form-response">
-                    <div class="success-message">Thank you! Your message has been sent.</div>
-                    <div class="error-message">Oops! Something went wrong. Please try again later.</div>
+                <div class="arrow-container">
+                    <svg class="arrow-down" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 16L6 10H18L12 16Z" fill="currentColor"/>
+                    </svg>
                 </div>
-            </div> -->
+            </div>
+        </div>
+    </section>
 
-            <div class="physalislabs_shop_kenji_container kenji_price_info">
-                <div class="physalislabs_shop_kenji_robot_card flex-item-left">
+    <!-- Product options -->
+     <div class="shop-container">
+        <!-- Base Package -->
+        <div class="shop-product-block">
+            <h2>Base Package</h2>
+            <p>BlueROV2 Base Package</p>
+            <div class="shop-product-option">
+                <label for="shop-tube-config">Tube Configuration <span>*</span></label>
+                <select id="shop-tube-config" name="shop-tube-config">
+                    <option value="acrylic-100m">Acrylic - 100 m</option>
+                </select>
+                <img src="./images/Kenji-2.jpg" alt="Product Image">
+                <p>SKU: BR-100415</p>
+                <p>HS Code: 9015.80.8080</p>
+                <p class="shop-price">$4,250.00</p>
+                <p>In stock</p>
+            </div>
+        </div>
+        
+        <!-- Heavy Configuration Add-on -->
+        <div class="shop-product-block">
+            <h2>Heavy Configuration Add-on</h2>
+            <div class="shop-product-option">
+                <label for="shop-heavy-config">Available options:</label>
+                <select id="shop-heavy-config" name="shop-heavy-config">
+                    <option value="none">No Heavy Configuration Add-on</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- Tether -->
+        <div class="shop-product-block">
+            <h2>Tether</h2>
+            <div class="shop-product-option">
+                <label for="shop-tether-type">Available options:</label>
+                <select id="shop-tether-type" name="shop-tether-type">
+                    <option value="fathom-rov">Fathom ROV Tether (ROV-ready)</option>
+                </select>
+                <p>Your selection:</p>
+                <p>Fathom ROV Tether (ROV-ready)</p>
+                <a href="#">Clear selection</a>
+                <img src="./images/Kenji-2.jpg" alt="Tether Image">
+                <label for="shop-twisted-pairs">Twisted Pairs <span>*</span></label>
+                <select id="shop-twisted-pairs" name="shop-twisted-pairs">
+                    <option value="4">4</option>
+                </select>
+                <label for="shop-tether-length">Tether Length (m) <span>*</span></label>
+                <select id="shop-tether-length" name="shop-tether-length">
+                    <option value="100m">100 m (330 ft)</option>
+                </select>
+                <p>SKU: BR-100862-100</p>
+                <p>HS Code: 8544.11.00.30</p>
+                <p class="shop-price">$750.00</p>
+                <p>In stock</p>
+            </div>
+        </div>
+        
+        <!-- Lights -->
+        <div class="shop-product-block">
+            <h2>Lights</h2>
+            <div class="shop-product-option">
+                <label for="shop-lights-type">Available options:</label>
+                <select id="shop-lights-type" name="shop-lights-type">
+                    <option value="lumen-subsea">Lumen Subsea Light (Pre-Connected Sets)</option>
+                </select>
+                <p>Your selection:</p>
+                <p>Lumen Subsea Light (Pre-Connected Sets)</p>
+                <a href="#">Clear selection</a>
+                <img src="./images/Kenji-2.jpg" alt="Lights Image">
+                <label for="shop-num-lights">Number of Lights <span>*</span></label>
+                <select id="shop-num-lights" name="shop-num-lights">
+                    <option value="2">2</option>
+                </select>
+                <p>SKU: BR-100717</p>
+                <p>HS Code: 9405.40.6000</p>
+                <p class="shop-price">$350.00</p>
+                <p>In stock</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Product options end -->
+
+
+    <!-- More Products part -->
+    <div class="additional-items-block">
+        <div class="additional-items-block-content">
+            <img src="https://placehold.co/400">
+            <h3>Battery</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+            <h6>$100.00</h6>
+            <ul>
+                <li><ion-icon name="star"></ion-icon></li>
+                <li><ion-icon name="star"></ion-icon></li>
+                <li><ion-icon name="star"></ion-icon></li>
+                <li><ion-icon name="star-half"></ion-icon></li>
+                <li><ion-icon name="star-outline"></ion-icon></li>
+            </ul>
+            <!-- <button class="buy-1">Buy Now</button> -->
+            <a href="#" class="btn_main btn_yellow_primary top-down">
+                <div class="hover"></div>
+                <span>Purchase</span>
+            </a>
+        </div>
+        <div class="additional-items-block-content">
+            <img src="https://placehold.co/400">
+            <h3>Arm</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+            <h6>$130.00</h6>
+            <ul>
+                <li><ion-icon name="star"></ion-icon></li>
+                <li><ion-icon name="star"></ion-icon></li>
+                <li><ion-icon name="star"></ion-icon></li>
+                <li><ion-icon name="star-half"></ion-icon></li>
+                <li><ion-icon name="star-outline"></ion-icon></li>
+            </ul>
+            <!-- <button class="buy-2">Buy Now</button> -->
+            <a href="#" class="btn_main btn_yellow_primary bottom-up">
+                <div class="hover"></div>
+                <span>Purchase</span>
+            </a>
+        </div>
+        <div class="additional-items-block-content">
+            <img src="https://placehold.co/400">
+            <h3>Caterpillar</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+            <h6>$70.00</h6>
+            <ul>
+                <li><ion-icon name="star"></ion-icon></li>
+                <li><ion-icon name="star"></ion-icon></li>
+                <li><ion-icon name="star"></ion-icon></li>
+                <li><ion-icon name="star-half"></ion-icon></li>
+                <li><ion-icon name="star-outline"></ion-icon></li>
+            </ul>
+            <!-- <button class="buy-3">Buy Now</button> -->
+            <a href="#" class="btn_main btn_yellow_primary bottom-up">
+                <div class="hover"></div>
+                <span>Purchase</span>
+            </a>
+        </div>
+        <div class="additional-items-block-content">
+            <img src="https://placehold.co/400">
+            <h3>Anthena</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+            <h6>$200.00</h6>
+            <ul>
+                <li><ion-icon name="star"></ion-icon></li>
+                <li><ion-icon name="star"></ion-icon></li>
+                <li><ion-icon name="star"></ion-icon></li>
+                <li><ion-icon name="star-half"></ion-icon></li>
+                <li><ion-icon name="star-outline"></ion-icon></li>
+            </ul>
+            <!-- <button class="buy-4">Buy Now</button> -->
+            <a href="#" class="btn_main btn_yellow_primary top-down">
+                <div class="hover"></div>
+                <span>Purchase</span>
+            </a>
+        </div>
+    </div>      <!-- More Products part end -->
+
+    <section class="shop-pricing-section">
+        <div class="shop-pricing">
+            <div class="shop-pricing-row">
+                <div class="shop-pricing-column">
                     <h2>Testing Kenji Kit</h2>
                     <h4>Free</h4>
                     <span>Duration 1 Month</span>
@@ -256,12 +327,12 @@
                         <li>✕Lorem ipsum</li>
                         <li>✕Lorem ipsum</li>
                     </ul>
-                    <a href="#" class="btn">
+                    <a href="#" class="btn_main_primary">
                         <div class="hover"></div>
                         <span>Purchase</span>
                     </a>
                 </div>
-                <div class="physalislabs_shop_kenji_robot_card flex-item-left">
+                <div class="shop-pricing-column">
                     <h2>Self-assembly kit</h2>
                     <h4>$2400 / item</h4>
                     <span>3,000 monthly visitors</span>
@@ -272,36 +343,31 @@
                         <li>✕Lorem ipsum</li>
                         <li>✕Lorem ipsum</li>
                     </ul>
-                    <a href="#" class="btn">
+                    <a href="#" class="btn_main btn_yellow_primary top-down">
                         <div class="hover"></div>
                         <span>Purchase</span>
                     </a>
                 </div>
-                <div class="physalislabs_shop_kenji_robot_card flex-item-right">
+                <div class="shop-pricing-column">
                     <h2>Assembled Kenji X1</h2>
                     <h4>$3000 / item</h4>
                     <span>10,000 monthly visitors</span>
                     <ul>
                         <li>✓Unlimited Reports</li>
-                        <li>✓15-days free trial</li>   
+                        <li>✓15-days free trial</li>
                         <li>✓Data storage for 3 year</li>
-                        <li>✓Data storage for 3 year</li>
-                        <li>✓Data storage for 3 year</li>
+                        <li>✓Lorem ipsum</li>
+                        <li>✓Lorem ipsum</li>
                     </ul>
-                    <a href="#" class="btn">
+                    <a href="#" class="btn_main_primary">
                         <div class="hover"></div>
                         <span>Purchase</span>
                     </a>
                 </div>
             </div>
-
-            </div>
-
-            
-
-
-
+        </div>
     </section>
+    
     
                 <!-- Footer -->
     <footer>
@@ -340,6 +406,7 @@
         lastScroll = scrollPosition();
     });
     </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
-<!--<script src="js/script.js"></script>--><!-- Script placement: Ensure that your JavaScript code is placed after the HTML element or after the DOM (Document Object Model) has loaded. Placing the script in the <head> section without any waiting mechanism may cause the code to execute before the element is available in the DOM. -->
