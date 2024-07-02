@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const tabs = document.querySelectorAll('.kenji_statistic_tab_tab');
-    const tabContents = document.querySelectorAll('.kenji_statistic_tab_tab_content');
-    const images = ['./images/Merlin.jpg', './images/MerlinVac.jpg', './images/Dragon.jpg'];
+    const tabs = document.querySelectorAll('.information_block_tab');
+    const tabContents = document.querySelectorAll('.information_block_tab_content');
+    const images = ['https://placehold.co/500x500', 'https://placehold.co/550x400', 'https://placehold.co/450x400'];
 
     tabs.forEach((tab, index) => {
         tab.addEventListener('click', () => {
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
             tabContents[index].classList.add('active');
 
             // Change image based on the clicked tab
-            document.querySelector('.kenji_statistic_tab_right img').src = images[index];
+            document.querySelector('.information_block_right img').src = images[index];
         });
     });
 });

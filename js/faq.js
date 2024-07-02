@@ -2,7 +2,6 @@
 //     [...document.getElementsByClassName('open-answer')].forEach(ans => ans.classList.remove('open-answer'));
 //     document.getElementById(`answer_${number}`).classList.toggle('open-answer');
 // }
-document.addEventListener('DOMContentLoaded', function() {
     function openAnswer(number) {
         // Close all other answers
         [...document.getElementsByClassName('answer')].forEach((ans, index) => {
@@ -22,4 +21,3 @@ document.addEventListener('DOMContentLoaded', function() {
         answer.previousElementSibling.querySelector('.addanswer').style.display = isOpen ? 'none' : 'inline';
         answer.previousElementSibling.querySelector('.removeanswer').style.display = isOpen ? 'inline' : 'none';
     }
-}); // END DOMContentLoaded

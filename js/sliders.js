@@ -1,94 +1,71 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // First Gallery Slider
-    const kenjiSlider = document.querySelector(".kenji_page_slider.gallery-slider");
-    const kenjiSlides = kenjiSlider.querySelectorAll(".kenji_page_slider_slide");
-    const kenjiDots = document.querySelectorAll(".kenji_page_slider.kenji_page_slider_dot");
-    const kenjiPrevSlideBtn = document.querySelector(".kenji_page_slider.prev-slide");
-    const kenjiNextSlideBtn = document.querySelector(".kenji_page_slider.next-slide");
-    let kenjiCurrentSlide = 0;
+    // Main Slider
+    const mainSlider = document.querySelector(".main_slider.gallery-slider");
+    const mainSlides = mainSlider.querySelectorAll(".main_slider_slide");
+    const mainDots = document.querySelectorAll(".main_slider_dot");
+    const mainPrevSlideBtn = document.querySelector(".main_slider .prev-slide");
+    const mainNextSlideBtn = document.querySelector(".main_slider .next-slide");
+    let mainCurrentSlide = 0;
 
-    function showKenjiSlide(index) {
-        kenjiSlides.forEach((slide, i) => {
-            if (i === index) {
-                slide.style.display = "block";
-            } else {
-                slide.style.display = "none";
-            }
+    function showMainSlide(index) {
+        mainSlides.forEach((slide, i) => {
+            slide.style.display = i === index ? "block" : "none";
         });
 
         // Toggle previous and next slide buttons
-        if (index === 0) {
-            kenjiPrevSlideBtn.classList.add('inactive');
-        } else {
-            kenjiPrevSlideBtn.classList.remove('inactive');
-        }
-
-        if (index === kenjiSlides.length - 1) {
-            kenjiNextSlideBtn.classList.add('inactive');
-        } else {
-            kenjiNextSlideBtn.classList.remove('inactive');
-        }
+        mainPrevSlideBtn.classList.toggle('inactive', index === 0);
+        mainNextSlideBtn.classList.toggle('inactive', index === mainSlides.length - 1);
 
         // Toggle active and inactive dots
-        kenjiDots.forEach((dot, i) => {
-            if (i === index) {
-                dot.classList.add('active');
-            } else {
-                dot.classList.remove('active');
-            }
+        mainDots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
         });
     }
 
     // Show initial slide
-    showKenjiSlide(kenjiCurrentSlide);
+    showMainSlide(mainCurrentSlide);
 
     // Event listener for previous slide button
-    kenjiPrevSlideBtn.addEventListener("click", function() {
-        if (kenjiCurrentSlide > 0) {
-            kenjiCurrentSlide--;
-            showKenjiSlide(kenjiCurrentSlide);
+    mainPrevSlideBtn.addEventListener("click", function() {
+        if (mainCurrentSlide > 0) {
+            mainCurrentSlide--;
+            showMainSlide(mainCurrentSlide);
         }
     });
 
     // Event listener for next slide button
-    kenjiNextSlideBtn.addEventListener("click", function() {
-        if (kenjiCurrentSlide < kenjiSlides.length - 1) {
-            kenjiCurrentSlide++;
-            showKenjiSlide(kenjiCurrentSlide);
+    mainNextSlideBtn.addEventListener("click", function() {
+        if (mainCurrentSlide < mainSlides.length - 1) {
+            mainCurrentSlide++;
+            showMainSlide(mainCurrentSlide);
         }
     });
 
-    // Second Gallery Slider
-    const gallerySlider = document.querySelector(".section-gallery .gallery-slider.kenji_down_slider");
+    // Event listener for dots
+    mainDots.forEach((dot, index) => {
+        dot.addEventListener("click", function() {
+            mainCurrentSlide = index;
+            showMainSlide(mainCurrentSlide);
+        });
+    });
+
+    // Gallery Slider
+    const gallerySlider = document.querySelector(".section-gallery .gallery-slider.down_slider");
     const gallerySlides = gallerySlider.querySelectorAll(".slide");
-    const galleryPrevSlideBtn = document.querySelector(".kenji_down_slider .prev-slide");
-    const galleryNextSlideBtn = document.querySelector(".kenji_down_slider .next-slide");
-    const gallerySlideInfo = gallerySlider.querySelector(".slide-info").querySelectorAll("p");
+    const galleryPrevSlideBtn = document.querySelector(".down_slider .prev-slide");
+    const galleryNextSlideBtn = document.querySelector(".down_slider .next-slide");
+    const gallerySlideInfo = gallerySlider.querySelectorAll(".slide-info p");
     let galleryCurrentSlide = 0;
 
     function showGallerySlide(index) {
         gallerySlides.forEach((slide, i) => {
-            if (i === index) {
-                slide.style.display = "block";
-                gallerySlideInfo[i].style.display = "block"; // Show slide info for current slide
-            } else {
-                slide.style.display = "none";
-                gallerySlideInfo[i].style.display = "none"; // Hide slide info for other slides
-            }
+            slide.style.display = i === index ? "block" : "none";
+            gallerySlideInfo[i].style.display = i === index ? "block" : "none";
         });
 
         // Toggle previous and next slide buttons
-        if (index === 0) {
-            galleryPrevSlideBtn.classList.add('inactive');
-        } else {
-            galleryPrevSlideBtn.classList.remove('inactive');
-        }
-
-        if (index === gallerySlides.length - 1) {
-            galleryNextSlideBtn.classList.add('inactive');
-        } else {
-            galleryNextSlideBtn.classList.remove('inactive');
-        }
+        galleryPrevSlideBtn.classList.toggle('inactive', index === 0);
+        galleryNextSlideBtn.classList.toggle('inactive', index === gallerySlides.length - 1);
     }
 
     // Show initial slide

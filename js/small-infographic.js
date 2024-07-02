@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Reset color of previously clicked dot and callout
             if (activeDot) {
                 activeDot.classList.remove("is-active");
+                activeDot.classList.remove("is-clicked");
                 const activeCalloutIndex = parseInt(activeDot.dataset.callout) - 1;
                 if (activeCalloutIndex >= 0 && activeCalloutIndex < callouts.length) {
                     callouts[activeCalloutIndex].style.borderColor = "#fff"; // Reset border color of previous callout
@@ -44,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // Change color of the clicked dot and border color of all callouts
             dot.classList.add("is-active");
+            dot.classList.add("is-clicked");
             activeDot = dot; // Update active dot
             callouts.forEach(callout => {
                 callout.style.borderColor = "#ADD8E6"; // Change border color of all callouts
