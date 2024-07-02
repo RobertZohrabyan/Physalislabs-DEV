@@ -258,7 +258,7 @@ section {
 
 /* Connect right dots to respective callouts */
 .kenjix1_point_dot.right-1::before {
-    width: 200px; 
+    width: 130px; 
     height: 1px; 
     top: 7px;
     left: 14px;
