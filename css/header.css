@@ -95,6 +95,10 @@ ul {
     width: max-content;
 }
 
+ul.submenu  {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
 .desktop-main-menu ul li:hover .submenu {
     display: block;
 }
@@ -134,7 +138,6 @@ ul {
     top: calc(100% - 5px); 
     left: -5px; 
     padding: 0;
-    background: transparent;
     width: max-content;
 }
 
