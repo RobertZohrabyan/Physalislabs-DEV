@@ -169,7 +169,8 @@ body {
     }
 
     .card-image img {
-      margin-left: 0px;
+      max-width: 100%;
+      margin-left: 23px;
     }
 
     .card-link{
@@ -214,7 +215,6 @@ body {
 
     .card-image img {
       max-width: 100%;
-      width: 600px;
     }
 
     .card-link{
@@ -250,9 +250,5 @@ body {
 @media (min-width: 600px) and (max-width: 960px) {
   .card {
     width: 48%;
-  }
-  .card-image img {
-    max-width: 100%;
-    width: 600px;
   }
 }

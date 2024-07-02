@@ -61,8 +61,8 @@ section {
 
 .section-g .section-inner {
 	position: absolute;
-	bottom: 200px;
-	left: 500px;
+	bottom: 150px;
+	/*left: 500px;*/
 	max-width: 560px;
 }
 
@@ -72,6 +72,7 @@ section {
 	margin-bottom: 20px;
 	margin: 0 auto;
 	animation: fadeInUp 0.5s ease-in-out;
+	text-transform: none;
 }
 
 .section-inner h4 {
@@ -99,10 +100,8 @@ section {
 	animation: fadeInUp 0.5s ease-in-out 0.4s;
 	animation-fill-mode: both; 
 }
-
 	/* Background images */
 		/* Section A */
-
 .section-a {
 	background-image: url('../images/kenji-x1/Baseboard_opened_Image_1.png');
 }
@@ -128,7 +127,7 @@ section {
 }
 
 .section-g {
-	background-image: url('../images/.jpg');
+	background-image: url('../images/kenji-x1/.jpg');  /* Suppliers */
 }
 
 .section-h {
@@ -139,9 +138,9 @@ section {
 	background-image: url('../images/.jpg');
 }
 
-.section-g {
-    background-image: url('../images/.jpg'); /* Suppliers*/
-    margin-top: 200px; /* Add margin-top to push the section down */
+.section-j {
+    background-image: url('../images/.jpg'); 
+    margin-top: 200px; 
 }
 
 .btn {
@@ -270,12 +269,12 @@ section {
 	background-image: url('../images/kenji-x1.jpg');
 }
 
-.bg-falcon-heavy {
-	background-image: url('../images/7.jpg');
+.bg-geo-lab {
+	background-image: url('../images/geo-lab/Physalis_GEO.Lab_CAD.png');
 }
 
-.bg-dragon {
-	background-image: url('../images/9.jpg');
+.bg-torch {
+	background-image: url('../images/kenji-x1/torch.png');
 }
 
 .bg-team {
@@ -325,31 +324,6 @@ section {
         strokeDashoffset: 0;
     }
 }
-
-.r { 
-	position: absolute;
-	top: 50%;
-	left: 10%;
-	/*transform: translate(-50%, -50%);*/
-	text-transform: uppercase;
-	text-align: center;
-	width: 80%;
-}
-
-.r p {
-	font-size: 13px;
-	/*animation: fadeInUp 0.5s ease-in-out 0.2s;*/
-	animation-fill-mode: both;
-}
-
-/*section.strip {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background: var(--dark);
-    padding: 50px 0;
-}*/
-
 			/*Documentation*/
 #techdoc_navbar {
     position: fixed;
@@ -420,13 +394,17 @@ section {
 	display: block;
 }
 
+.techdoc_main_section p {
+
+}
+
 .techdoc_main_section {
 	/*margin: 100px 0px;*/
 }
 
 .techdoc_main_section img {
     width: 700px;
-    height: 700px;
+    height: auto;
     border: 1px solid green;
 }
 
@@ -493,6 +471,19 @@ code {
 		border-bottom: 2px solid white;
 	}
 }
+/* Styles and blocks took from one of the git hub examples */
+/* strip is showing call to action block with button and text */
+
+section.strip {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--dark);
+    /*padding: 50px 0;*/
+    height: 150px;
+}
+
+/* Styles for the block where the kenji robot image is moving and showing information */
 
 section.rocket {
     display: grid;
@@ -548,6 +539,9 @@ section.rocket .block h1.with-underline:before {
 
 section.rocket p {
     line-height: 1.6;
+    font-size: 12px;
+    text-transform: none;
+    font-family: 'Familjen Grotesk', sans-serif;
 }
 
 section.rocket .block h2 {
@@ -713,7 +707,6 @@ section.rocket .rocket-body span.active:nth-child(1) {
 	justify-content: space-between;
 	text-align: center;
 	text-transform: uppercase;
-	border: 1px solid green;
 }
 
 .stats div span {
@@ -776,18 +769,18 @@ section.rocket .rocket-body span.active:nth-child(1) {
 
 		/* Media Queries */
 @media(max-width: 1024px){ 
-	.kenji_information-inner {
+	.footer-two-inner {
 	    position: absolute;
 		top: 50%;
 	}
-	.kenji_information-inner a {
+	.footer-two-inner a {
 		padding: 12px 18px;
 	}
-	.kenji_information-inner a:first-of-type {
+	.footer-two-inner a:first-of-type {
 		margin-right: 10px;
 	}
 	
-	.kenji_information-inner .vertical-line{
+	.footer-two-inner .vertical-line{
 		height: 60%;
 		margin-bottom: 25px;
 	}
@@ -918,10 +911,9 @@ section.rocket .rocket-body span.active:nth-child(1) {
 
 }
 
-/* section kenji information*/
-
-section.kenji_information {
-	display: flex;
+/* section footer two */
+section.footer-two {
+    display: flex;
     align-items: self-end;
     justify-content: center;
     position: relative;
@@ -930,21 +922,18 @@ section.kenji_information {
     background-repeat: no-repeat;
     background-size: cover;
     text-transform: uppercase;
-    background-color: #000;
-    border: 1px solid green;
 }
 
-.kenji_information-inner {
+.footer-two-inner {
     transform: translate(-50%, -50%);
     max-width: 560px;
     opacity: 0;
     animation: fadeInUp 0.5s ease-in-out 0.2s forwards;
     font-family: 'Familjen Grotesk', sans-serif;
-    background: #000;
     color: #fff;
 }
 
-.kenji_information-inner p {
+.footer-two-inner p {
     font-size: 12px;
     font-weight: 200;
     opacity: 0;
@@ -954,7 +943,7 @@ section.kenji_information {
     text-transform: none;
 }
 
-.kenji_information-inner a {
+.footer-two-inner a {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 0.5s ease-in-out 0.9s forwards;
@@ -972,10 +961,122 @@ section.kenji_information {
     background-color: #fff;
 }
 
+/* Animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation 1: as it is now */
+.footer-two.animation-1 .vertical-line {
+    animation: fadeInUp 0.75s ease-in-out 0.3s forwards;
+}
+
+.footer-two.animation-1 .footer-two-inner p {
+    animation: fadeInUp 0.7s ease-in-out 0.5s forwards;
+}
+
+.footer-two.animation-1 .footer-two-inner a {
+    animation: fadeInUp 0.7s ease-in-out 0.8s forwards;
+}
+
+/* Animation 2: separator, paragraph, link, button1, button2 */
+.footer-two.animation-2 .vertical-line {
+    animation: fadeInUp 0.3s ease-in-out 0.2ss forwards;
+}
+
+.footer-two.animation-2 .footer-two-inner p {
+    animation: fadeInUp 0.6s ease-in-out 0.3s forwards;
+}
+
+.footer-two.animation-2 .footer-two-inner a[href="mailto:purchase@physalislabs.org"] {
+    animation: fadeInUp 0.6s ease-in-out 0.5s forwards;
+}
+
+.footer-two.animation-2 .footer-two-inner a.btn:nth-of-type(1) {
+    animation: fadeInUp 0.6s ease-in-out 0.7s forwards;
+}
+
+.footer-two.animation-2 .footer-two-inner a.btn:nth-of-type(2) {
+    animation: fadeInUp 0.6s ease-in-out 0.9s forwards;
+}
+
 .content-center {
     text-align: center;
 }
 
+/* CSS for footer-two-version-two */
+
+.footer-two-version-two {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    position: relative;
+    padding: 20px; 
+}
+
+.footer-two-version-two .footer-two-inner {
+    width: 100%;
+    max-width: 560px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Familjen Grotesk', sans-serif;
+    transform: translate(-50%, -50%);
+  	opacity: 0;
+  	animation: fadeInUp 0.5s ease-in-out 0.3s forwards;
+}
+
+.footer-two-version-two .paragraph-and-link {
+    margin-bottom: 130px;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-in-out 0.5s forwards;
+}
+
+.footer-two-version-two .vertical-line {
+    position: absolute;
+    top: 15%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 100px;
+    background-color: #fff;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-in-out 0.7s forwards;
+}
+
+.footer-two-version-two .footer-two-content {
+    text-align: center;
+    margin-top: 100px;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-in-out 0.9s forwards;
+}
+
+.footer-two-version-two .btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    margin-bottom: 50px;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-in-out 1.1s forwards;
+}
+
+.footer-two-version-two .btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Buttons */
 .btn {
     font: 22px 'Familjen Grotesk', sans-serif;
     position: relative;
@@ -1095,9 +1196,7 @@ a {
 	font-size: 15px;
 	color: #999;
 }
-
 			/* About */
-
 .about {
 	display: flex;
 	justify-content: space-between;
@@ -1172,12 +1271,21 @@ a {
 }
 
 /*Suppliars section supplier-btn*/
-
-
 .row {
-	width: 960px;
+   width: 960px;
+   text-align: left;
 }
 
+.row h3 {
+	margin-bottom: 20px;
+}
+
+.row p {
+	line-height: 1.6;
+	font-size: 14px;
+	font-weight: 400;
+	margin-top: 10px;
+}
 
 .supplier-btn {
 	position: relative;
@@ -1215,17 +1323,22 @@ a {
 	transform: translateY(0);	
 }
 
+.btn-supplier-left {
+	float: left;
+}
+
 .btn-supplier-right {
-	position: absolute;
-  	top: 186px;
-  	left: 370px;
+	/*position: absolute;
+  	top: 100px;
+  	left: 280px;*/
+  	float: left;
+  	margin-left: 50px;
 }
 		/* Partners logos in index page */
 .our_suppliers_section {
   position: relative;
   height: auto;
   overflow: hidden;
-  border: 1px solid green;
   background-color: #fff;
   padding: 20px;
 }

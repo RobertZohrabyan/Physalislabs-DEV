@@ -1,0 +1,129 @@
+/*body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background: #f2f2f2;
+}*/
+
+.additional-items-block h3 {
+	text-align: center;
+	font-size: 30px;
+	margin: 0;
+	padding-top: 10px;
+}
+
+.additional-items-block a {
+	text-decoration: none;
+}
+
+.additional-items-block {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	margin: 50px 0;
+}
+
+.additional-items-block-content {
+	width: 20%;
+	margin: 15px;
+	box-sizing: border-box;
+	float: left;
+	text-align: center;
+	border-radius: 20px;
+	cursor: pointer;
+	padding-top: 10px;
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+	transition: .4s;
+	/*background: #f2f2f2;*/
+	border: 1px solid #fff;
+}
+
+.additional-items-block-content:hover {
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+	transform: translate(0px, -8px);
+}
+
+.additional-items-block-content img {
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+}
+
+
+.additional-items-block-content p {
+	text-align: center;
+	color: #b2bec3;
+	padding-top: 0 8px;
+}
+
+.additional-items-block-content h6 {
+	font-size: 26px;
+	text-align: center;
+	color: #fff;
+	margin: 0;
+}
+
+.additional-items-block-content ul {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+}
+
+.additional-items-block-content li {
+	padding: 5px;
+}
+
+ion-icon {
+	font-size: 26px;
+	transition: .4s;
+}
+
+/* checked and hover icons */
+
+button {
+	text-align: center;
+	font-size: 24px;
+	color: #fff;
+	width: 100%;
+	padding-top: 15px;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+	margin-top: 5px;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+
+.buy-1 {
+	background: #2183a2;
+}
+
+.buy-2 {
+	background: #3b3e6e;
+}
+
+.buy-3 {
+	background: #0b0b0b;
+}
+
+.buy-4 {
+	background: #ff9f43;
+}
+
+@media(max-width: 1000px){
+	.content {
+		width: 45%;
+	}
+}
+
+@media(max-width: 750px){
+	.content {
+		width: 100%;
+	}
+}

@@ -1,8 +1,9 @@
-*, *::before, *::after {
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
+
 body {
 	font-family: 'Familjen Grotesk', sans-serif;
 	background: #000;
@@ -22,7 +23,6 @@ ul {
 footer {
 	position: relative;
 	padding: 55px 0;
-	border: 1px solid green;
 }
 
 footer ul {

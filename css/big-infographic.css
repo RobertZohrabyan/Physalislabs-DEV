@@ -1,6 +1,5 @@
 body {
   background-color: #000;
-  /*color: #fff;*/
   font-family: 'Familjen Grotesk', sans-serif;
 }
 
@@ -60,17 +59,17 @@ body {
 
 .cogwheel-2 {
   top: 270px;
-  left: 450px;
+  left: 460px;
 }
 
 .cogwheel-3 {
-  top: 90px;
-  left: 707px;
+  top: 100px;
+  left: 720px;
 }
 
 .cogwheel-4 {
   top: 270px;
-  left: 740px;
+  left: 755px;
 }
 
 .cogwheel-5 {
@@ -195,11 +194,11 @@ body {
 
 .infographic-logo {
   position: absolute;
-  width: 220px;
-  height: 120px;
+  width: 50px;
+  height: 50px;
   display: none;
-  top: -100px; 
-  left: 20%;
+  top: -50px; 
+  left: 40%;
   transform: translateX(-50%);
 }
 
@@ -210,17 +209,20 @@ body {
 .modal {
   display: none;
   position: absolute;
-  width: 200px; 
-  height: 200px;
-  border: 1px solid green;
+  width: 300px; 
+  height: auto;
+  border: none;
   background-color: #fff;
   overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
 }
 
 /* Adjust modal positions */
 #modal-1 {
-  left: 50px;
-  top: 370px;
+  left: 100px;
+  top: 150px;
 }
 
 #modal-2 {
@@ -229,62 +231,58 @@ body {
 }
 
 #modal-3 {
-  left: 200px;
-  top: 10px;
+  left: 100px;
+  top: 150px;
 }
 
 #modal-4 {
-  left: 800px;
-  top: 10px;
+  left: 850px;
+  top: 50px;
 }
 
 #modal-5 {
-  left: 200px;
-  top: 10px;
+  left: 850px;
+  top: 50px;
 }
 
 #modal-6 {
-  left: 900px;
-  top: 350px;
+  left: 850px;
+  top: 50px;
 }
 
 #modal-7 {
-  left: 900px;
-  top: 200px;
-}
-
-.modal img {
-  width: 200px;
-  height: 200px;
-}
-
-.modal video {
-  width: 200px;
-  height: 200px;
+  left: 850px;
+  top: 50px;
 }
 
 .modal-content {
-  /*padding: 20px;*/
+  padding: 10px;
+  text-align: left;
 }
 
 .modal-content h2 {
   color: #000;
-  font-size: 18px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-family: 'Familjen Grotesk', sans-serif;
 }
 
 .modal-content p {
-  margin-top: 5px;
   font-size: 14px;
-  font-size: 11px;
   font-weight: 200;
-  margin-bottom: 3px;
-  color: #000;
-  text-transform: none;
+  margin-bottom: 15px;
+  color: #333;
+  text-transform: lowercase;
 }
 
-.modal-content img {
-  width: 200px;
-  height: 200px;
-  border: 1px solid green;
-  margin: 0 auto;
+.modal-content img, .modal-content video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid black;
+  margin-top: 10px;
+}
+
+.modal-content video {
+  max-height: 300px;
 }
