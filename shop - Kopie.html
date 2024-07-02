@@ -24,6 +24,132 @@
 
     <script src="js/shop.js"></script>
     <script src="js/script.js"></script>
+
+
+    <style>
+        @media (max-width: 600px) {
+            .product-left,
+            .product-right {
+                padding: 5px;
+            }
+
+            .product-info h2 {
+                font-size: 20px;
+            }
+
+            .product-info h3 {
+                font-size: 16px;
+            }
+
+            .product-info p {
+                font-size: 14px;
+            }
+
+            .price-option h4 {
+                font-size: 20px;
+            }
+
+            .btn_line {
+                flex-direction: column;
+                width: 45%;
+                margin: 0 auto;
+            }
+
+            .separator {
+                width: 1px;
+                height: 90px;
+                background-color: #fff;
+                margin: 0 10px;
+            }
+
+            .shop-pricing-column {
+                max-width: calc(50% - 20px);
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 960px) {
+            .product-section {
+                margin-top: 15vh;
+            }
+
+            .product-wrapper {
+                flex-direction: column;
+            }
+
+            .product-content {
+                grid-template-columns: 1fr;
+            }
+
+            .product-left,
+            .product-right {
+                padding: 10px;
+            }
+
+            .separator {
+                width: 1px;
+                height: 90px;
+                background-color: #fff;
+                margin: 0 10px;
+            }
+        }
+
+        @media (max-width: 390px) {
+            .additional-items-block {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .additional-items-block-content {
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (min-width: 391px) and (max-width: 600px) {
+            .additional-items-block-content {
+                width: 48%;
+                max-width: 48%;
+            }
+            .shop-pricing-column {
+                max-width: calc(50% - 20px);
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 960px) {
+            .additional-items-block-content {
+                width: 23%;
+                max-width: 23%;
+            }
+        }
+
+        @media (max-width: 960px) {
+            .shop-pricing-column {
+                max-width: calc(50% - 20px);
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .shop-pricing-column {
+                max-width: calc(50% - 20px);
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 390px) {
+            .shop-pricing-column {
+                max-width: 100%;
+                flex: 1 1 100%;
+                box-shadow: none; 
+                margin-bottom: 20px; 
+            }
+        }
+
+
+    </style>
 </head>
 <body>
     <!-- Content goes here -->
@@ -152,89 +278,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Product options -->
-     <div class="shop-container">
-        <!-- Base Package -->
-        <div class="shop-product-block">
-            <h2>Base Package</h2>
-            <p>BlueROV2 Base Package</p>
-            <div class="shop-product-option">
-                <label for="shop-tube-config">Tube Configuration <span>*</span></label>
-                <select id="shop-tube-config" name="shop-tube-config">
-                    <option value="acrylic-100m">Acrylic - 100 m</option>
-                </select>
-                <img src="./images/Kenji-2.jpg" alt="Product Image">
-                <p>SKU: BR-100415</p>
-                <p>HS Code: 9015.80.8080</p>
-                <p class="shop-price">$4,250.00</p>
-                <p>In stock</p>
-            </div>
-        </div>
-        
-        <!-- Heavy Configuration Add-on -->
-        <div class="shop-product-block">
-            <h2>Heavy Configuration Add-on</h2>
-            <div class="shop-product-option">
-                <label for="shop-heavy-config">Available options:</label>
-                <select id="shop-heavy-config" name="shop-heavy-config">
-                    <option value="none">No Heavy Configuration Add-on</option>
-                </select>
-            </div>
-        </div>
-        
-        <!-- Tether -->
-        <div class="shop-product-block">
-            <h2>Tether</h2>
-            <div class="shop-product-option">
-                <label for="shop-tether-type">Available options:</label>
-                <select id="shop-tether-type" name="shop-tether-type">
-                    <option value="fathom-rov">Fathom ROV Tether (ROV-ready)</option>
-                </select>
-                <p>Your selection:</p>
-                <p>Fathom ROV Tether (ROV-ready)</p>
-                <a href="#">Clear selection</a>
-                <img src="./images/Kenji-2.jpg" alt="Tether Image">
-                <label for="shop-twisted-pairs">Twisted Pairs <span>*</span></label>
-                <select id="shop-twisted-pairs" name="shop-twisted-pairs">
-                    <option value="4">4</option>
-                </select>
-                <label for="shop-tether-length">Tether Length (m) <span>*</span></label>
-                <select id="shop-tether-length" name="shop-tether-length">
-                    <option value="100m">100 m (330 ft)</option>
-                </select>
-                <p>SKU: BR-100862-100</p>
-                <p>HS Code: 8544.11.00.30</p>
-                <p class="shop-price">$750.00</p>
-                <p>In stock</p>
-            </div>
-        </div>
-        
-        <!-- Lights -->
-        <div class="shop-product-block">
-            <h2>Lights</h2>
-            <div class="shop-product-option">
-                <label for="shop-lights-type">Available options:</label>
-                <select id="shop-lights-type" name="shop-lights-type">
-                    <option value="lumen-subsea">Lumen Subsea Light (Pre-Connected Sets)</option>
-                </select>
-                <p>Your selection:</p>
-                <p>Lumen Subsea Light (Pre-Connected Sets)</p>
-                <a href="#">Clear selection</a>
-                <img src="./images/Kenji-2.jpg" alt="Lights Image">
-                <label for="shop-num-lights">Number of Lights <span>*</span></label>
-                <select id="shop-num-lights" name="shop-num-lights">
-                    <option value="2">2</option>
-                </select>
-                <p>SKU: BR-100717</p>
-                <p>HS Code: 9405.40.6000</p>
-                <p class="shop-price">$350.00</p>
-                <p>In stock</p>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Product options end -->
 
 
     <!-- More Products part -->
@@ -367,6 +410,7 @@
             </div>
         </div>
     </section>
+   
     
     
                 <!-- Footer -->
