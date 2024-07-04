@@ -16,33 +16,34 @@
 <body>
     <!-- Content goes here -->
     <div id="overlay"></div>
-    <div id="mobile-menu" class="mobile-main-menu"><!-- mobile menu -->
+    <div id="mobile-menu" class="mobile-main-menu">
         <ul>
-            <li><a href="kenji-x1.html">Kenji X1</a></li>
-            <li><a href="geo-lab.html">Geo-Lab</a></li>
-            <li><a href="torch.html">Torch</a></li>
+            <li class="has-submenu">
+                <a href="#">Projects<span class="submenu-icon"></span></a>
+                <ul class="submenu">
+                    <li><a href="kenji-x1.html">Kenji X1</a></li>
+                    <li><a href="geo-lab.html">Geo-Lab</a></li>
+                    <li><a href="torch.html">Torch</a></li>
+                </ul>
+            </li>
             <li><a href="documentation.html">Documentation</a></li>
             <li><a href="faq.html">FAQ</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="team.html">Team</a></li>
             <li><a href="contact-us.html">Contact</a></li>
             <li><a href="shop.html">Shop</a></li>
-            <li class="mobile-only"><a href="#">Project 1</a></li>
-            <li class="mobile-only"><a href="#">Project 2</a></li>
-            <li class="mobile-only"><a href="#">Project 3</a></li>
-            <li class="mobile-only"><a href="#">Project 4</a></li>
         </ul>
     </div>
-    <header class="main-header"><!-- main header -->
+    <header class="main-header">
         <div class="logo">
             <a href="index.html">
-                <img src="images/logo.png" alt="PhysalisLabs" />
+                <img src="images/logo.png" alt="SpaceX" />
             </a>
         </div>
         <nav class="desktop-main-menu">
             <ul>
                 <li class="has-submenu">
-                    <a href="#">Projects</a>
+                    <a href="#">Projects<span class="submenu-icon"></span></a>
                     <ul class="submenu">
                         <li><a href="kenji-x1.html">Kenji X1</a></li>
                         <li><a href="geo-lab.html">Geo-Lab</a></li>
@@ -58,8 +59,6 @@
             </ul>
         </nav>
     </header>
-    
-    <!-- Hamburger Menu -->
     <button id="menu-btn" class="hamburger" type="button">
         <span class="hamburger-top"></span>
         <span class="hamburger-middle"></span>
@@ -71,7 +70,7 @@
     <!-- </section> -->
     <section class="blog_section section">
         <div class="w-container">
-            <h2 class="h2">Below are some publications based on our innovative approach</h2>
+            <!-- <h2 class="h2">Below are some publications based on our innovative approach</h2> -->
             <div class="flex cards">
                 <div class="card">
                     <div>
