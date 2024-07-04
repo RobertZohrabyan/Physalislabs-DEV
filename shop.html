@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <title>PhysalisLabs-Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Explore robotics development together with our Kenji X1 telepresence systems.">   
+    <title>PhysalisLabs - Shop</title>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/hamburger.css">
@@ -28,33 +29,34 @@
 <body>
     <!-- Content goes here -->
     <div id="overlay"></div>
-    <div id="mobile-menu" class="mobile-main-menu"><!-- mobile menu -->
+    <div id="mobile-menu" class="mobile-main-menu">
         <ul>
-            <li><a href="kenji-x1.html">Kenji X1</a></li>
-            <li><a href="geo-lab.html">Geo-Lab</a></li>
-            <li><a href="torch.html">Torch</a></li>
+            <li class="has-submenu">
+                <a href="#">Projects<span class="submenu-icon"></span></a>
+                <ul class="submenu">
+                    <li><a href="kenji-x1.html">Kenji X1</a></li>
+                    <li><a href="geo-lab.html">Geo-Lab</a></li>
+                    <li><a href="torch.html">Torch</a></li>
+                </ul>
+            </li>
             <li><a href="documentation.html">Documentation</a></li>
             <li><a href="faq.html">FAQ</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="team.html">Team</a></li>
             <li><a href="contact-us.html">Contact</a></li>
             <li><a href="shop.html">Shop</a></li>
-            <li class="mobile-only"><a href="#">Project 1</a></li>
-            <li class="mobile-only"><a href="#">Project 2</a></li>
-            <li class="mobile-only"><a href="#">Project 3</a></li>
-            <li class="mobile-only"><a href="#">Project 4</a></li>
         </ul>
     </div>
-    <header class="main-header"><!-- main header -->
+    <header class="main-header">
         <div class="logo">
             <a href="index.html">
-                <img src="images/logo.png" alt="Physalislabs" />
+                <img src="images/logo.png" alt="SpaceX" />
             </a>
         </div>
         <nav class="desktop-main-menu">
             <ul>
                 <li class="has-submenu">
-                    <a href="#">Projects</a>
+                    <a href="#">Projects<span class="submenu-icon"></span></a>
                     <ul class="submenu">
                         <li><a href="kenji-x1.html">Kenji X1</a></li>
                         <li><a href="geo-lab.html">Geo-Lab</a></li>
@@ -70,173 +72,114 @@
             </ul>
         </nav>
     </header>
-    
-    <!-- Hamburger Menu -->
-   <!-- <button id="menu-btn" class="hamburger" type="button">
+    <!-- <button id="menu-btn" class="hamburger" type="button">
         <span class="hamburger-top"></span>
         <span class="hamburger-middle"></span>
         <span class="hamburger-bottom"></span>
-    </button>-->
-    
+    </button> -->
+    <section class="shop-content">
                     <!-- Shop -->
-    <section class="product-section">
-        <div class="product-container">
-            <div class="product-wrapper">
-                <div class="product-content">
-                    <div class="product-left">
-                        <div class="image-container">
-                            <img id="mainImage" src="./images/Kenji-2.jpg" alt="Product Image">
-                        </div>
-                        <div class="thumbnails"><!--thumbnails-left-->
-                            <img src="./images/shop-1.png" data-src="./images/Kenji-2.jpg" onclick="changeImage(this)" onmouseover="hoverChangeImage(this)">
-                            <img src="./images/shop-2.png" data-src="./images/Kenji-5.jpg" onclick="changeImage(this)" onmouseover="hoverChangeImage(this)">
-                            <img src="./images/shop-3.png" data-src="./images/Kenji-9.jpg" onclick="changeImage(this)" onmouseover="hoverChangeImage(this)">
-                            <img src="./images/shop-4.png" data-src="./images/Kenji-11.jpg" onclick="changeImage(this)" onmouseover="hoverChangeImage(this)">
-                            <img src="./images/shop-5.png" data-src="./images/Kenji-6.jpg" onclick="changeImage(this)" onmouseover="hoverChangeImage(this)">
-                        </div>
-                    </div>
-                    <div class="product-right">
-                        <div class="product-info">
-                            <h2>Kenji X1</h2>
-                            <h3>Developer Kit</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero eu leo placerat, ac consequat purus eleifend. consectetur adipiscing elit. Nulla convallis libero eu leo placerat, ac consequat purus eleifend consectetur adipiscing elit. Nulla convallis libero eu leo placerat, ac consequat purus eleifend</p>
-                        </div>
-                        <div class="btn-group btn_line">
-                            <a href="#" class="btn_main btn_yellow_primary top-down">
-                                <div class="hover"></div>
-                                <span>Buy Now</span>
-                            </a>
-                            <a href="#" class="btn_main btn_yellow_primary right-left">
-                                <div class="hover"></div>
-                                <span>Buy Now</span>
-                            </a>
-                            <a href="#" class="btn_main btn_yellow_primary left-right">
-                                <div class="hover"></div>
-                                <span>Buy Now</span>
-                            </a>
-                        </div>
-                        <div class="price-info">
-                            <div class="price-option">
-                                <h4>$100</h4>
-                                <p>Self-assembly kit</p>
-                                <div class="btn-group">
-                                    <a href="#" class="btn_main btn_yellow_primary bottom-up">
-                                        <div class="hover"></div>
-                                        <span>Buy Now</span>
-                                    </a>
-                                </div>
+        <section class="product-section">
+            <div class="product-container">
+                <div class="product-wrapper">
+                    <div class="product-content">
+                        <div class="product-left">
+                            <div class="image-container">
+                                <img id="mainImage" src="./images/Kenji-2.jpg" alt="Product Image">
                             </div>
-                            <div class="separator"></div>
-                            <div class="price-option">
-                                <h4>$150</h4>
-                                <p>Assembled Product</p>
-                                <div class="btn-group">
-                                    <a href="#" class="btn_main btn_yellow_primary top-down">
-                                        <div class="hover"></div>
-                                        <span>Buy Now</span>
-                                    </a>
-                                </div>
+                            <div class="thumbnails">
+                                <img src="./images/shop-1.png" data-src="./images/Kenji-2.jpg" onclick="changeImage(this)" onmouseover="hoverChangeImage(this)">
+                                <img src="./images/shop-2.png" data-src="./images/Kenji-5.jpg" onclick="changeImage(this)" onmouseover="hoverChangeImage(this)">
+                                <img src="./images/shop-3.png" data-src="./images/Kenji-9.jpg" onclick="changeImage(this)" onmouseover="hoverChangeImage(this)">
+                                <img src="./images/shop-4.png" data-src="./images/Kenji-11.jpg" onclick="changeImage(this)" onmouseover="hoverChangeImage(this)">
+                                <img src="./images/shop-5.png" data-src="./images/Kenji-6.jpg" onclick="changeImage(this)" onmouseover="hoverChangeImage(this)">
                             </div>
                         </div>
-                        <div class="additional-info">
-                            <a href="#">Learn more</a>
-                            <a href="#">Specifications</a>
+                        <div class="product-right">
+                            <div class="product-info">
+                                <h2>Kenji X1</h2>
+                                <h3>Developer Kit</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero eu leo placerat, ac consequat purus eleifend. consectetur adipiscing elit. Nulla convallis libero eu leo placerat, ac consequat purus eleifend consectetur adipiscing elit. Nulla convallis libero eu leo placerat, ac consequat purus eleifend</p>
+                            </div>
+                            <div class="btn-group btn_line">
+                                <a href="#" class="btn_main btn_yellow_primary top-down">
+                                    <div class="hover"></div>
+                                    <span>Download</span>
+                                </a>
+                                <a href="#" class="btn_main btn_yellow_primary right-left">
+                                    <div class="hover"></div>
+                                    <span>Brochure</span>
+                                </a>
+                                <a href="#" class="btn_main btn_yellow_primary left-right">
+                                    <div class="hover"></div>
+                                    <span>User Guide</span>
+                                </a>
+                            </div>
+                            <div class="product-options">
+                                <div class="option-group">
+                                    <label for="baseStation">Camera</label>
+                                    <select id="baseStation" name="baseStation">
+                                        <option value="none" selected>No BaseStation</option>
+                                        <option value="blueBoatBaseStation">BlueBoat BaseStation - $550.00</option>
+                                    </select>
+                                </div>
+                                <div class="option-group">
+                                    <label for="payloadBracket">Joystick</label>
+                                    <select id="payloadBracket" name="payloadBracket">
+                                        <option value="none" selected>No Payload Bracket</option>
+                                    </select>
+                                </div>
+                                <div class="option-group">
+                                    <label for="controller">Controller</label>
+                                    <select id="controller" name="controller">
+                                        <option value="none" selected>No Controller</option>
+                                        <option value="joystick">Joystick</option>
+                                    </select>
+                                </div>
+                                <div class="option-group">
+                                    <label for="sideScan">Side Scan</label>
+                                    <select id="sideScan" name="sideScan">
+                                        <option value="none" selected>No Side Scan</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="price-info">
+                                <div class="price-option">
+                                    <h4>$100</h4>
+                                    <p>Self-assembly kit</p>
+                                    <div class="btn-group">
+                                        <a href="#" class="btn_main btn_yellow_primary bottom-up">
+                                            <div class="hover"></div>
+                                            <span>Buy Now</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="separator"></div>
+                                <div class="price-option">
+                                    <h4>$150</h4>
+                                    <p>Assembled Product</p>
+                                    <div class="btn-group">
+                                        <a href="#" class="btn_main btn_yellow_primary top-down">
+                                            <div class="hover"></div>
+                                            <span>Buy Now</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="additional-info">
+                                <a href="#">Learn more</a>
+                                <a href="#">Specifications</a>
+                            </div>
                         </div>
                     </div>
+                    <div class="arrow-container">
+                        <svg class="arrow-down" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 16L6 10H18L12 16Z" fill="currentColor"/>
+                        </svg>
+                    </div>
                 </div>
-                <div class="arrow-container">
-                    <svg class="arrow-down" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 16L6 10H18L12 16Z" fill="currentColor"/>
-                    </svg>
-                </div>
-            </div>
-        </div>
+            </div>   
     </section>
-
-    <!-- Product options -->
-     <div class="shop-container">
-        <!-- Base Package -->
-        <div class="shop-product-block">
-            <h2>Base Package</h2>
-            <p>BlueROV2 Base Package</p>
-            <div class="shop-product-option">
-                <label for="shop-tube-config">Tube Configuration <span>*</span></label>
-                <select id="shop-tube-config" name="shop-tube-config">
-                    <option value="acrylic-100m">Acrylic - 100 m</option>
-                </select>
-                <img src="./images/Kenji-2.jpg" alt="Product Image">
-                <p>SKU: BR-100415</p>
-                <p>HS Code: 9015.80.8080</p>
-                <p class="shop-price">$4,250.00</p>
-                <p>In stock</p>
-            </div>
-        </div>
-        
-        <!-- Heavy Configuration Add-on -->
-        <div class="shop-product-block">
-            <h2>Heavy Configuration Add-on</h2>
-            <div class="shop-product-option">
-                <label for="shop-heavy-config">Available options:</label>
-                <select id="shop-heavy-config" name="shop-heavy-config">
-                    <option value="none">No Heavy Configuration Add-on</option>
-                </select>
-            </div>
-        </div>
-        
-        <!-- Tether -->
-        <div class="shop-product-block">
-            <h2>Tether</h2>
-            <div class="shop-product-option">
-                <label for="shop-tether-type">Available options:</label>
-                <select id="shop-tether-type" name="shop-tether-type">
-                    <option value="fathom-rov">Fathom ROV Tether (ROV-ready)</option>
-                </select>
-                <p>Your selection:</p>
-                <p>Fathom ROV Tether (ROV-ready)</p>
-                <a href="#">Clear selection</a>
-                <img src="./images/Kenji-2.jpg" alt="Tether Image">
-                <label for="shop-twisted-pairs">Twisted Pairs <span>*</span></label>
-                <select id="shop-twisted-pairs" name="shop-twisted-pairs">
-                    <option value="4">4</option>
-                </select>
-                <label for="shop-tether-length">Tether Length (m) <span>*</span></label>
-                <select id="shop-tether-length" name="shop-tether-length">
-                    <option value="100m">100 m (330 ft)</option>
-                </select>
-                <p>SKU: BR-100862-100</p>
-                <p>HS Code: 8544.11.00.30</p>
-                <p class="shop-price">$750.00</p>
-                <p>In stock</p>
-            </div>
-        </div>
-        
-        <!-- Lights -->
-        <div class="shop-product-block">
-            <h2>Lights</h2>
-            <div class="shop-product-option">
-                <label for="shop-lights-type">Available options:</label>
-                <select id="shop-lights-type" name="shop-lights-type">
-                    <option value="lumen-subsea">Lumen Subsea Light (Pre-Connected Sets)</option>
-                </select>
-                <p>Your selection:</p>
-                <p>Lumen Subsea Light (Pre-Connected Sets)</p>
-                <a href="#">Clear selection</a>
-                <img src="./images/Kenji-2.jpg" alt="Lights Image">
-                <label for="shop-num-lights">Number of Lights <span>*</span></label>
-                <select id="shop-num-lights" name="shop-num-lights">
-                    <option value="2">2</option>
-                </select>
-                <p>SKU: BR-100717</p>
-                <p>HS Code: 9405.40.6000</p>
-                <p class="shop-price">$350.00</p>
-                <p>In stock</p>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Product options end -->
-
-
     <!-- More Products part -->
     <div class="additional-items-block">
         <div class="additional-items-block-content">
@@ -244,13 +187,6 @@
             <h3>Battery</h3>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
             <h6>$100.00</h6>
-            <ul>
-                <li><ion-icon name="star"></ion-icon></li>
-                <li><ion-icon name="star"></ion-icon></li>
-                <li><ion-icon name="star"></ion-icon></li>
-                <li><ion-icon name="star-half"></ion-icon></li>
-                <li><ion-icon name="star-outline"></ion-icon></li>
-            </ul>
             <!-- <button class="buy-1">Buy Now</button> -->
             <a href="#" class="btn_main btn_yellow_primary top-down">
                 <div class="hover"></div>
@@ -262,13 +198,6 @@
             <h3>Arm</h3>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
             <h6>$130.00</h6>
-            <ul>
-                <li><ion-icon name="star"></ion-icon></li>
-                <li><ion-icon name="star"></ion-icon></li>
-                <li><ion-icon name="star"></ion-icon></li>
-                <li><ion-icon name="star-half"></ion-icon></li>
-                <li><ion-icon name="star-outline"></ion-icon></li>
-            </ul>
             <!-- <button class="buy-2">Buy Now</button> -->
             <a href="#" class="btn_main btn_yellow_primary bottom-up">
                 <div class="hover"></div>
@@ -280,13 +209,6 @@
             <h3>Caterpillar</h3>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
             <h6>$70.00</h6>
-            <ul>
-                <li><ion-icon name="star"></ion-icon></li>
-                <li><ion-icon name="star"></ion-icon></li>
-                <li><ion-icon name="star"></ion-icon></li>
-                <li><ion-icon name="star-half"></ion-icon></li>
-                <li><ion-icon name="star-outline"></ion-icon></li>
-            </ul>
             <!-- <button class="buy-3">Buy Now</button> -->
             <a href="#" class="btn_main btn_yellow_primary bottom-up">
                 <div class="hover"></div>
@@ -298,13 +220,6 @@
             <h3>Anthena</h3>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
             <h6>$200.00</h6>
-            <ul>
-                <li><ion-icon name="star"></ion-icon></li>
-                <li><ion-icon name="star"></ion-icon></li>
-                <li><ion-icon name="star"></ion-icon></li>
-                <li><ion-icon name="star-half"></ion-icon></li>
-                <li><ion-icon name="star-outline"></ion-icon></li>
-            </ul>
             <!-- <button class="buy-4">Buy Now</button> -->
             <a href="#" class="btn_main btn_yellow_primary top-down">
                 <div class="hover"></div>
@@ -367,9 +282,7 @@
             </div>
         </div>
     </section>
-    
-    
-                <!-- Footer -->
+                    <!-- Footer -->
     <footer>
         <ul>
             <li>PhysalisLabs &copy; 2024</li>
@@ -382,6 +295,8 @@
             <li><a href="#">Suppliers</a></li>-->
         <ul>
     </footer>
+
+</section>
 
     <script>                            //menu hiding while scrolling
     let lastScroll = 0;
