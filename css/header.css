@@ -200,7 +200,6 @@ ul {
 }
 
 .mobile-main-menu ul .submenu li:last-child {
-    border-bottom: none;
     margin-bottom: 0;
 }
 
