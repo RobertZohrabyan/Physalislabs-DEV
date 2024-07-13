@@ -16,29 +16,31 @@
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300i,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
     <script src="js/script.js"></script>
     <script type="text/javascript" src="js/sliders.js"></script>
+    <script type="text/javascript" src="js/team-slider-accordion.js"></script>
     <script src="https://kit.fontawesome.com/d6dbc33cc6.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Content goes here -->
     <div id="overlay"></div>
-    <div id="mobile-menu" class="mobile-main-menu"><!-- mobile menu -->
+    <div id="mobile-menu" class="mobile-main-menu">
         <ul>
-            <li><a href="kenji-x1.html">Kenji X1</a></li>
-            <li><a href="geo-lab.html">Geo-Lab</a></li>
-            <li><a href="torch.html">Torch</a></li>
+            <li class="has-submenu">
+                <a href="#">Projects<span class="submenu-icon"></span></a>
+                <ul class="submenu">
+                    <li><a href="kenji-x1.html">Kenji X1</a></li>
+                    <li><a href="geo-lab.html">Geo-Lab</a></li>
+                    <li><a href="torch.html">Torch</a></li>
+                </ul>
+            </li>
             <li><a href="documentation.html">Documentation</a></li>
             <li><a href="faq.html">FAQ</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="team.html">Team</a></li>
             <li><a href="contact-us.html">Contact</a></li>
             <li><a href="shop.html">Shop</a></li>
-            <li class="mobile-only"><a href="#">Project 1</a></li>
-            <li class="mobile-only"><a href="#">Project 2</a></li>
-            <li class="mobile-only"><a href="#">Project 3</a></li>
-            <li class="mobile-only"><a href="#">Project 4</a></li>
         </ul>
     </div>
-    <header class="main-header"><!-- main header -->
+    <header class="main-header">
         <div class="logo">
             <a href="index.html">
                 <img src="images/logo.png" alt="PhysalisLabs" />
@@ -47,7 +49,7 @@
         <nav class="desktop-main-menu">
             <ul>
                 <li class="has-submenu">
-                    <a href="#">Projects</a>
+                    <a href="#">Projects<span class="submenu-icon"></span></a>
                     <ul class="submenu">
                         <li><a href="kenji-x1.html">Kenji X1</a></li>
                         <li><a href="geo-lab.html">Geo-Lab</a></li>
@@ -63,8 +65,6 @@
             </ul>
         </nav>
     </header>
-    
-    <!-- Hamburger Menu -->
     <button id="menu-btn" class="hamburger" type="button">
         <span class="hamburger-top"></span>
         <span class="hamburger-middle"></span>
@@ -166,7 +166,45 @@
             </div>
         </div>
      </section>
-    </section>      
+    </section>     
+                            <!-- Accordion slider -->  
+    <section class="accordion">
+        <div class="accordion-item item-active">
+            <img src="./images/team/img1.png" alt="Nyx">
+            <div>
+                <h2>Nyx</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere fringilla felis, sit amet imperdiet felis pellentesque non</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <img src="./images/team/img2.png" alt="Zero">
+            <div>
+                <h2>Zero</h2>
+                <p>Donec finibus consequat gravida. Aenean tempus, felis eu tempor euismod, orci ligula posuere ligula, quis laoreet tortor ligula eu dolor.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <img src="./images/team/img3.png" alt="Vortex">
+            <div>
+                <h2>Vortex</h2>
+                <p>Mauris aliquet magna massa, sit amet rutrum diam interdum vitae. Nunc mollis sem eu quam ultrices, eu lacinia nunc tincidunt. Vivamus imperdiet egestas justo et egestas. Vivamus urna lacus,</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <img src="./images/team/img4.png" alt="Zero">
+            <div>
+                <h2>Zero</h2>
+                <p>Curabitur rutrum dapibus leo ac dignissim. Donec ullamcorper magna vitae dictum vestibulum. Aenean tincidunt consectetur est, sit amet tristique urna varius sed.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <img src="./images/team/img5.png" alt="Cipher">
+            <div>
+                <h2>Cipher</h2>
+                <p>Aenean massa leo, vulputate sit amet tellus ac, pharetra rhoncus purus. Fusce feugiat efficitur justo, euismod placerat lacus. Fusce aliquet nibh massa,</p>
+            </div>
+        </div>
+    </section> 
                         <!-- Team work images slider -->  
     <section class="section-gallery">
         <!-- Gallery Slider -->
