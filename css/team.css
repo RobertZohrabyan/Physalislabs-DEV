@@ -78,3 +78,144 @@
 		font-size: 3.2rem;
 	}
 }
+
+/* Accordion slider styles */
+.accordion {
+    padding: 4em 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    background: linear-gradient(45deg, #101008, #13161c);
+    height: 70vh;
+}
+
+.accordion-item {
+    --accent: #ff3e3e;
+    --gradient: #391717;
+    width: 5em;
+    height: 23em;
+    border-radius: 3em;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.6);
+    border-bottom: 2px transparent solid;
+    cursor: pointer;
+    transition: 200ms cubic-bezier(.91,.36,.84,.6);
+}
+/* Themes for each accordion item */
+.accordion-item:nth-child(2){
+    --accent: #3e9eff;
+    --gradient: #172939;
+}
+
+.accordion-item:nth-child(3){
+    --accent: #e8ff3e;
+    --gradient: #353917;
+}
+
+.accordion-item:nth-child(4){
+    --accent: #3eff7e;
+    --gradient: #173921;
+}
+
+.accordion-item::before {
+    content: "";
+    background: linear-gradient(0deg, var(--gradient), transparent);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    transition: 200ms;
+}
+
+.accordion-item:hover {
+    border-bottom: 2px var(--accent) solid;
+}
+
+.accordion-item:not(.item-active):hover:before{
+    opacity: 1;
+    height: 50%;
+}
+
+.accordion-item img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    transition: width 300ms;
+    transition-delay: 200ms;
+    filter: brightness(0.9);
+}
+
+.accordion-item:hover:not(.item-active) img,
+.item-active img {
+    filter: brightness(1.25);
+}
+
+.accordion-item > div {
+    position: absolute;
+    left: 8em;
+    bottom: 2em;
+    width: 450px;
+    max-width: calc(100% - 4em);
+    color: #fff;
+    transition: none;
+    opacity: 0;
+    z-index: 1;
+}
+
+.accordion-item h2 {
+    margin-bottom: 0.7em;
+}
+
+.accordion-item p {
+    line-height: 30px;
+    font-size: 0.9em;
+}
+
+.item-active {
+    width: 25em;
+    border-bottom: 2px var(--accent) solid;
+}
+
+.item-active > div {
+    left: 2em;
+    transition: 200ms;
+    transition-delay: 200ms;
+    opacity: 1;
+}
+
+.item-active img {
+    width: 110%;
+}
+
+.item-active::before {
+    opacity: 1;
+}
+
+@media screen and (max-width: 700px){
+    .accordion {
+        flex-direction: column;
+    }
+    .accordion-item {
+        width: 23em;
+        height: 5em;
+    }
+    .item-active {
+        height: 25em;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .accordion-item {
+        width: 100%;
+    }
+}
