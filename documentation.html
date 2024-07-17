@@ -35,7 +35,7 @@
     <header class="main-header">
         <div class="logo">
             <a href="index.html">
-                <img src="images/logo.png" alt="SpaceX" />
+                <img src="images/logo.png" alt="PhysalisLabs" />
             </a>
         </div>
         <nav class="desktop-main-menu">
@@ -63,6 +63,11 @@
         <span class="hamburger-bottom"></span>
     </button>
                 <!-- Documentation -->
+    <button id="doc-menu-btn" class="doc-hamburger" type="button">
+        <span class="doc-hamburger-top"></span>
+        <span class="doc-hamburger-middle"></span>
+        <span class="doc-hamburger-bottom"></span>
+    </button>
     <nav id="techdoc_navbar">
     <header class="techdoc_navbar_header">
         <h1>Kenji Documentation</h1>
@@ -239,5 +244,29 @@
         <p>Praesent tincidunt velit et libero suscipit, non aliquam tortor commodo. Aliquam iaculis ligula eu auctor vulputate. In interdum nulla vel tempus euismod. Aliquam at dapibus purus. Pellentesque mattis et leo non pulvinar. Curabitur ac interdum turpis. Sed imperdiet massa quis libero interdum blandit. Donec metus nibh, semper vel posuere nec, pharetra id eros. Nullam semper posuere ex, a sollicitudin odio gravida vel. Vestibulum posuere felis mi, sed aliquet est commodo vitae. Proin a dui quam. </p>
     </div>
 </div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const docMenuBtn = document.getElementById('doc-menu-btn');
+    const techdocNavbar = document.getElementById('techdoc_navbar');
+
+    if (docMenuBtn && techdocNavbar) {
+        docMenuBtn.addEventListener('click', function() {
+            this.classList.toggle('open');
+            techdocNavbar.classList.toggle('doc-show-menu');
+        });
+
+        // Close menu when clicking a link
+        const techdocNavLinks = techdocNavbar.querySelectorAll('.techdoc_nav_link');
+        techdocNavLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                docMenuBtn.classList.remove('open');
+                techdocNavbar.classList.remove('doc-show-menu');
+            });
+        });
+    } else {
+        console.error('Documentation menu elements not found');
+    }
+});
+</script>
 </body>
 </html>
