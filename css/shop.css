@@ -49,13 +49,19 @@ img {
     margin-bottom: 10px;
 }
 
+.image-container img {
+    min-height: 400px;
+}
+
 .thumbnails {
     display: flex;
     gap: 10px;
+    overflow: hidden;
 }
 
 .thumbnails img {
     cursor: pointer;
+    width: 100px;
     opacity: 0.6;
 }
 
