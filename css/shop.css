@@ -402,7 +402,7 @@ select {
 /* Media Queries */
 
 /* For max width 960px */
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
     .product-section {
         margin-top: 15vh;
     }
@@ -433,6 +433,18 @@ select {
     }
 }
 
+@media screen and (1024px < width < 1600px) {
+    .product-content {
+        max-width: 1024px;
+    }
+
+    .product-left, .product-right {
+        padding: 0;
+    }
+}
+.shop-btn {
+    padding-inline: 12px !important;
+}
 /* For max width 600px */
 @media (max-width: 600px) {
     .product-left,
@@ -551,4 +563,14 @@ select {
         padding: 4px 8px; 
         max-width: 250px; 
     }
+}
+
+.h-100 {
+    height: 100px;
+}
+
+.shop-content {
+    min-height: 100vh;
+    height: auto;
+
 }
