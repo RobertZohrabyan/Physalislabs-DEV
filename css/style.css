@@ -327,34 +327,73 @@ section {
 			/*Documentation*/
 #techdoc_navbar {
     position: fixed;
-	overflow-y: scroll;
+    overflow-y: scroll;
     top: 100px;
     left: 0;
     padding: 30px;
     width: 300px;
-    height: 100vh;
+    height: calc(100vh - 100px);
     background-color: black;
+    transition: 0.3s;
 }
 
-/* width */
+/* Documentation Hamburger Menu Styles */
+.doc-hamburger {
+    position: fixed;
+    top: 100px;
+    left: 20px;
+    z-index: 1002;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    background: none;
+    border: none;
+    display: none;
+}
+
+.doc-hamburger-top, 
+.doc-hamburger-middle, 
+.doc-hamburger-bottom {
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    left: 0;
+    background: #fff;
+    transition: all 0.3s;
+}
+
+.doc-hamburger-top { top: 0; }
+.doc-hamburger-middle { top: 8px; }
+.doc-hamburger-bottom { top: 16px; }
+
+.doc-hamburger.open .doc-hamburger-top {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.doc-hamburger.open .doc-hamburger-middle {
+    opacity: 0;
+}
+
+.doc-hamburger.open .doc-hamburger-bottom {
+    transform: rotate(-45deg) translateY(-6px) translateX(6px);
+}
+
+/* Scrollbar styles */
 ::-webkit-scrollbar {
-	width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-	background: #f1f1f1;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-	background: #888;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-	background: #555;
-  }
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
 
 .techdoc_nav_links {
     font-size: 16px;
@@ -371,35 +410,27 @@ section {
 }
 
 .techdoc_nav_link:hover {
-    /*background-color: #ccc;*/
     font-weight: 700;
     transform: translateX(10px);
-    transition: transform 0.3s ease-in-out; 
 }
 
 .techdoc_main_doc {
     margin-left: 400px;
-  	margin-right: 20px;
-  	height: calc(100vh - 100px);
-  	overflow-y: scroll;
-  	scroll-behavior: smooth;
-  	margin-top: 100px;
-	text-align: justify;
-	padding-right: 50px;
-	line-height: 20px;
+    margin-right: 20px;
+    height: calc(100vh - 100px);
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    margin-top: 100px;
+    text-align: justify;
+    padding-right: 50px;
+    line-height: 20px;
 }
 
-.techdoc_main_doc h1, .techdoc_main_doc img, .techdoc_main_doc pre {
-	margin: 22px 0;
-	display: block;
-}
-
-.techdoc_main_section p {
-
-}
-
-.techdoc_main_section {
-	/*margin: 100px 0px;*/
+.techdoc_main_doc h1, 
+.techdoc_main_doc img, 
+.techdoc_main_doc pre {
+    margin: 22px 0;
+    display: block;
 }
 
 .techdoc_main_section img {
@@ -421,7 +452,7 @@ code {
 }
 
 .techdoc_navbar_header:not(:first-child) h1 {
-	padding-top: 15px;
+    padding-top: 15px;
 }
 
 .techdoc_navbar_header h1 {
@@ -436,40 +467,28 @@ code {
     font-family: 'Familjen Grotesk', sans-serif;
 }
 
-@media(max-width: 1200px) {
-    #techdoc_navbar {
-        width: 100%;
-		height: auto;
-		z-index: 2;
+@media (max-width: 1200px) {
+    .doc-hamburger {
+        display: block;
+        background: rgb(0, 0, 0);
     }
 
-	.techdoc_nav_links {
-		margin-top: 10px;
-		/* here you control how documentation should appear */
-		/* flex-direction: row; */
-	}
+    #techdoc_navbar {
+        left: -300px;
+    }
 
-	.techdoc_nav_link:first-child {
-		padding-left: 0px;
-	}
-
-	.techdoc_nav_link {
-		padding: 7px;
-	}
-
-    .techdoc_navbar_header h1 {
-        font-size: 22px;
+    #techdoc_navbar.doc-show-menu {
+        left: 0;
     }
 
     .techdoc_main_doc {
-        margin-left: 25px;
-		padding-top: 120px;
+        margin-left: 20px;
+        padding-top: 60px;
     }
-	.techdoc_nav_link:hover {
-		font-weight: 700;
-		transform: translateX(0px);
-		border-bottom: 2px solid white;
-	}
+
+    .techdoc_nav_link:hover {
+        transform: translateX(5px);
+    }
 }
 /* Styles and blocks took from one of the git hub examples */
 /* strip is showing call to action block with button and text */
