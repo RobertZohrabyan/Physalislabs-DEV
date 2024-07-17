@@ -282,12 +282,14 @@ img {
 
 .shop-pricing .shop-pricing-row {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .shop-pricing .shop-pricing-column {
     padding: 5%;
     flex: 1;
+    max-width: 400px;
 }
 
 .shop-pricing .shop-pricing-column:not(:last-child) {
@@ -422,9 +424,10 @@ select {
     }
 
     .shop-pricing-column {
-        max-width: calc(50% - 20px);
+        max-width: 300px;
         flex: 1 1 calc(50% - 20px);
     }
+
 }
 
 @media screen and (1024px < width < 1600px) {
@@ -530,12 +533,26 @@ select {
         min-width: 80px; 
         padding: 8px 16px; 
     }
+    .shop-pricing-column {
+        border-right: none !important;
+    }
+
+    .shop-pricing-row {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media (max-width: 600px) {
     .btn_main {
         min-width: 70px; 
         padding: 6px 12px; 
+    }
+    .product-left, .product-right {
+        max-width: 82%;
+    }
+    .thumbnails {
+        width: 100%;
     }
 }
 
