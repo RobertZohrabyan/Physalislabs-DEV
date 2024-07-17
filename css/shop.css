@@ -13,15 +13,13 @@ img {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: #000;
+    height: auto;
     padding: 5%;
-    margin-top: 100px;
 }
 
 .product-container {
     max-width: 1200px;
-    /*margin: 0 auto;*/
+    margin: 0 auto;
     position: relative;
 }
 
@@ -403,10 +401,6 @@ select {
 
 /* For max width 960px */
 @media (max-width: 1024px) {
-    .product-section {
-        margin-top: 15vh;
-    }
-
     .product-wrapper {
         flex-direction: column;
     }

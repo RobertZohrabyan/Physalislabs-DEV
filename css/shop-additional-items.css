@@ -28,6 +28,8 @@
 
 .additional-items-block-content {
 	width: 20%;
+	min-width: 200px;
+	max-width: 300px;
 	margin: 15px;
 	box-sizing: border-box;
 	float: left;
