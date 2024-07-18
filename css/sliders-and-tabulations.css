@@ -9,7 +9,7 @@ body {
 }
 
 .slider-section {
-    height: 300vh; /
+    height: 200vh;
     position: relative;
     overflow: hidden;
 }
@@ -425,7 +425,6 @@ body {
 /* Gallery Slider Styles */
 .section-gallery {
     position: relative;
-    height: 100vh;
     overflow: hidden;
     border: 1px solid green;
 }

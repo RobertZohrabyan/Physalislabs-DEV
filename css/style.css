@@ -810,7 +810,7 @@ section.rocket .rocket-body span.active:nth-child(1) {
 
 		/* Gallery */
 	.section-gallery {
-        height: 600px;
+        height: 500px;
     }
 	.our_suppliers_logo_row {
 		justify-content: center !important;
