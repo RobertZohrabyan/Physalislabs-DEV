@@ -1,28 +1,6 @@
 html {
 	scroll-behavior: smooth;
 }
-
-.kpb_block {
-  position: relative;
-  height: 150vh;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-transform: uppercase;
-  overflow: hidden;
-  border: 1px solid red;
-}
-
-.kps_block {
-  position: relative;
-  height: 120vh;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-transform: uppercase;
-  overflow: hidden;
-  border: 1px solid red;
-}
 	/* Sections */
 section {
 	position: relative;
