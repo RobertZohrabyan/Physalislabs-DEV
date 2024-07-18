@@ -14,26 +14,25 @@
 <body>
     <!-- Content goes here -->
     <div id="overlay"></div>
-    <div id="mobile-menu" class="mobile-main-menu"><!-- mobile menu -->
+    <div id="mobile-menu" class="mobile-main-menu">
         <ul>
-            <li><a href="kenji-x1.html">Kenji X1</a></li>
-            <li><a href="geo-lab.html">Geo-Lab</a></li>
-            <li><a href="torch.html">Torch</a></li>
+            <li class="has-submenu">
+                <a href="#">Projects<span class="submenu-icon"></span></a>
+                <ul class="submenu">
+                    <li><a href="kenji-x1.html">Kenji X1</a></li>
+                    <li><a href="geo-lab.html">Geo-Lab</a></li>
+                    <li><a href="torch.html">Torch</a></li>
+                </ul>
+            </li>
             <li><a href="documentation.html">Documentation</a></li>
             <li><a href="faq.html">FAQ</a></li>
             <li><a href="blog.html">Blog</a></li>
-            <li><a href="shop.html">Contact</a></li>
-
-            <li class="mobile-only"><a href="kenji-x1.html">Kenji X1</a></li>
-            <li class="mobile-only"><a href="geo-lab.html">Geo-Lab</a></li>
-            <li class="mobile-only"><a href="team.html">Team</a></li>
-            <li class="mobile-only"><a href="#">Project 1</a></li>
-            <li class="mobile-only"><a href="#">Project 2</a></li>
-            <li class="mobile-only"><a href="#">Project 3</a></li>
-            <li class="mobile-only"><a href="#">Project 4</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="contact-us.html">Contact</a></li>
+            <li><a href="shop.html">Shop</a></li>
         </ul>
     </div>
-    <header class="main-header"><!-- main header -->
+    <header class="main-header">
         <div class="logo">
             <a href="index.html">
                 <img src="images/logo.png" alt="PhysalisLabs" />
@@ -42,7 +41,7 @@
         <nav class="desktop-main-menu">
             <ul>
                 <li class="has-submenu">
-                    <a href="#">Projects</a>
+                    <a href="#">Projects<span class="submenu-icon"></span></a>
                     <ul class="submenu">
                         <li><a href="kenji-x1.html">Kenji X1</a></li>
                         <li><a href="geo-lab.html">Geo-Lab</a></li>
@@ -58,8 +57,6 @@
             </ul>
         </nav>
     </header>
-    
-    <!-- Hamburger Menu -->
     <button id="menu-btn" class="hamburger" type="button">
         <span class="hamburger-top"></span>
         <span class="hamburger-middle"></span>
@@ -97,7 +94,7 @@
             <li>PhysalisLabs &copy; 2019-2024</li>
             <li><a href="https://www.linkedin.com/company/physalis-labs/" target="_blank">LinkedIn</a></li>
             <li><a href="https://www.youtube.com/@physalislabs9881" target="_blank">YouTube</a></li>
-            <li><a href="#" target="_blank">Privacy Policy</a></li>
+            <!-- <li><a href="#" target="_blank">Privacy Policy</a></li> -->
             <li><a href="suppliers.html" target="_blank">Suppliers</a></li>
             <!--<li><a href="#">Instagram</a></li>
             <li><a href="#">FLickr</a></li>
