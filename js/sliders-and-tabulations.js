@@ -11,22 +11,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
         let imageRevealed = false;
 
-        // Set initial positions
-        imageContainer.style.top = '50%';
-        imageContainer.style.transform = 'translateY(-50%)';
-        leftContent.style.top = '50%';
-        leftContent.style.transform = 'translateY(-50%)';
-
         window.addEventListener('scroll', function() {
             const rect = sliderSection.getBoundingClientRect();
             const progress = -rect.top / (rect.height - window.innerHeight);
 
-            if (progress >= 0 && progress <= 1) {
-                // Text animation
-                const textProgress = progress * 100;
-                leftContent.style.transform = `translateY(${Math.max(-50 - textProgress, -100)}%)`;
-                leftContent.style.opacity = 1 - progress * 2;
+            if (rect.top < 300) {
+                imageContainer.style.display = 'block';
+                leftContent.style.display = 'block';
+                leftContent.style.top = `${rect.top + 500}px`;
+            } else {
+                imageContainer.style.display = 'none';
+                leftContent.style.display = 'none';
+            }
 
+            if (progress >= 0 && progress <= 1) {
                 // Image animation
                 const newTop = Math.min(50 + progress * 50, 100);
                 imageContainer.style.top = `${newTop}%`;
