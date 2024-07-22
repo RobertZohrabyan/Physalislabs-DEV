@@ -1,4 +1,36 @@
 /* General styles */
+
+/* Example positioning for callouts */
+.callout-one {
+    top: 310px;
+    left: -290px;
+}
+
+.callout-two {
+    top: 130px;
+    left: -280px;
+}
+
+.callout-three {
+    top: -110px;
+    left: -74px;
+}
+
+.callout-four {
+    top: 130px;
+    right: -834px;
+}
+
+.callout-five {
+    top: 100px;
+    right: -782px;
+}
+
+.callout-six {
+    top: 290px;
+    right: -850px;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -75,36 +107,7 @@ section {
     }
 }
 
-/* Example positioning for callouts */
-.callout-one {
-    top: 310px;
-    left: -290px;
-}
 
-.callout-two {
-    top: 130px;
-    left: -280px;
-}
-
-.callout-three {
-    top: -110px;
-    left: -74px;
-}
-
-.callout-four {
-    top: 130px;
-    right: -834px;
-}
-
-.callout-five {
-    top: 100px;
-    right: -782px;
-}
-
-.callout-six {
-    top: 290px;
-    right: -850px;
-}
 
 .kenjix1-callout.is-active, .dot.is-active:hover + .kenjix1-callout {
     display: block;
@@ -296,6 +299,7 @@ section {
         width: 100%;
         max-width: 600px;
         height: auto;
+        min-height: 450px;
         background-size: contain;
         background-repeat: no-repeat;
         padding-bottom: 50%; /* Adjust this value to match your image aspect ratio */
@@ -319,6 +323,12 @@ section {
         color: #fff;
         padding: 20px;
         box-sizing: border-box;
+        position: absolute;
+        bottom: 0;
+        top: auto;
+        z-index: 1;
+        left: 0;
+        margin: 0;
     }
 
     .kenjix1_point_dot_callout.default-active {
@@ -326,12 +336,12 @@ section {
     }
 
     /* Reset callout positions */
-    .callout-one, .callout-two, .callout-three, .callout-four, .callout-five, .callout-six {
+    /* .callout-one, .callout-two, .callout-three, .callout-four, .callout-five, .callout-six {
         top: auto;
         left: auto;
         right: auto;
         bottom: auto;
-    }
+    } */
 
     /* Adjust dot positions for responsiveness */
     .kenjix1_point_dot {
