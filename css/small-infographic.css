@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Familjen Grotesk', sans-serif;
+    background-color: #000;
 }
 
 /* Section styles */
@@ -137,7 +138,7 @@ section {
     height: 15px;
     border: 1px solid #fff;
     border-radius: 50%;
-    background-color: #ADD8E6;
+    background-color: #56ffa8;
     transition: background-color 0.3s ease, transform 0.3s ease;
     animation: breathe 3s infinite alternate;
 }
@@ -175,13 +176,13 @@ section {
 }
 
 .kenjix1_point_dot.right-3 {
-    bottom: 67px;
-    right: 188px;
+    bottom: 18.17%;
+    right: 32.5%;
     animation: none;
 }
 
 .kenjix1_point_dot:hover, .kenjix1_point_dot.is-active {
-    background-color: #777;
+    background-color: #56ffda;
     transform: scale(1.2);
     border: 1px solid #ADD8E6;
 }
@@ -287,4 +288,71 @@ section {
     top: 36px;
     left: 12px;
     transform: rotate(30deg);
+}
+
+/* Media query for screens below 960px */
+@media (max-width: 960px) {
+    .kenji_x1_image-container {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding-bottom: 50%; /* Adjust this value to match your image aspect ratio */
+        margin: 20px auto;
+    }
+
+    .kenjix1_point_dots_callouts {
+        position: static;
+        margin-top: 20px;
+    }
+
+    .kenjix1_point_dot_callout {
+        position: static;
+        width: 100%;
+        max-width: 600px;
+        max-height: none;
+        display: none;
+        margin: 20px auto;
+        border: 1px solid #fff;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .kenjix1_point_dot_callout.default-active {
+        display: block;
+    }
+
+    /* Reset callout positions */
+    .callout-one, .callout-two, .callout-three, .callout-four, .callout-five, .callout-six {
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+    }
+
+    /* Adjust dot positions for responsiveness */
+    .kenjix1_point_dot {
+        width: 12px;
+        height: 12px;
+    }
+
+    .kenjix1_point_dot.left-1 { top: 83.33%; left: 28.33%; }
+    .kenjix1_point_dot.left-2 { top: 50%; left: 25.83%; }
+    .kenjix1_point_dot.left-3 { top: 11.9%; left: 63.33%; }
+    .kenjix1_point_dot.right-1 { top: 50.24%; left: 68.33%; }
+    .kenjix1_point_dot.right-2 { top: 34.52%; left: 45.83%; }
+    .kenjix1_point_dot.right-3 { bottom: 15.95%; right: 31.33%; }
+
+    /* Hide connection lines on mobile */
+    .kenjix1_point_dot::before, .kenjix1_point_dot::after {
+        display: none;
+    }
+
+    /* Hide white callouts on mobile */
+    .kenjix1_point_dot_callout {
+        display: none;
+    }
 }
