@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const preContainer = document.querySelector('.main_slider-pre-container');
         const leftContent = document.querySelector('.main_slider-pre-left-content');
         const imageContainer = document.querySelector('.main_slider-pre-image-container');
-        const bgImage = imageContainer && imageContainer.querySelector('img');
+        const bgImage = imageContainer.querySelector('img');
         const mainSlider = document.querySelector('.main_slider.section-gallery');
         const revealImage = document.querySelector('.reveal-image');
 
@@ -230,9 +230,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Initialize all components
     initScrollRevealSlider();
-    if (document.querySelector('.main-slider')) {
-        initMainSlider();
-    }
+    initMainSlider();
     initGallerySlider();
     initStandaloneInfoBlock();
 });
