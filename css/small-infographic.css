@@ -298,7 +298,7 @@ section {
         width: 100%;
         max-width: 600px;
         height: auto;
-        min-height: 450px;
+        min-height: 550px;
         background-size: contain;
         background-repeat: no-repeat;
         padding-bottom: 50%; /* Adjust this value to match your image aspect ratio */
@@ -348,12 +348,12 @@ section {
         height: 12px;
     }
 
-    .kenjix1_point_dot.left-1 { top: 83.33%; left: 28.33%; }
+    .kenjix1_point_dot.left-1 { top: 65%; left: 30%; }
     .kenjix1_point_dot.left-2 { top: 50%; left: 25.83%; }
     .kenjix1_point_dot.left-3 { top: 11.9%; left: 63.33%; }
     .kenjix1_point_dot.right-1 { top: 50.24%; left: 68.33%; }
     .kenjix1_point_dot.right-2 { top: 34.52%; left: 45.83%; }
-    .kenjix1_point_dot.right-3 { bottom: 15.95%; right: 31.33%; }
+    .kenjix1_point_dot.right-3 { bottom: 36.95%; right: 32.33%; }
 
     /* Hide connection lines on mobile */
     .kenjix1_point_dot::before, .kenjix1_point_dot::after {
