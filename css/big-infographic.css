@@ -1,0 +1,291 @@
+body {
+  background-color: #000;
+  font-family: 'Familjen Grotesk', sans-serif;
+}
+
+.infographic-section {
+  position: relative;
+  height: 150vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid green;
+  overflow: hidden;
+}
+
+.robot-container {
+    position: relative;
+    background-image: url(../images/Kenji-drivedown.png);
+    background-size: 140%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 450px;
+    height: 450px;
+    border: 1px solid green;
+    margin: 0 auto;
+}
+.robot {
+  position: relative;
+  border: 1px solid green;
+}
+
+.cogwheel {
+  position: absolute; 
+  width: 30px; 
+  height: 30px;
+  background-image: url('../images/gear.png');
+  background-size: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+.cogwheel::before,
+.cogwheel::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  background-color: white;
+}
+
+.cogwheel:hover {
+  transform: rotate(360deg);
+}
+
+/* Adjust cogwheel positions */
+.cogwheel-1 {
+  top: 365px;
+  left: 90px;
+}
+
+.cogwheel-2 {
+  top: 205px;
+  left: 70px;
+}
+
+.cogwheel-3 {
+  top: 60px;
+  left: 300px;
+}
+
+.cogwheel-4 {
+  top: 205px;
+  left: 340px;
+}
+
+.cogwheel-5 {
+  top: 150px;
+  left: 200px;
+}
+
+.cogwheel-6 {
+  top: 210px;
+  left: 190px;
+}
+
+.cogwheel-7 {
+  top: 340px;
+  left: 320px;
+}
+
+.info-line {
+  text-align: center;
+  position: relative;
+  border: 1px solid green;
+  display: flex;
+  width: 100%;
+  height: 20vh;
+  margin-top: 500px;
+   position: absolute;
+  top: 0;
+  left: -80px;
+}
+
+.info {
+  display: inline-block;
+  cursor: pointer;
+  margin: 20px;
+  padding: 10px;
+  transition: color 0.3s ease;
+  width: 125px;
+  opacity: 0;
+  visibility: inherit;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+  text-align: left;
+  color: #fff;
+  position: relative;
+}
+
+.info:hover {
+  color: grey;
+}
+
+.info-line .info:nth-child(1) {
+  animation: revealUp 0.5s ease forwards;
+  animation-delay: 0s;
+}
+
+.info-line .info:nth-child(2) {
+  animation: revealUp 0.5s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.info-line .info:nth-child(3) {
+  animation: revealUp 0.5s ease forwards;
+  animation-delay: 1s;
+}
+
+.info-line .info:nth-child(4) {
+  animation: revealUp 0.5s ease forwards;
+  animation-delay: 1.5s;
+}
+
+.info-line .info:nth-child(5) {
+  animation: revealUp 0.5s ease forwards;
+  animation-delay: 2s;
+}
+
+.info-line .info:nth-child(6) {
+  animation: revealUp 0.5s ease forwards;
+  animation-delay: 2.5s;
+}
+
+.info-line .info:nth-child(7) {
+  animation: revealUp 0.5s ease forwards;
+  animation-delay: 3s;
+}
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.info > span {
+  display: block;
+  position: relative;
+  font-family: 'Familjen Grotesk', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.info p {
+  display: none;
+  margin-top: 10px;
+  overflow: hidden;
+  width: 125px;
+  text-align: left;
+  position: relative;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 5px;
+  color: rgba(255,255,255,.5);
+  text-transform: none;
+}
+
+.info:hover p {
+  display: block;
+}
+
+.infographic-logo {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  display: none;
+  top: -50px; 
+  left: 40%;
+  transform: translateX(-50%);
+}
+
+.info:hover .infographic-logo {
+  display: block;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  width: 300px; 
+  height: auto;
+  border: none;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* Adjust modal positions */
+#modal-1 {
+  left: -300px;
+  top: 100px;
+}
+
+#modal-2 {
+  left: -300px;
+  top: 100px;
+}
+
+#modal-3 {
+  left: -300px;
+  top: 100px;
+}
+
+#modal-4 {
+  right: -350px;
+  top: 50px;
+}
+
+#modal-5 {
+  right: -350px;
+  top: 50px;
+}
+
+#modal-6 {
+  right: -350px;
+  top: 50px;
+}
+
+#modal-7 {
+  right: -350px;
+  top: 50px;
+}
+
+.modal-content {
+  padding: 10px;
+  text-align: left;
+}
+
+.modal-content h2 {
+  color: #000;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-family: 'Familjen Grotesk', sans-serif;
+}
+
+.modal-content p {
+  font-size: 14px;
+  font-weight: 200;
+  margin-bottom: 15px;
+  color: #333;
+  text-transform: lowercase;
+}
+
+.modal-content img, .modal-content video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid black;
+  margin-top: 10px;
+}
+
+.modal-content video {
+  max-height: 300px;
+}
