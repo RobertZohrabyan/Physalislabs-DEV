@@ -5,6 +5,7 @@ body {
 
 .big-infographic-height {
   min-height: 50vh;
+  height: auto !important;
 }
 
 .infographic-section {
@@ -113,6 +114,10 @@ body {
   text-align: left;
   color: #fff;
   position: relative;
+}
+
+.info .active {
+  display: block !important;
 }
 
 .info:hover {
@@ -320,5 +325,9 @@ body {
 
   .info p {
     display: none;
+  }
+
+  .info .active {
+    display: none !important;
   }
 }

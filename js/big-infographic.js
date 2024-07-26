@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // Show modal
         modals[index].style.display = 'block';
         // Show info logo and text
-        logoImages[index].style.display = 'block';
-        infoTexts[index].style.display = 'block';
+        logoImages[index].classList.add('active');
+        infoTexts[index].classList.add('active');
     }
 
     function handleGearReset(gear, index) {
@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // Hide modal
         modals[index].style.display = 'none';
         // Hide info logo and text
-        logoImages[index].style.display = 'none';
-        infoTexts[index].style.display = 'none';
+        logoImages[index].classList.remove('active');
+        infoTexts[index].classList.remove('active');
     }
 
     gears.forEach((gear, index) => {
@@ -43,8 +43,8 @@ document.addEventListener("DOMContentLoaded", function() {
             // Show modal
             modals[index].style.display = 'block';
             // Show info logo and text
-            logoImages[index].style.display = 'block';
-            infoTexts[index].style.display = 'block';
+            logoImages[index].classList.add('active');
+            infoTexts[index].classList.add('active');
         });
         info.addEventListener('mouseleave', () => {
             // Reset corresponding gear rotation
@@ -52,8 +52,8 @@ document.addEventListener("DOMContentLoaded", function() {
             // Hide modal
             modals[index].style.display = 'none';
             // Hide info logo and text
-            logoImages[index].style.display = 'none';
-            infoTexts[index].style.display = 'none';
+            logoImages[index].classList.remove('active');
+            infoTexts[index].classList.remove('active');
         });
     });
 
