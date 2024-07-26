@@ -18,7 +18,6 @@ body {
     position: relative;
     height: 130vh;
     overflow: hidden;
-    border: 1px solid green;
 }
 
 /* Styles for the left side of the mission block */
