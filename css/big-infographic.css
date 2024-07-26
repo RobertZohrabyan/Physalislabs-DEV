@@ -3,30 +3,34 @@ body {
   font-family: 'Familjen Grotesk', sans-serif;
 }
 
+.big-infographic-height {
+  min-height: 50vh;
+}
+
 .infographic-section {
   position: relative;
-  height: 150vh;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 1px solid green;
   overflow: hidden;
+  margin-top: 100px;
 }
 
 .robot-container {
     position: relative;
-    background-image: url(../images/Kenji-drivedown.png);
-    background-size: 140%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 450px;
-    height: 450px;
-    border: 1px solid green;
     margin: 0 auto;
 }
+
 .robot {
   position: relative;
-  border: 1px solid green;
+  background-image: url(../images/Kenji-drivedown.png);
+  background-size: 140%;
+  height: 450px;
+  width: 450px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 .cogwheel {
@@ -89,15 +93,9 @@ body {
 
 .info-line {
   text-align: center;
-  position: relative;
-  border: 1px solid green;
+  flex-wrap: wrap;
   display: flex;
-/*   width: 100%; */
-  height: 20vh;
-  margin-top: 500px;
-   position: absolute;
-  top: 0;
-  left: -80px;
+  justify-content: center;  
 }
 
 .info {
@@ -224,38 +222,38 @@ body {
 
 /* Adjust modal positions */
 #modal-1 {
-  left: -300px;
-  top: 100px;
+  left: -255px;;
+  top: 10px;
 }
 
 #modal-2 {
-  left: -300px;
-  top: 100px;
+  left: -255px;;
+  top: 10px;
 }
 
 #modal-3 {
-  left: -300px;
-  top: 100px;
+  left: -255px;;
+  top: 10px;
 }
 
 #modal-4 {
-  right: -350px;
-  top: 50px;
+  right: -255px;
+  top: 10px;
 }
 
 #modal-5 {
-  right: -350px;
-  top: 50px;
+  right: -255px;
+  top: 10px;
 }
 
 #modal-6 {
-  right: -350px;
-  top: 50px;
+  right: -255px;
+  top: 10px;
 }
 
 #modal-7 {
-  right: -350px;
-  top: 50px;
+  right: -255px;
+  top: 10px;
 }
 
 .modal-content {
@@ -288,4 +286,12 @@ body {
 
 .modal-content video {
   max-height: 300px;
+}
+
+@media (max-width: 600px) {
+  .modal {
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 auto !important;
+  }
 }
