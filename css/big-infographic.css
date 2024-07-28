@@ -4,7 +4,7 @@ body {
 }
 
 .big-infographic-height {
-  min-height: 50vh;
+  min-height: 87vh;
   height: auto !important;
 }
 
@@ -329,5 +329,34 @@ body {
 
   .info .active {
     display: none !important;
+  }
+}
+
+@media (max-width: 960px) {
+  .modal {
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 auto !important;
+    width: 450px;
+  }
+
+  .close-modal {
+    display: block;
+  }
+
+  .info p {
+    display: none;
+  }
+
+  .info .active {
+    display: none !important;
+  }  
+}
+
+
+@media (max-width: 1200px) {
+  .big-infographic-height {
+    min-height: 100vh;
+    height: auto !important;
   }
 }
