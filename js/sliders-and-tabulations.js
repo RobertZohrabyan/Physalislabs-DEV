@@ -49,100 +49,114 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Main Slider Functionality
-    function initMainSlider() {
-        const slider = document.querySelector('.main_slider.gallery-slider');
-        const slides = slider.querySelectorAll('.main_slider_slide');
-        const dots = document.querySelectorAll('.main_slider_dot');
-        const prevBtn = document.querySelector('.prev-slide');
-        const nextBtn = document.querySelector('.next-slide');
-        let currentSlide = 0;
+function initMainSlider() {
+    const slider = document.querySelector('.main_slider.gallery-slider');
+    const slides = slider.querySelectorAll('.main_slider_slide');
+    const dots = document.querySelectorAll('.main_slider_dot');
+    const prevBtn = document.querySelector('.prev-slide');
+    const nextBtn = document.querySelector('.next-slide');
+    let currentSlide = 0;
 
-        const slideImages = {
-            0: { 0: './images/2.png', 1: 'https://placehold.co/550x400', 2: 'https://placehold.co/450x400' },
-            1: { 0: './images/Dragon.jpg', 1: 'https://placehold.co/540x400', 2: 'https://placehold.co/440x400' },
-            2: { 0: './images/DragonTrunk.jpg', 1: 'https://placehold.co/530x400', 2: 'https://placehold.co/430x400' }
-        };
+    const slideImages = {
+        0: { 0: './images/kenji-x1/Kenji-4.jpg', 1: './images/kenji-x1/DSC_0773.jpg', 2: './images/kenji-x1/including-slam.png' },
+        1: { 0: './images/kenji-x1/plata.PNG', 1: './images/website_images/current-draw.jpg', 2: './images/kenji-x1/duplex-communication.png' },
+        2: { 0: './images/kenji-x1/Kenji-1_Tower_Module.jpg', 1: './images/kenji-x1/kenji-tower-modules.png', 2: './video/tower_rotation_smallsize.gif' },
+        3: { 0: './video/Lab_Application_1.gif', 1: './video/arm_craning_1.gif', 2: './video/arm_craning_3_small.gif' },
+        4: { 0: './images/website_images/s-l400.jpg', 1: './images/website_images/RaspberryPi_B+.jpg', 2: './images/website_images/roboDrive_Hardware_Enclosure.png' },
+        5: { 0: './images/kenji-x1/Graph16.jpg', 1: './images/kenji-x1/Graph7.jpg', 2: './images/kenji-x1/Graph3.jpg' },
+        6: { 0: 'https://placehold.co/440x400', 1: 'https://placehold.co/550x400', 2: 'https://placehold.co/450x400' }
+    };
 
-        function showSlide(index) {
-            console.log('Showing slide:', index);
-            slider.style.transform = `translateX(-${index * 100}%)`;
-            
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === index);
-            });
-            prevBtn.classList.toggle('inactive', index === 0);
-            nextBtn.classList.toggle('inactive', index === slides.length - 1);
+    function showSlide(index) {
+        console.log('Showing slide:', index);
+        slider.style.transform = `translateX(-${index * 100}%)`;
+        
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+        prevBtn.classList.toggle('inactive', index === 0);
+        nextBtn.classList.toggle('inactive', index === slides.length - 1);
 
-            if (slides[index]) {
-                initializeTabs(slides[index]);
-            } else {
-                console.error('Slide not found at index:', index);
-            }
+        if (slides[index]) {
+            initializeTabs(slides[index]);
+        } else {
+            console.error('Slide not found at index:', index);
         }
-
-        function initializeTabs(slide) {
-            const slideIndex = Array.from(slides).indexOf(slide);
-            console.log('Initializing slide:', slideIndex);
-
-            const tabs = slide.querySelectorAll('.information_block_tab');
-            const tabContents = slide.querySelectorAll('.information_block_tab_content');
-            const tabImage = slide.querySelector('.information_block_right img');
-
-            if (!tabImage) {
-                console.error('Image element not found for slide', slideIndex);
-                return;
-            }
-
-            tabs.forEach((tab, index) => {
-                tab.addEventListener('click', () => {
-                    tabs.forEach(t => t.classList.remove('active', 'default-active'));
-                    tabContents.forEach(tc => tc.classList.remove('active'));
-                    
-                    tab.classList.add('active');
-                    tabContents[index].classList.add('active');
-                    tabImage.src = slideImages[slideIndex][index];
-                });
-
-                tab.addEventListener('mouseenter', () => {
-                    if (!tab.classList.contains('active')) tab.classList.remove('default-active');
-                });
-
-                tab.addEventListener('mouseleave', () => {
-                    if (!tab.classList.contains('active')) tab.classList.add('default-active');
-                });
-            });
-
-            // Set default tab
-            tabs[0].click();
-        }
-
-        prevBtn.addEventListener('click', () => {
-            if (currentSlide > 0) {
-                currentSlide--;
-                showSlide(currentSlide);
-            }
-        });
-
-        nextBtn.addEventListener('click', () => {
-            if (currentSlide < slides.length - 1) {
-                currentSlide++;
-                showSlide(currentSlide);
-            }
-        });
-
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                currentSlide = index;
-                showSlide(currentSlide);
-            });
-        });
-
-        // Initialize tabs for all slides
-        slides.forEach(initializeTabs);
-
-        // Show initial slide
-        showSlide(currentSlide);
     }
+
+    function initializeTabs(slide) {
+        const slideIndex = Array.from(slides).indexOf(slide);
+        console.log('Initializing slide:', slideIndex);
+
+        const tabs = slide.querySelectorAll('.information_block_tab');
+        const tabContents = slide.querySelectorAll('.information_block_tab_content');
+        const tabImage = slide.querySelector('.information_block_right img');
+
+        if (!tabImage) {
+            console.error('Image element not found for slide', slideIndex);
+            return;
+        }
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active', 'default-active'));
+                tabContents.forEach(tc => tc.classList.remove('active'));
+                
+                tab.classList.add('active');
+                tabContents[index].classList.add('active');
+                
+                // Update image
+                if (slideImages[slideIndex] && slideImages[slideIndex][index]) {
+                    tabImage.src = slideImages[slideIndex][index];
+                }
+
+                // Update content from data-content attribute
+                const content = tab.getAttribute('data-content');
+                if (content) {
+                    tabContents[index].textContent = content;
+                }
+            });
+
+            tab.addEventListener('mouseenter', () => {
+                if (!tab.classList.contains('active')) tab.classList.remove('default-active');
+            });
+
+            tab.addEventListener('mouseleave', () => {
+                if (!tab.classList.contains('active')) tab.classList.add('default-active');
+            });
+        });
+
+        // Set default tab
+        tabs[0].click();
+    }
+
+    prevBtn.addEventListener('click', () => {
+        if (currentSlide > 0) {
+            currentSlide--;
+            showSlide(currentSlide);
+        }
+    });
+
+    nextBtn.addEventListener('click', () => {
+        if (currentSlide < slides.length - 1) {
+            currentSlide++;
+            showSlide(currentSlide);
+        }
+    });
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentSlide = index;
+            showSlide(currentSlide);
+        });
+    });
+
+    // Initialize tabs for all slides
+    slides.forEach(initializeTabs);
+
+    // Show initial slide
+    showSlide(currentSlide);
+}
 
     // Gallery Slider Functionality
     function initGallerySlider() {
@@ -203,9 +217,9 @@ document.addEventListener("DOMContentLoaded", function() {
         const tabContents = infoBlock.querySelectorAll('.information_block_tab_content');
         const image = infoBlock.querySelector('.information_block_right img');
         const images = [
-            'https://placehold.co/600x400',
-            'https://placehold.co/450x400',
-            'https://placehold.co/550x400'
+            './images/kenji-x1/DSC_0736_front_view_dark_2.jpg',
+            './images/kenji-x1/crab-kenji.png',
+            './images/kenji-x1/Kenji-13.jpg'
         ];
 
         function showTab(index) {
