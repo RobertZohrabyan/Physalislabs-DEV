@@ -59,6 +59,7 @@ section {
 	font-weight: 300;
 	animation: fadeInUp 0.5s ease-in-out;
 	animation-fill-mode: both; 
+	color: #fff;
 }
 
 .section-inner h2 {
@@ -67,6 +68,7 @@ section {
 	margin-bottom: 20px;
 	animation: fadeInUp 0.5s ease-in-out 0.2s;
 	animation-fill-mode: both; 
+	color: #fff;
 }
 
 .section-inner h1 {
@@ -81,19 +83,19 @@ section {
 	/* Background images */
 		/* Section A */
 .section-a {
-	background-image: url('../images/kenji-x1/Baseboard_opened_Image_1.png');
+	background-image: url('../images/torch/TORCH_Mastcam_Render.png');
 }
 
 .section-b {
-	background-image: url('../images/kenji-x1/Kenji-6.jpg');
+	background-image: url('../images/kenji-x1/Baseboard_opened_Image_1.png');
 }
 
 .section-c {
-	background-image: url('../images/kenji-x1/Kenji-13.jpg');
+	background-image: url('../images/geo-lab/Physalis_GEO.Lab_CAD.png');
 }
 
 .section-d {
-	background-image: url('../images/kenji-x1/Kenji-9.jpg');
+	background-image: url('../images/torch/Left_Mecha_Arm_version1a.png');
 }
 
 .section-e {
@@ -104,8 +106,8 @@ section {
 	background-image: url('../images/kenji-x1/Kenji-10.jpg');
 }
 
-.section-g {
-	background-image: url('../images/kenji-x1/.jpg');  /* Suppliers */
+.section-k {
+	background-image: url('../images/kenji-x1/Kenji-9.jpg');
 }
 
 .section-h {
@@ -119,6 +121,28 @@ section {
 .section-j {
     background-image: url('../images/.jpg'); 
     margin-top: 200px; 
+}
+
+.block_color_black h1, 
+.block_color_black h2, 
+.block_color_black h3, 
+.block_color_black h4, 
+.block_color_black h5, 
+.block_color_black h6 {
+    color: #000 !important;
+}
+
+.block_color_black .btn {
+    border-color: #000;
+    color: #000;
+}
+
+.block_color_black .btn .hover {
+    background-color: #000;
+}
+
+.block_color_black .btn:hover span {
+    color: #fff;
 }
 
 .btn {
@@ -252,7 +276,7 @@ section {
 }
 
 .bg-torch {
-	background-image: url('../images/kenji-x1/torch.png');
+	background-image: url('../images/torch/Kenji_X1_Model v225_1.png');
 }
 
 .bg-team {
