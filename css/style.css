@@ -80,6 +80,61 @@ section {
 	animation: fadeInUp 0.5s ease-in-out 0.4s;
 	animation-fill-mode: both; 
 }
+/* Block with tables in index page */
+.section-table-table {
+    border-collapse: collapse;
+    width: 200%;
+    margin-top: 20px;
+}
+
+.section-table-table td {
+    padding: 15px;
+    border-bottom: 1px solid #fff;
+    color: #fff; /* Text color */
+    font-family: 'Familjen Grotesk', sans-serif;
+}
+
+.section-table-table span {
+    font-weight: normal;
+    font-size: 14px;
+    color: #979797; /* Light grey for secondary text */
+}
+
+.left {
+    text-align: left; 
+    padding-left: 0;
+}
+
+.right {
+    text-align: right;
+    padding-right: 0; 
+}
+
+/* Section Block Table Styles */
+.section-table-a {
+	background-image: url('../images/torch/User_Library_honeycomb_3_2024_Jun_18_07_00_25PM_000_CustomizedView26194565777.png');
+} 
+
+.section-table-b {
+	background-image: url('../images/3.jpg');
+} 
+
+.section-table-c {
+	background-image: url('../images/3.jpg');
+} 
+
+.section-table-d {
+	background-image: url('../images/3.jpg');
+} 
+
+.section-table-e {
+	background-image: url('../images/3.jpg');
+} 
+
+.section-table-f {
+    background-image: url('../images/3.jpg');
+}
+/* Block with tables in index page END*/
 	/* Background images */
 		/* Section A */
 .section-a {
@@ -243,18 +298,18 @@ section {
 	flex-direction: column;
 	align-items: end;
 	justify-content: center;
-	padding: 50px;
+    padding: 30px; /*padding: 50px;*/
 	width: 100%;
 }
 
 .mobile-main-menu ul li {
-	margin-bottom: 20px;
+    margin-bottom: 10px;/*margin-bottom: 20px;*/
 	font-size: 18px;
 	text-transform: uppercase;
 	border-bottom: 1px #555 dotted;
 	width: 100%;
 	text-align: right;
-	padding-bottom: 8px;
+	padding-bottom: 8px;/*padding-bottom: 8px;*/
 }
 
 .mobile-main-menu ul li a {
@@ -337,6 +392,16 @@ section {
     height: calc(100vh - 100px);
     background-color: black;
     transition: 0.3s;
+}
+
+.doc_thumbnail_img {
+    width: 250px;
+}
+
+.doc_image_together img {
+   width: 45% !important;
+   display: inline-block !important; 
+   margin-right: 3% !important;
 }
 
 /* Documentation Hamburger Menu Styles */
@@ -1383,4 +1448,43 @@ a {
     height: auto;
     margin: 10px;
   }
+}
+
+
+
+
+
+
+
+
+
+/* Responsive Styles for blocks in index page with tables */
+@media (max-width: 960px) {
+    .section-table-table {
+        width: 150%;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-table-table {
+        width: 120%;
+    }
+}
+
+@media (max-width: 600px) {
+    .section-table-table {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-table-table {
+        width: 100%;
+    }
+}
+
+@media (max-width: 390px) {
+    .section-table-table {
+        width: 100%;
+    }
 }
