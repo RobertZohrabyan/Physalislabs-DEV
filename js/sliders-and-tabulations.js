@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const preContainer = document.querySelector('.main_slider-pre-container');
         const leftContent = document.querySelector('.main_slider-pre-left-content');
         const imageContainer = document.querySelector('.main_slider-pre-image-container');
-        const bgImage = imageContainer.querySelector('img');
+        const bgImage = imageContainer?.querySelector('img');
         const mainSlider = document.querySelector('.main_slider.section-gallery');
         const revealImage = document.querySelector('.reveal-image');
 
@@ -51,21 +51,55 @@ document.addEventListener("DOMContentLoaded", function() {
     // Main Slider Functionality
 function initMainSlider() {
     const slider = document.querySelector('.main_slider.gallery-slider');
+    if(!slider) return;
     const slides = slider.querySelectorAll('.main_slider_slide');
     const dots = document.querySelectorAll('.main_slider_dot');
     const prevBtn = document.querySelector('.prev-slide');
     const nextBtn = document.querySelector('.next-slide');
     let currentSlide = 0;
 
-    const slideImages = {
-        0: { 0: './images/kenji-x1/Kenji-4.jpg', 1: './images/kenji-x1/DSC_0773.jpg', 2: './images/kenji-x1/including-slam.png' },
-        1: { 0: './images/kenji-x1/plata.PNG', 1: './images/website_images/current-draw.jpg', 2: './images/kenji-x1/duplex-communication.png' },
-        2: { 0: './images/kenji-x1/Kenji-1_Tower_Module.jpg', 1: './images/kenji-x1/kenji-tower-modules.png', 2: './video/tower_rotation_smallsize.gif' },
-        3: { 0: './video/Lab_Application_1.gif', 1: './video/arm_craning_1.gif', 2: './video/arm_craning_3_small.gif' },
-        4: { 0: './images/website_images/s-l400.jpg', 1: './images/website_images/RaspberryPi_B+.jpg', 2: './images/website_images/roboDrive_Hardware_Enclosure.png' },
-        5: { 0: './images/kenji-x1/Graph16.jpg', 1: './images/kenji-x1/Graph7.jpg', 2: './images/kenji-x1/Graph3.jpg' },
-        6: { 0: 'https://placehold.co/440x400', 1: 'https://placehold.co/550x400', 2: 'https://placehold.co/450x400' }
+    let slideImages = {
+          0: { 0: './images/kenji-x1/Kenji-4.jpg', 1: './images/kenji-x1/DSC_0773.jpg', 2: './images/kenji-x1/Graph3.jpg' },
+          1: { 0: './images/kenji-x1/plata.PNG', 1: './images/website_images/current-draw.jpg', 2: './images/kenji-x1/duplex-communication.png' },
+          2: { 0: './images/kenji-x1/Kenji-1_Tower_Module.jpg', 1: './images/kenji-x1/kenji-tower-modules.png', 2: './video/tower_rotation_smallsize.gif' },
+          3: { 0: 'https://placehold.co/440x400', 1: 'https://placehold.co/550x400', 2: 'https://placehold.co/530x400' },
+          4: { 0: 'https://placehold.co/550x400', 1: 'https://placehold.co/440x400', 2: 'https://placehold.co/450x400' },
+          5: { 0: 'https://placehold.co/550x400', 1: 'https://placehold.co/450x400', 2: 'https://placehold.co/440x400' },
+          6: { 0: 'https://placehold.co/440x400', 1: 'https://placehold.co/550x400', 2: 'https://placehold.co/450x400' }
     };
+
+    if (slider.classList.contains('geo-lab-slider')) {
+        slideImages = {
+            0: { 0: './images/geo-lab/DSC_0745.JPG', 1: './images/geo-lab/DSC_0752.JPG', 2: './images/geo-lab/DSC_0751.JPG' },
+            1: { 0: './images/geo-lab/DSC_0748.JPG', 1: './images/geo-lab/DSC_0754.JPG', 2: './images/geo-lab/DSC_0745.JPG' },
+            2: { 0: './images/geo-lab/DSC_0744.JPG', 1: './images/geo-lab/DSC_0747.JPG', 2: './images/geo-lab/DSC_0755.JPG' },
+            3: { 0: './images/geo-lab/DSC_0750.JPG', 1: './images/geo-lab/DSC_0754.JPG', 2: './images/geo-lab/DSC_0755.JPG' },
+            4: { 0: './images/geo-lab/DSC_0751.JPG', 1: './images/geo-lab/DSC_0744.JPG', 2: './images/geo-lab/DSC_0754.JPG' },
+            5: { 0: './images/geo-lab/DSC_0744.JPG', 1: './images/geo-lab/DSC_0755.JPG', 2: './images/geo-lab/DSC_0754.JPG' }
+        }
+    }
+
+    if (slider.classList.contains('torch-slider')) {
+        slideImages = {
+            0: { 0: './images/torch/Left_Mecha_Arm_version2.png', 1: './images/torch/Left_Mecha_Arm_version5.png', 2: './images/torch/Left_Mecha_Arm_version7.png' },
+            1: { 0: './images/torch/Kenji_X1_Model v225_3 (2).png', 1: './images/torch/Kenji_X1_Model v225_2.png', 2: './images/torch/Torch_CAD_mODEL_pRE_fINAL.PNG' },
+            2: { 0: './images/torch/', 1: './images/torch/', 2: './images/torch/' },
+            3: { 0: './images/torch/', 1: './images/torch/', 2: './images/torch/' },
+            4: { 0: './images/torch/', 1: './images/torch/', 2: './images/torch/' },
+            5: { 0: './images/torch/', 1: './images/torch/', 2: './images/torch/' }
+        }
+    }
+
+    if (slider.classList.contains('team-gallery')) {
+        slideImages = {
+            0: { 0: './images/torch/Left_Mecha_Arm_version2.png'},
+            1: { 0: './images/torch/Kenji_X1_Model v225_3 (2).png'},
+            2: { 0: './images/torch/', 1: './images/torch/'},
+            3: { 0: './images/torch/', 1: './images/torch/'},
+            4: { 0: './images/torch/', 1: './images/torch/'},
+            5: { 0: './images/torch/', 1: './images/torch/'}
+        }
+    }
 
     function showSlide(index) {
         console.log('Showing slide:', index);
@@ -217,9 +251,9 @@ function initMainSlider() {
         const tabContents = infoBlock.querySelectorAll('.information_block_tab_content');
         const image = infoBlock.querySelector('.information_block_right img');
         const images = [
-            './images/kenji-x1/DSC_0736_front_view_dark_2.jpg',
-            './images/kenji-x1/crab-kenji.png',
-            './images/kenji-x1/Kenji-13.jpg'
+            'https://placehold.co/600x400',
+            'https://placehold.co/450x400',
+            'https://placehold.co/550x400'
         ];
 
         function showTab(index) {
