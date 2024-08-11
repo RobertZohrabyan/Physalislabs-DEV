@@ -59,13 +59,12 @@ function initMainSlider() {
     let currentSlide = 0;
 
     let slideImages = {
-          0: { 0: './images/kenji-x1/Kenji-4.jpg', 1: './images/kenji-x1/DSC_0773.jpg', 2: './images/kenji-x1/Graph3.jpg' },
-          1: { 0: './images/kenji-x1/plata.PNG', 1: './images/website_images/current-draw.jpg', 2: './images/kenji-x1/duplex-communication.png' },
-          2: { 0: './images/kenji-x1/Kenji-1_Tower_Module.jpg', 1: './images/kenji-x1/kenji-tower-modules.png', 2: './video/tower_rotation_smallsize.gif' },
-          3: { 0: 'https://placehold.co/440x400', 1: 'https://placehold.co/550x400', 2: 'https://placehold.co/530x400' },
-          4: { 0: 'https://placehold.co/550x400', 1: 'https://placehold.co/440x400', 2: 'https://placehold.co/450x400' },
-          5: { 0: 'https://placehold.co/550x400', 1: 'https://placehold.co/450x400', 2: 'https://placehold.co/440x400' },
-          6: { 0: 'https://placehold.co/440x400', 1: 'https://placehold.co/550x400', 2: 'https://placehold.co/450x400' }
+          0: { 0: './images/website_images/Kenji_Explained_2.png', 1: './video/Kenji_X1_Rescue_Zone_3_small.gif', 2: './video/Lab_Application_1.gif' },
+          1: { 0: './images/kenji-x1/plata.PNG', 1: './images/website_images/current-draw.jpg', 2: './images/website_images/lagos-techie-kenji-x1.jpg' },
+          2: { 0: './video/tower_rotation_smallsize.gif', 1: './images/kenji-x1/kenji-tower-modules.png', 2: './images/kenji-x1/Kenji-1_Tower_Module.jpg' },
+          3: { 0: './video/arm_craning_1.gif', 1: './video/arm_craning_5.gif', 2: './video/arm_craning_3_small.gif' },
+          4: { 0: './images/website_images/s-l400.jpg', 1: './images/website_images/RaspberryPi_B+.jpg', 2: './images/website_images/roboDrive_Hardware_Enclosure.png' },
+          5: { 0: './video/kenji_positioning_2.gif', 1: './images/kenji-x1/Kenji-6.jpg', 2: './images/kenji-x1/Graph3.jpg' },
     };
 
     if (slider.classList.contains('geo-lab-slider')) {
@@ -90,14 +89,25 @@ function initMainSlider() {
         }
     }
 
+    if (slider.classList.contains('robo-drive-slider')) {
+        slideImages = {
+            0: { 0: './images/kenji-x1/2.png', 1: './images/torch/Left_Mecha_Arm_version5.png', 2: './images/torch/Left_Mecha_Arm_version7.png' },
+            1: { 0: '', 1: '', 2: '' },
+            2: { 0: './images/torch/', 1: './images/torch/', 2: './images/torch/' },
+            3: { 0: './images/torch/', 1: './images/torch/', 2: './images/torch/' },
+            4: { 0: './images/torch/', 1: './images/torch/', 2: './images/torch/' },
+            5: { 0: './images/torch/', 1: './images/torch/', 2: './images/torch/' }
+        }
+    }
+
     if (slider.classList.contains('team-gallery')) {
         slideImages = {
-            0: { 0: './images/torch/Left_Mecha_Arm_version2.png'},
-            1: { 0: './images/torch/Kenji_X1_Model v225_3 (2).png'},
-            2: { 0: './images/torch/', 1: './images/torch/'},
-            3: { 0: './images/torch/', 1: './images/torch/'},
-            4: { 0: './images/torch/', 1: './images/torch/'},
-            5: { 0: './images/torch/', 1: './images/torch/'}
+            0: { 0: ''},
+            1: { 0: ''},
+            2: { 0: '', 1: ''},
+            3: { 0: '', 1: ''},
+            4: { 0: '', 1: ''},
+            5: { 0: '', 1: ''}
         }
     }
 
@@ -251,9 +261,9 @@ function initMainSlider() {
         const tabContents = infoBlock.querySelectorAll('.information_block_tab_content');
         const image = infoBlock.querySelector('.information_block_right img');
         const images = [
-            'https://placehold.co/600x400',
-            'https://placehold.co/450x400',
-            'https://placehold.co/550x400'
+            './images/kenji-x1/DSC_0736_front_view_dark_2.jpg',
+            './images/kenji-x1/DSC_0763_smallsize.jpg',
+            './images/kenji-x1/pcb-stack-inside-robodrive.png'
         ];
 
         function showTab(index) {
