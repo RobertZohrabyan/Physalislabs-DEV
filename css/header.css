@@ -130,6 +130,10 @@ ul {
     margin-left: 5px;
 }
 
+.hide {
+    display: none;
+}
+
 /* Mobile Menu */
 .mobile-main-menu {
     position: fixed;
