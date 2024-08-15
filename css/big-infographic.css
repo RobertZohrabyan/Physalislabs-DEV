@@ -4,7 +4,7 @@ body {
 }
 
 .big-infographic-height {
-  min-height: 87vh;
+  min-height: 93vh;
   height: auto !important;
 }
 
@@ -13,7 +13,6 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
   margin-top: 100px;
 }
 
@@ -24,7 +23,7 @@ body {
 
 .robot {
   position: relative;
-  background-image: url(../images/Kenji-drivedown.png);
+  background-image: url(../images/kenji-x1/Kenji-5.jpg);
   background-size: 140%;
   height: 450px;
   width: 450px;
@@ -58,8 +57,8 @@ body {
 
 /* Adjust cogwheel positions */
 .cogwheel-1 {
-  top: 365px;
-  left: 90px;
+  top: 290px;
+  left: 105px;
 }
 
 .cogwheel-2 {
@@ -78,18 +77,18 @@ body {
 }
 
 .cogwheel-5 {
-  top: 150px;
-  left: 200px;
+  top: 230px;
+  left: 140px;
 }
 
 .cogwheel-6 {
-  top: 210px;
-  left: 190px;
+  top: 128px;
+  left: 260px;
 }
 
 .cogwheel-7 {
-  top: 340px;
-  left: 320px;
+  top: 346px;
+  left: 309px;
 }
 
 .info-line {
@@ -183,10 +182,10 @@ body {
 .info p {
   display: none;
   margin-top: 10px;
-  overflow: hidden;
+  overflow: visible;
   width: 125px;
   text-align: left;
-  position: relative;
+  position: absolute;
   font-size: 12px;
   line-height: 16px;
   margin-top: 5px;
@@ -353,10 +352,9 @@ body {
   }  
 }
 
-
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
   .big-infographic-height {
-    min-height: 100vh;
+    min-height: 850px;
     height: auto !important;
   }
 }
