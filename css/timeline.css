@@ -80,6 +80,10 @@ body {
 	animation-delay: 6s;
 }
 
+.timeline_container:nth-child(7){
+	animation-delay: 7s;
+}
+
 .timeline_text-box {
 	padding: 20px 30px;
 	background: #000;

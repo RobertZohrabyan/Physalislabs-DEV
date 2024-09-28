@@ -112,11 +112,11 @@ section {
 
 /* Section Block Table Styles */
 .section-table-a {
-	background-image: url('../images/torch/User_Library_honeycomb_3_2024_Jun_18_07_00_25PM_000_CustomizedView26194565777.png');
+	background-image: url('../images/torch/Kenji_X1_Model v225_3 (2).png');
 } 
 
 .section-table-b {
-	background-image: url('../images/3.jpg');
+	background-image: url('../images/torch/Kenji_X1_Model v225_3 (2).png');
 } 
 
 .section-table-c {
@@ -138,11 +138,11 @@ section {
 	/* Background images */
 		/* Section A */
 .section-a {
-	background-image: url('../images/torch/TORCH_Mastcam_Render.png');
+	background-image: url('../images/torch/TORCH_Mastcam_Render (2).png');
 }
 
 .section-b {
-	background-image: url('../images/kenji-x1/Baseboard_opened_Image_1.png');
+	background-image: url('../images/2.png');
 }
 
 .section-c {
@@ -331,11 +331,15 @@ section {
 }
 
 .bg-torch {
-	background-image: url('../images/torch/Kenji_X1_Model v225_1.png');
+	background-image: url('../images/torch/TORCH_gen2_Render_A20.png');
 }
 
 .bg-robodrive {
-	background-image: url('../images/kenji-x1/plata.PNG');
+	background-image: url('../images/robodrive/Baseboard_opened_2024-Aug-20_06.png');
+}
+
+.bg-mecha-arm {
+	background-image: url('../images/torch/Left_Mecha_Arm_v1_1.png');
 }
 
 .bg-team {
@@ -385,7 +389,7 @@ section {
         strokeDashoffset: 0;
     }
 }
-			/*Documentation*/
+/*Documentation*/
 #techdoc_navbar {
     position: fixed;
     overflow-y: scroll;
@@ -393,19 +397,28 @@ section {
     left: 0;
     padding: 30px;
     width: 300px;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 220px);
     background-color: black;
     transition: 0.3s;
 }
 
 .doc_thumbnail_img {
     width: 250px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .doc_image_together img {
    width: 45% !important;
    display: inline-block !important; 
    margin-right: 3% !important;
+}
+
+/* Documentation Footer */
+footer {
+  padding: 30px;
+  text-align: center;
+  color: #888;
 }
 
 /* Documentation Hamburger Menu Styles */
@@ -470,6 +483,13 @@ section {
     font-size: 16px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+}
+
+.techdoc_nav_links:not(.collapsed) {
+    max-height: 1000px;
 }
 
 .techdoc_nav_link {
@@ -488,7 +508,7 @@ section {
 .techdoc_main_doc {
     margin-left: 400px;
     margin-right: 20px;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 120px);
     overflow-y: scroll;
     scroll-behavior: smooth;
     margin-top: 100px;
@@ -529,6 +549,30 @@ code {
     font-size: 22px;
     font-family: 'Familjen Grotesk', sans-serif;
     color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding-right: 30px;
+}
+
+.techdoc_navbar_header h1::after {
+    content: '\276F'; /* Right-pointing arrow */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    transition: transform 0.3s ease;
+}
+
+.techdoc_navbar_header h1:not(.collapsed)::after {
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.techdoc_navbar_header h1:hover::after {
+    color: #777;
 }
 
 .techdoc_navbar_header p {
@@ -544,7 +588,7 @@ code {
     }
 
     #techdoc_navbar {
-        left: -300px;
+        left: -400px;
     }
 
     #techdoc_navbar.doc-show-menu {
@@ -560,6 +604,7 @@ code {
         transform: translateX(5px);
     }
 }
+
 /* Styles and blocks took from one of the git hub examples */
 /* strip is showing call to action block with button and text */
 
@@ -1393,7 +1438,7 @@ a {
 /* Media queries */
 @media only screen and (max-width: 400px) {
   .our_suppliers_section {
-  	height: 50vh;
+  	height: 67vh;/*height: 50vh;*/
   }	
 
   .our_suppliers_logo_row {

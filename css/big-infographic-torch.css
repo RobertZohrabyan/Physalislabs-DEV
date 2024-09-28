@@ -23,7 +23,7 @@ body {
 
 .robot {
   position: relative;
-  background-image: url(../images/kenji-x1/Kenji-5.jpg);
+  background-image: url('../images/torch/TORCH_gen1 v251_WireFrame (2).png');
   background-size: 140%;
   height: 450px;
   width: 450px;
@@ -57,38 +57,38 @@ body {
 
 /* Adjust cogwheel positions */
 .cogwheel-1 {
-  top: 290px;
-  left: 105px;
+  top: 195px;
+  left: 175px;
 }
 
 .cogwheel-2 {
-  top: 205px;
-  left: 70px;
+  top: 285px;
+  left: 80px;
 }
 
 .cogwheel-3 {
-  top: 60px;
-  left: 300px;
+  top: 15px;
+  left: 212px;
 }
 
 .cogwheel-4 {
-  top: 205px;
-  left: 340px;
+  top: 288px;
+  left: 385px;
 }
 
 .cogwheel-5 {
   top: 230px;
-  left: 140px;
+  left: 300px;
 }
 
 .cogwheel-6 {
-  top: 128px;
-  left: 260px;
+  top: 165px;
+  left: 220px;
 }
 
 .cogwheel-7 {
-  top: 346px;
-  left: 309px;
+  top: 345px;
+  left: 266px;
 }
 
 .info-line {

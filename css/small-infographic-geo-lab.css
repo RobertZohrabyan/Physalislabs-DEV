@@ -3,22 +3,22 @@
 /* Example positioning for callouts */
 .callout-one {
     top: 310px;
-    left: -290px;
+    left: -219px;
 }
 
 .callout-two {
-    top: 130px;
-    left: -280px;
+    top: 110px;
+    left: -225px;
 }
 
 .callout-three {
-    top: -110px;
-    left: -74px;
+    top: -100px;
+    left: -124px;
 }
 
 .callout-four {
-    top: 50px;
-    right: -820px;
+    top: 110px;
+    right: -981px;
 }
 
 .callout-five {
@@ -127,79 +127,19 @@ section {
 }
 
 .kenji_x1_image-container.small_infographic_kenji {
-    background-image: url('../images/Kenji-infographic.png');
-}
-
-.kenji_x1_image-container.small_infographic_geo_lab {
     background-image: url('../images/geo-lab/Geo_Lab_Platform_v2_A1.png');
 }
-
-.kenji_x1_image-container.small_infographic_torch {
-    background-image: url('../images/torch/torch-wireframe-small-infographic.png');
-}
-
-.kenji_x1_image-container.small_infographic_robodrive {
-    background-image: url('../images/kenji-x1/croped-plata.PNG');
-}
 /* Kenji dot positions */
-.small_infographic_kenji .kenjix1_point_dot.left-1 { display: block; top: 75%; left: 30%; }
-.small_infographic_kenji .kenjix1_point_dot.left-2 { display: block; top: 50%; left: 26%; }
-.small_infographic_kenji .kenjix1_point_dot.left-3 { display: block; top: 13%; left: 63%; }
+.small_infographic_kenji .kenjix1_point_dot.left-1 { display: block; top: 85%; left: 40%; }
+.small_infographic_kenji .kenjix1_point_dot.left-2 { display: block; top: 45%; left: 35%; }
+.small_infographic_kenji .kenjix1_point_dot.left-3 { display: block; top: 15%; left: 55%; }
 .small_infographic_kenji .kenjix1_point_dot.left-4 { display: block; top: 33%; right: 37%; }
-.small_infographic_kenji .kenjix1_point_dot.right-1 { display: block; top: 48%; right: 50%; }
+.small_infographic_kenji .kenjix1_point_dot.right-1 { display: block; top: 46%; left: 93%; }
 .small_infographic_kenji .kenjix1_point_dot.right-2 { display: block; top: 34%; right: 51%; }
 .small_infographic_kenji .kenjix1_point_dot.right-3 { display: block; bottom: 18.17%; right: 32.5%; }
 .small_infographic_kenji .kenjix1_point_dot.right-4 { display: block; top: 25%; left: 40%; }
 .small_infographic_kenji .kenjix1_point_dot.right-5 { display: block; top: 50%; right: 28.8%; }
-/* ... */
 
-
-/* Geo-Lab dot positions */
-.small_infographic_geo_lab .kenjix1_point_dot.left-1 { display: block; top: 55%; left: 40%; }
-.small_infographic_geo_lab .kenjix1_point_dot.left-2 { display: block; top: 45%; left: 35%; }
-.small_infographic_geo_lab .kenjix1_point_dot.left-3 { display: block; top: 60px; left: 325px; }
-.small_infographic_geo_lab .kenjix1_point_dot.left-4 { display: block; top: 190px; right: 25px; }
-
-
-
-
-/* Torch dot positions */
-.small_infographic_torch .kenjix1_point_dot.left-1 { display: block; top: 88%; left: 5%; }
-.small_infographic_torch .kenjix1_point_dot.left-2 { display: block; top: 59%; left: 25%; }
-.small_infographic_torch .kenjix1_point_dot.left-3 { display: block; top: 33%; left: 25%; }
-.small_infographic_torch .kenjix1_point_dot.left-4 { display: block; top: 20%; left: 23%; }
-.small_infographic_torch .kenjix1_point_dot.right-1 { display: block; top: 48%; right: 50%;  }
-.small_infographic_torch .kenjix1_point_dot.right-2 { display: block; top: 34%; right: 51%; }
-.small_infographic_torch .kenjix1_point_dot.right-3 { display: block; bottom: 27.17%; right: 41.5%; }
-.small_infographic_torch .kenjix1_point_dot.right-4 { display: block; top: 29%; left: 40%;  }
-.small_infographic_torch .kenjix1_point_dot.right-5 { display: block; top: 50%; right: 28.8%; }
-
-
-@media  only screen and  (min-width: 960px) {
-
-/*.small_infographic_kenji .callout-one { top: 20%; left: 30%; } 
-.small_infographic_kenji .callout-two { top: 130px; left: -280px; }
-.small_infographic_kenji .callout-three { top: -110px; left: -74px; }
-.small_infographic_kenji .callout-four { top: 50px; right: -820px; }
-.small_infographic_kenji .callout-five { top: 140px; right: -700px; }*/
-/*.small_infographic_kenji .kenjix1_point_dot.left-2 { display: block; top: 38%; left: 27%; }
-.small_infographic_kenji .kenjix1_point_dot.right-4 { display: block; top: 20%; left: 40%; }
-.small_infographic_kenji .kenjix1_point_dot.right-2 { display: block; top: 27%; left: 47%; }
-.small_infographic_kenji .kenjix1_point_dot.right-1 { display: block; top: 37%; left: 48%; }
-.small_infographic_kenji .kenjix1_point_dot.left-4 { display: block; top: 25%; right: 35%; }
-.small_infographic_kenji .kenjix1_point_dot.right-5 { display: block; top: 38%; right: 27.8%; }*/
-
-/* Geo-Lab callout positions */
-/*.small_infographic_geo_lab .kenjix1_point_dot.left-1 { display: block; top: 55%; left: 40%; }
-.small_infographic_geo_lab .kenjix1_point_dot.left-2 { display: block; top: 28%; left: 28%; }
-.small_infographic_geo_lab .kenjix1_point_dot.left-3 { display: block; top: 50px; left: 260px; }
-.small_infographic_geo_lab .kenjix1_point_dot.left-4 { display: block; top: 190px; right: 25px; }*/
-/* /* .small_infographic_geo_lab .callout-one { top: 333px; left: -220px; } */
-/*.small_infographic_geo_lab .callout-two { top: 140px; left: -225px; }
-.small_infographic_geo_lab .callout-three { top: -90px; left: -128px;}
-.small_infographic_geo_lab .callout-four { top: 120px; right: -1020px;}
-.small_infographic_geo_lab .kenjix1_point_dot.left-1 { display: block; top: 90%; left: 50%; }*/
-}
     
 /* Callout styles */
 .kenjix1_point_dot {

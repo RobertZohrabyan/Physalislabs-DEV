@@ -51,6 +51,10 @@ ul {
     margin-right: 50px;
 }
 
+.desktop-main-menu.doc_menu {
+    margin-right: 130px;
+}
+
 .desktop-main-menu ul {
     display: flex;
 }
@@ -92,7 +96,7 @@ ul {
     display: none;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.7);
-    width: 110px;
+    width: 120px;
     left: 0;
     top: 100%;
     padding: 10px 0;
@@ -198,7 +202,7 @@ ul {
     font-size: 18px;
     border-bottom: 1px solid #555;
     padding-bottom: 8px;
-    width: 100%;
+    width: 90%;
     text-align: right;
 }
 

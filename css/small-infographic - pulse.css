@@ -46,50 +46,6 @@
     right: -846px;
 }
 
-.small_infographic_geo_lab .callout-one {
-    top: 310px;
-    left: -290px;
-}
-
-.small_infographic_geo_lab .callout-two {
-    top: 130px;
-    left: -280px;
-}
-
-.small_infographic_geo_lab .callout-three {
-    top: -110px;
-    left: -74px;
-}
-
-.small_infographic_geo_lab .callout-four {
-    top: 50px;
-    right: -820px;
-}
-
-.small_infographic_geo_lab .callout-five {
-    top: 140px;
-    right: -700px;
-}
-
-.small_infographic_geo_lab .callout-six {
-    top: 70px;
-    right: -781px;
-}
-
-.small_infographic_geo_lab .callout-seven {
-    top: 330px;
-    right: -852px;
-}
-
-.small_infographic_geo_lab .callout-eight {
-    top: 30px;
-    right: -100px;
-}
-
-.small_infographic_geo_lab .callout-nine {
-    top: 140px;
-    right: -846px;
-}
 body {
     margin: 0;
     padding: 0;
@@ -115,103 +71,33 @@ section {
     margin: 130px auto;
 }
 
-.kenji_x1_background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
-}
-
 .kenji_x1_image-container.small_infographic_kenji {
     background-image: url('../images/Kenji-infographic.png');
 }
 
 .kenji_x1_image-container.small_infographic_geo_lab {
-    background-image: url('../images/geo-lab/Geo_Lab_Platform_v2_A1.png');
+    background-image: url('../images/website_images/s-l400.jpg');
 }
 
 .kenji_x1_image-container.small_infographic_torch {
-    background-image: url('../images/torch/torch-wireframe-small-infographic.png');
+    background-image: url('../images/website_images/s-l400.jpg');
 }
 
 .kenji_x1_image-container.small_infographic_robodrive {
     background-image: url('../images/kenji-x1/croped-plata.PNG');
 }
-/* Kenji dot positions */
-.small_infographic_kenji .kenjix1_point_dot.left-1 { display: block; top: 75%; left: 30%; }
-.small_infographic_kenji .kenjix1_point_dot.left-2 { display: block; top: 50%; left: 26%; }
-.small_infographic_kenji .kenjix1_point_dot.left-3 { display: block; top: 13%; left: 63%; }
-.small_infographic_kenji .kenjix1_point_dot.left-4 { display: block; top: 33%; right: 37%; }
-.small_infographic_kenji .kenjix1_point_dot.right-1 { display: block; top: 48%; right: 50%; }
-.small_infographic_kenji .kenjix1_point_dot.right-2 { display: block; top: 34%; right: 51%; }
-.small_infographic_kenji .kenjix1_point_dot.right-3 { display: block; bottom: 18.17%; right: 32.5%; }
-.small_infographic_kenji .kenjix1_point_dot.right-4 { display: block; top: 25%; left: 40%; }
-.small_infographic_kenji .kenjix1_point_dot.right-5 { display: block; top: 50%; right: 28.8%; }
+
+.small_infographic_kenji .kenjix1_point_dot.left-1 { top: 75%; left: 30%; }
+.small_infographic_kenji .kenjix1_point_dot.left-2 { top: 50%; left: 25.83%; }
 /* ... */
 
-
 /* Geo-Lab dot positions */
-.small_infographic_geo_lab .kenjix1_point_dot.left-1 { display: block; top: 55%; left: 40%; }
-.small_infographic_geo_lab .kenjix1_point_dot.left-2 { display: block; top: 45%; left: 35%; }
-.small_infographic_geo_lab .kenjix1_point_dot.left-3 { display: block; top: 60px; left: 325px; }
-.small_infographic_geo_lab .kenjix1_point_dot.left-4 { display: block; top: 190px; right: 25px; }
+.small_infographic_geo_lab .kenjix1_point_dot.left-1 { top: 55%; left: 35%; }
+.small_infographic_geo_lab .kenjix1_point_dot.left-2 { top: 40%; left: 30%; }
 
-
-
-
-/* Torch dot positions */
-.small_infographic_torch .kenjix1_point_dot.left-1 { display: block; top: 88%; left: 5%; }
-.small_infographic_torch .kenjix1_point_dot.left-2 { display: block; top: 59%; left: 25%; }
-.small_infographic_torch .kenjix1_point_dot.left-3 { display: block; top: 33%; left: 25%; }
-.small_infographic_torch .kenjix1_point_dot.left-4 { display: block; top: 20%; left: 23%; }
-.small_infographic_torch .kenjix1_point_dot.right-1 { display: block; top: 48%; right: 50%;  }
-.small_infographic_torch .kenjix1_point_dot.right-2 { display: block; top: 34%; right: 51%; }
-.small_infographic_torch .kenjix1_point_dot.right-3 { display: block; bottom: 27.17%; right: 41.5%; }
-.small_infographic_torch .kenjix1_point_dot.right-4 { display: block; top: 29%; left: 40%;  }
-.small_infographic_torch .kenjix1_point_dot.right-5 { display: block; top: 50%; right: 28.8%; }
-
-
-@media  only screen and  (min-width: 960px) {
-
-/*.small_infographic_kenji .callout-one { top: 20%; left: 30%; } 
-.small_infographic_kenji .callout-two { top: 130px; left: -280px; }
-.small_infographic_kenji .callout-three { top: -110px; left: -74px; }
-.small_infographic_kenji .callout-four { top: 50px; right: -820px; }
-.small_infographic_kenji .callout-five { top: 140px; right: -700px; }*/
-/*.small_infographic_kenji .kenjix1_point_dot.left-2 { display: block; top: 38%; left: 27%; }
-.small_infographic_kenji .kenjix1_point_dot.right-4 { display: block; top: 20%; left: 40%; }
-.small_infographic_kenji .kenjix1_point_dot.right-2 { display: block; top: 27%; left: 47%; }
-.small_infographic_kenji .kenjix1_point_dot.right-1 { display: block; top: 37%; left: 48%; }
-.small_infographic_kenji .kenjix1_point_dot.left-4 { display: block; top: 25%; right: 35%; }
-.small_infographic_kenji .kenjix1_point_dot.right-5 { display: block; top: 38%; right: 27.8%; }*/
-
-/* Geo-Lab callout positions */
-/*.small_infographic_geo_lab .kenjix1_point_dot.left-1 { display: block; top: 55%; left: 40%; }
-.small_infographic_geo_lab .kenjix1_point_dot.left-2 { display: block; top: 28%; left: 28%; }
-.small_infographic_geo_lab .kenjix1_point_dot.left-3 { display: block; top: 50px; left: 260px; }
-.small_infographic_geo_lab .kenjix1_point_dot.left-4 { display: block; top: 190px; right: 25px; }*/
-/* /* .small_infographic_geo_lab .callout-one { top: 333px; left: -220px; } */
-/*.small_infographic_geo_lab .callout-two { top: 140px; left: -225px; }
-.small_infographic_geo_lab .callout-three { top: -90px; left: -128px;}
-.small_infographic_geo_lab .callout-four { top: 120px; right: -1020px;}
-.small_infographic_geo_lab .kenjix1_point_dot.left-1 { display: block; top: 90%; left: 50%; }*/
-}
-    
 /* Callout styles */
 .kenjix1_point_dot {
-    display: none;
-    position: absolute;
-    cursor: pointer;
-    width: 15px;
-    height: 15px;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    background-color: #eedc34;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+     position: relative;/*position: absolute;*/
 }
 
 .pulse-animation {
@@ -223,14 +109,27 @@ section {
     height: 100%;
     background-color: inherit;
     border-radius: inherit;
-    z-index: 2; 
-    animation: pulse 3s linear infinite;
+    z-index: -1; /* Place it behind the dot but in front of the lines */
+    animation: pulse 2s linear infinite;
     pointer-events: none;
 }
 
 @keyframes pulse {
-  0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-  100% { transform: translate(-50%, -50%) scale(3); opacity: 0; }
+    0% {
+        width: 100%;
+        height: 100%;
+        opacity: 0.7;
+    }
+    50% {
+        width: 300%;
+        height: 300%;
+        opacity: 0;
+    }
+    100% {
+        width: 300%;
+        height: 300%;
+        opacity: 0;
+    }
 }
 
 .kenjix1_point_dots_callouts {
@@ -266,6 +165,18 @@ section {
     word-wrap: break-word;
 }
 
+/*@keyframes breathe {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}*/
+
 .kenjix1-callout.is-active, .dot.is-active:hover + .kenjix1-callout {
     display: block;
 }
@@ -289,7 +200,6 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 2;
 }
 
 .kenjix1_point_dot {
@@ -300,12 +210,13 @@ section {
     border: 1px solid #fff;
     border-radius: 50%;
     background-color: #eedc34;
-    animation: pulse 3s infinite alternate;
-    z-index: 3;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: breathe 3s infinite alternate;
 }
 
 /* Left side dots */
 .kenjix1_point_dot.left-1 {
+    top: 350px;
     left: 170px;
     animation: none;
 }
@@ -582,7 +493,7 @@ section {
         min-height: 550px;
         background-size: contain;
         background-repeat: no-repeat;
-        padding-bottom: 50%;
+        padding-bottom: 50%; /* Adjust this value to match your image aspect ratio */
         margin: 20px auto;
     }
 
@@ -629,12 +540,12 @@ section {
         height: 12px;
     }
 
-    /*.kenjix1_point_dot.left-1 { top: 65% !important; left: 30% !important; }
+    .kenjix1_point_dot.left-1 { top: 65%; left: 30%; }
     .kenjix1_point_dot.left-2 { top: 50%; left: 25.83%; }
     .kenjix1_point_dot.left-3 { top: 11.9%; left: 63.33%; }
     .kenjix1_point_dot.right-1 { top: 50.24%; left: 68.33%; }
     .kenjix1_point_dot.right-2 { top: 34.52%; left: 45.83%; }
-    .kenjix1_point_dot.right-3 { bottom: 36.95% !important; right: 32.33% !important; }*/
+    .kenjix1_point_dot.right-3 { bottom: 36.95%; right: 32.33%; }
 
     /* Hide connection lines on mobile */
     .kenjix1_point_dot::before, .kenjix1_point_dot::after {

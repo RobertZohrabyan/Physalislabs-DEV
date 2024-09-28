@@ -23,7 +23,7 @@ body {
 
 .robot {
   position: relative;
-  background-image: url(../images/kenji-x1/Kenji-5.jpg);
+  background-image: url(../images/mecha-arm/big-infographic-mecha-arm-image.png);
   background-size: 140%;
   height: 450px;
   width: 450px;
@@ -57,18 +57,18 @@ body {
 
 /* Adjust cogwheel positions */
 .cogwheel-1 {
-  top: 290px;
-  left: 105px;
+  top: 155px;
+  left: 100px;
 }
 
 .cogwheel-2 {
-  top: 205px;
-  left: 70px;
+  top: 215px;
+  left: 103px;
 }
 
 .cogwheel-3 {
-  top: 60px;
-  left: 300px;
+  top: 177px;
+  left: 158px;
 }
 
 .cogwheel-4 {
@@ -77,8 +77,8 @@ body {
 }
 
 .cogwheel-5 {
-  top: 230px;
-  left: 140px;
+  top: 295px;
+  left: 175px;
 }
 
 .cogwheel-6 {
@@ -87,8 +87,8 @@ body {
 }
 
 .cogwheel-7 {
-  top: 346px;
-  left: 309px;
+  top: 293px;
+  left: 335px;
 }
 
 .info-line {
