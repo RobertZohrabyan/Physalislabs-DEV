@@ -3,24 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <title>PhysalisLabs-Robodrive</title>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/hamburger.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/our-mission.css"><!-- Kenji page block with tabs on the left -->
-    <link rel="stylesheet" href="css/small-infographic.css"><!-- Kenji page small infographic -->
-    <link rel="stylesheet" href="css/big-infographic.css"><!-- Kenji page big infographic -->
+    <link rel="stylesheet" href="css/small-infographic-robodrive.css"><!-- Kenji page small infographic -->
     <link rel="stylesheet" href="css/sliders-and-tabulations.css">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script><!-- words writing animation on kenji page-->
     <script src="js/script.js"></script>
     <script src="js/text-animation.js"></script><!-- Kenji rewriting animation -->
     <script type="text/javascript" src="js/our-mission.js"></script><!-- Kenji page our mission -->
-    <script type="text/javascript" src="js/small-infographic.js"></script><!-- Kenji page our mission -->
-    <script type="text/javascript" src="js/big-infographic.js"></script><!-- Kenji page our mission -->
+    <script type="text/javascript" src="js/small-infographic-robodrive.js"></script><!-- Kenji page our mission -->
     <script type="text/javascript" src="js/sliders-and-tabulations.js"></script>
     <script type="text/javascript" src="js/kenji-page-rewriting-animation.js"></script>
+    <script type="text/javascript" src="js/separate-tabulation-block.js"></script>
 </head>
 <body>
     <!-- Content goes here -->
@@ -30,9 +29,10 @@
             <li class="has-submenu">
                 <a href="#">Projects<span class="submenu-icon"></span></a>
                 <ul class="submenu">
-                    <li><a href="kenji-x1.html">Kenji X1</a></li>
-                    <li><a href="geo-lab.html">Geo-Lab</a></li>
                     <li><a href="torch.html">Torch</a></li>
+                    <li><a href="kenji-x1.html">Kenji X1</a></li>
+                    <li><a href="mecha-arm.html">Mecha-arm</a></li>
+                    <li><a href="geo-lab.html">Geo-Lab</a></li>
                 </ul>
             </li>
             <li><a href="robo-drive.html">Robodrive engine</a></li>
@@ -47,7 +47,7 @@
     <header class="main-header">
         <div class="logo">
             <a href="index.html">
-                <img src="images/logo.png" alt="PhysalisLabs" />
+                <img src="images/logo-2.png" alt="PhysalisLabs" />
             </a>
         </div>
         <nav class="desktop-main-menu">
@@ -55,9 +55,10 @@
                 <li class="has-submenu">
                     <a href="#">Projects<span class="submenu-icon"></span></a>
                     <ul class="submenu">
-                        <li><a href="kenji-x1.html">Kenji X1</a></li>
-                        <li><a href="geo-lab.html">Geo-Lab</a></li>
                         <li><a href="torch.html">Torch</a></li>
+                        <li><a href="kenji-x1.html">Kenji X1</a></li>
+                        <li><a href="mecha-arm.html">Mecha-arm</a></li>
+                        <li><a href="geo-lab.html">Geo-Lab</a></li>
                     </ul>
                 </li>
                 <li><a href="robo-drive.html">Robodrive engine</a></li>
@@ -114,11 +115,11 @@
         <div class="main_slider-pre-container">
             <div class="main_slider-pre-content">
                 <div class="main_slider-pre-left-content">
-                    <p>Geo-Lab Robotics Development Platform can be configured for  Applications: Monitoring (Areal, Indoor/Outdoor, Active Terrain Exploration and Geophysical) Home Automation, (Security and Surveillance) Laboratory Environment, (Test Chambers, Test-Benches) Inspection (Remote, Local, Autonomous) Vertical Farming, (Agriculture) Environmental (Ecology and Animal Observations) Education (Academics).</p>
+                    <p>Robodrive Robotics Development Platform can be configured for  Applications: Monitoring (Areal, Indoor/Outdoor, Active Terrain Exploration and Geophysical) Home Automation, (Security and Surveillance) Laboratory Environment, (Test Chambers, Test-Benches) Inspection (Remote, Local, Autonomous) Vertical Farming, (Agriculture) Environmental (Ecology and Animal Observations) Education (Academics).</p>
                 </div>
                 <div class="main_slider-pre-right-content">
                     <div class="main_slider-pre-image-container">
-                        <img class="bg-image kenji-first-slider-first-image" src="./images/kenji-x1/1.png" alt="Transparent Image">
+                        <img class="bg-image kenji-first-slider-first-image" src="./images/kenji-x1/test1.png" alt="Transparent Image">
                     </div>
                 </div>
             </div>
@@ -134,15 +135,15 @@
                                 <h2>Robodrive</h2>
                                 <h4>Overview</h4>
                                 <div class="information_block_tabs">
-                                    <div class="information_block_tab" data-tab="0">Control</div>
+                                    <div class="information_block_tab" data-tab="0">Baseboard PCB</div>
                                     <div class="separator"></div>
-                                    <div class="information_block_tab" data-tab="1">Payload</div>
+                                    <div class="information_block_tab" data-tab="1">Interaction</div>
                                     <div class="separator"></div>
-                                    <div class="information_block_tab" data-tab="2">Measurement</div>
+                                    <div class="information_block_tab" data-tab="2">Host Control</div>
                                 </div>
                                 <div class="information_block_tab_content" data-content="0">
                                     <div class="information_block_tab_content_text">
-                                        <p>Geo-Lab can carry payload of several kilograms. It can be measurement equipment, sensors, robotic arms, area mapping devicesand depth cameras. At its core, the platform has been designed having high level of customization in mind. This feature enables Geo-Lab to be used in various areas. The modular design makes it possible to add needed Functionality right away or remove it. Further, enabling access for other developers and scientific groups to develop and add their own API’s and modules to it.</p>
+                                        <p>Robodrive can carry payload of several kilograms. It can be measurement equipment, sensors, robotic arms, area mapping devicesand depth cameras. At its core, the platform has been designed having high level of customization in mind. This feature enables Robodrive to be used in various areas. The modular design makes it possible to add needed Functionality right away or remove it. Further, enabling access for other developers and scientific groups to develop and add their own API’s and modules to it.</p>
                                     </div>
                                     <div class="information_block_tab_content_table">
                                         <table class="information_block_table">
@@ -196,17 +197,17 @@
                         <div class="information_block_left">
                             <div class="information_block_left_content">
                                 <h2>Robodrive</h2>
-                                <h4>Robodrive Engine</h4>
+                                <h4>Control Circutry</h4>
                                 <div class="information_block_tabs">
                                     <div class="information_block_tab" data-tab="0">Power Supply</div>
                                     <div class="separator"></div>
-                                    <div class="information_block_tab" data-tab="1">Current Draw</div>
-                                    <div class="separator"></div>
+                                    <!-- <div class="information_block_tab" data-tab="1">Current Draw</div>
+                                    <div class="separator"></div> -->
                                     <div class="information_block_tab" data-tab="2">HAL</div>
                                 </div>
                                 <div class="information_block_tab_content" data-content="0">
                                     <div class="information_block_tab_content_text">
-                                        <p>Physalis Geo-Lab is autonomous active terrain exploration and monitoring robotic platform developed by Physalis Labs to assist scientists in making reliable measurements both manually and in autonomous mode.</p>
+                                        <p>Physalis Robodrive is autonomous active terrain exploration and monitoring robotic platform developed by Physalis Labs to assist scientists in making reliable measurements both manually and in autonomous mode.</p>
                                     </div>
                                     <div class="information_block_tab_content_table">
                                         <table class="information_block_table">
@@ -225,7 +226,7 @@
                                         </table>
                                     </div>
                                 </div>
-                                <div class="information_block_tab_content" data-content="1">
+                                <!-- <div class="information_block_tab_content" data-content="1">
                                     <div class="information_block_tab_content_text">
                                         <p>Physalis Robodrive has been designed to withstand harsh environment and weather conditions. Once deployed it will start exploring the terrain and make measurements according to the program, (Autonomous mode), or remotely controlled via operator (manual mode)..</p>
                                     </div>
@@ -241,7 +242,7 @@
                                             </tr>
                                         </table>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="information_block_tab_content" data-content="2">
                                     <div class="information_block_tab_content_text">
                                         <p>Physalis Robodrive can be used to track the vibrations with high-precision and therefore can be on guard in areas where earthquakes often occur..</p>
@@ -250,7 +251,7 @@
                             </div>
                         </div>
                         <div class="information_block_right">
-                            <img src="https://placehold.co/600x400" alt="Geo-Lab" class="reveal-image">
+                            <img src="https://placehold.co/600x400" alt="Robodrive" class="reveal-image">
                         </div>
                     </section>
                 </div>
@@ -260,13 +261,13 @@
                             <div class="information_block_left">
                                 <div class="information_block_left_content">
                                     <h2>Robodrive</h2>
-                                    <h4>Tower Module</h4>
+                                    <h4>Field Tested</h4>
                                     <div class="information_block_tabs">
-                                        <div class="information_block_tab" data-tab="0">Tab 7</div>
+                                        <div class="information_block_tab" data-tab="0">Robot Control</div>
                                         <div class="separator"></div>
-                                        <div class="information_block_tab" data-tab="1">Tab 8</div>
+                                        <div class="information_block_tab" data-tab="1">Field Operation</div>
                                         <div class="separator"></div>
-                                        <div class="information_block_tab" data-tab="2">Tab 9</div>
+                                        <div class="information_block_tab" data-tab="2">Data Collection</div>
                                     </div>
                                     <div class="information_block_tab_content" data-content="0">
                                         <div class="information_block_tab_content_text">
@@ -314,12 +315,12 @@
                                 </div>
                             </div>
                     <div class="information_block_right">
-                        <img src="https://placehold.co/550x400" alt="Geo-Lab" class="reveal-image">
+                        <img src="https://placehold.co/550x400" alt="Robodrive" class="reveal-image">
                     </div>
                 </section>
                 </div>
                 <!-- Slide 4 -->
-                <div class="main_slider main_slider_slide" data-slide="3">
+                <!-- <div class="main_slider main_slider_slide" data-slide="3">
                     <section class="information_block_section">
                             <div class="information_block_left">
                                 <div class="information_block_left_content">
@@ -378,16 +379,16 @@
                                 </div>
                             </div>
                     <div class="information_block_right">
-                        <img src="https://placehold.co/550x400" alt="Geo-Lab" class="reveal-image">
+                        <img src="https://placehold.co/550x400" alt="Robodrive" class="reveal-image">
                     </div>
                 </section>
-                </div>
+                </div> -->
                  <!-- Slide 5 -->
-                <div class="main_slider main_slider_slide" data-slide="4">
+               <!--  <div class="main_slider main_slider_slide" data-slide="4">
                     <section class="information_block_section">
                             <div class="information_block_left">
                                 <div class="information_block_left_content">
-                                    <h2>Geo-Lab</h2>
+                                    <h2>Robodrive</h2>
                                     <h4>Payload</h4>
                                     <div class="information_block_tabs">
                                         <div class="information_block_tab" data-tab="0">Tab 13</div>
@@ -445,9 +446,9 @@
                         <img src="https://placehold.co/550x400" alt="Slide 5" class="reveal-image">
                     </div>
                 </section>
-                </div>
+                </div> -->
                 <!-- Slide 6 -->
-                <div class="main_slider main_slider_slide" data-slide="5">
+                <!-- <div class="main_slider main_slider_slide" data-slide="5">
                     <section class="information_block_section">
                             <div class="information_block_left">
                                 <div class="information_block_left_content">
@@ -509,9 +510,9 @@
                         <img src="https://placehold.co/550x400" alt="Slide 6" class="reveal-image">
                     </div>
                 </section>
-                </div>
+                </div> -->
                  <!-- Slide 7 -->
-                <div class="main_slider main_slider_slide" data-slide="6">
+                <!-- <div class="main_slider main_slider_slide" data-slide="6">
                     <section class="information_block_section">
                             <div class="information_block_left">
                                 <div class="information_block_left_content">
@@ -573,7 +574,7 @@
                         <img src="https://placehold.co/550x400" alt="Slide 19" class="reveal-image">
                     </div>
                 </section>
-                </div>
+                </div> -->
             </div>
             <div class="main_slider main_slider_slide-controls-wrapper">
                 <button class="main_slider prev-slide">&#10094;</button>
@@ -581,10 +582,10 @@
                     <span class="main_slider main_slider_dot active"></span>
                     <span class="main_slider main_slider_dot"></span>
                     <span class="main_slider main_slider_dot"></span>
+                    <!-- <span class="main_slider main_slider_dot"></span>
                     <span class="main_slider main_slider_dot"></span>
                     <span class="main_slider main_slider_dot"></span>
-                    <span class="main_slider main_slider_dot"></span>
-                    <span class="main_slider main_slider_dot"></span>
+                    <span class="main_slider main_slider_dot"></span> -->
                 </div>
                 <button class="main_slider next-slide">&#10095;</button>
             </div>
@@ -605,73 +606,88 @@
             <h4>Tracking</h4>
         </div>                   
     </div> -->      
-                <!-- Kenji small infographic section -->
-    <div class="kenji_x1_image-container">
-    <!-- <img src="./images/Kenji-drivedown.png" alt="Kenji Image"> -->
-    <!-- Callouts -->
-    <div class="kenjix1_point_dots_callouts">
-        <div class="kenjix1_point_dot_callout default-active callout-one" data-callout="one">
-            <h3>Technical Claw</h3>
-            <p>The 3-D printed helmet with customized padding houses microphones for communication and valves that regulate the suit’s pressure systems.</p>
-        </div>
-        <div class="kenjix1_point_dot_callout callout-two" data-callout="two">
-            <h3>Tracked Drivetrain</h3>
-            <p>Physalis Geo-Lab can carry payload of several kilograms. It can be measurement equipment, sensors, robotic arms, area mapping devices and depth cameras.</p>
-        </div>
-        <div class="kenjix1_point_dot_callout callout-three" data-callout="three">
-            <h3>Wireless Communication Antenna</h3>
-            <p>The gloves are designed for easy use when the suit is pressurized and with the ability to operate Dragon’s touchscreens.</p>
-        </div>
-        <div class="kenjix1_point_dot_callout callout-four" data-callout="four">
-            <h3>Flame-resistant Materials</h3>
-            <p>The space suit’s outer layer is made with flame-resistant materials. Gray parts are different versions of Nomex and the white material is a Teflon fabric.</p>
-        </div>
-        <div class="kenjix1_point_dot_callout callout-five" data-callout="five">
-            <h3>Night Light</h3>
-            <p>Designed to provide a large field of view and rotates open.</p>
-        </div>
-        <div class="kenjix1_point_dot_callout callout-six" data-callout="six">
-            <h3>TOF LIDAR 1KHZ</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel ultrices ante. Quisque volutpat, erat ac viverra ultrices, mi mauris malesuada nulla, et auctor ante magna rutrum elit.</p>
-        </div>
-        <div class="kenjix1_point_dot_callout callout-seven" data-callout="seven">
-            <h3>Vibration Sensors</h3>
-            <p>Equipped with advanced sensors to monitor environmental conditions and provide real-time data.</p>
-        </div>
-        <div class="kenjix1_point_dot_callout callout-eight" data-callout="eight">
-            <h3>Payload</h3>
-            <p>Features energy-efficient systems that ensure long-duration operation with minimal power consumption.</p>
-        </div>
-        <div class="kenjix1_point_dot_callout callout-nine" data-callout="nine">
-            <h3>Nylon Tracks</h3>
-            <p>Integrated high-resolution cameras for detailed imaging and video recording.</p>
-        </div>
-    </div>
-    <!-- Dots -->
-        <div class="kenjix1_point_dot activated default-active is-small left-1" data-callout="one"></div>
-        <div class="kenjix1_point_dot is-small left-2" data-callout="two"></div>
-        <div class="kenjix1_point_dot is-small left-3" data-callout="three"></div>
-        <div class="kenjix1_point_dot is-small left-4" data-callout="nine"></div>
-        <div class="kenjix1_point_dot is-small right-1" data-callout="four"></div>
-        <div class="kenjix1_point_dot is-small right-2" data-callout="five"></div>
-        <div class="kenjix1_point_dot is-small right-3" data-callout="six"></div>
-        <div class="kenjix1_point_dot is-small right-4" data-callout="seven"></div>
-        <div class="kenjix1_point_dot is-small right-5" data-callout="eight"></div>
-    </div>
-
-
+      <div class="kenji_x1_image-container small_infographic_kenji">
+         <!-- <img src="./images/Kenji-drivedown.png" alt="Kenji Image"> -->
+         <!-- Callouts -->
+         <div class="kenjix1_point_dots_callouts">
+            <div class="kenjix1_point_dot_callout default-active callout-one" data-callout="one">
+               <h3>Full-Bridge</h3>
+               <p>The 3-D printed helmet with customized padding houses microphones for communication and valves that regulate the suit’s pressure systems.</p>
+            </div>
+            <div class="kenjix1_point_dot_callout callout-two" data-callout="two">
+               <h3>Control Circuitry</h3>
+               <p>Physalis Robodrive can carry payload of several kilograms. It can be measurement equipment, sensors, robotic arms, area mapping devices and depth cameras.</p>
+            </div>
+            <div class="kenjix1_point_dot_callout callout-three" data-callout="three">
+               <h3>Drivetrain Power Connectors</h3>
+               <p>The gloves are designed for easy use when the suit is pressurized and with the ability to operate Dragon’s touchscreens.</p>
+            </div>
+            <div class="kenjix1_point_dot_callout callout-four" data-callout="four">
+               <h3>Memory Chip (F-RAM)</h3>
+               <p>The space suit’s outer layer is made with flame-resistant materials. Gray parts are different versions of Nomex and the white material is a Teflon fabric.</p>
+            </div>
+            <div class="kenjix1_point_dot_callout callout-five" data-callout="five">
+               <h3>Connections for Mecha-Arm V.1</h3>
+               <p>Designed to provide a large field of view and rotates open.</p>
+            </div>
+            <!-- <div class="kenjix1_point_dot_callout callout-six" data-callout="six">
+               <h3>TOF LIDAR 1KHZ</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel ultrices ante. Quisque volutpat, erat ac viverra ultrices, mi mauris malesuada nulla, et auctor ante magna rutrum elit.</p>
+            </div> -->
+            <div class="kenjix1_point_dot_callout callout-seven" data-callout="seven">
+               <h3>Power Suppply and Cooling System</h3>
+               <p>Equipped with advanced sensors to monitor environmental conditions and provide real-time data.</p>
+            </div>
+            <!-- <div class="kenjix1_point_dot_callout callout-eight" data-callout="eight">
+               <h3>Payload</h3>
+               <p>Features energy-efficient systems that ensure long-duration operation with minimal power consumption.</p>
+            </div> -->
+            <!-- <div class="kenjix1_point_dot_callout callout-nine" data-callout="nine">
+               <h3>Nylon Tracks</h3>
+               <p>Integrated high-resolution cameras for detailed imaging and video recording.</p>
+            </div> -->
+         </div>
+         <!-- Dots -->
+         <div class="kenjix1_point_dot activated default-active is-small left-1" data-callout="one">
+            <div class="pulse-animation"></div>
+         </div>
+         <div class="kenjix1_point_dot is-small left-2" data-callout="two">
+            <div class="pulse-animation"></div>
+         </div>
+         <div class="kenjix1_point_dot is-small left-3" data-callout="three">
+            <div class="pulse-animation"></div>
+         </div>
+         <div class="kenjix1_point_dot is-small left-4" data-callout="nine">
+            <div class="pulse-animation"></div>
+         </div>
+         <div class="kenjix1_point_dot is-small right-1" data-callout="four">
+            <div class="pulse-animation"></div>
+         </div>
+         <!-- <div class="kenjix1_point_dot is-small right-2" data-callout="five">
+            <div class="pulse-animation"></div>
+         </div> 
+         <div class="kenjix1_point_dot is-small right-3" data-callout="six">
+            <div class="pulse-animation"></div>
+         </div>-->
+         <div class="kenjix1_point_dot is-small right-4" data-callout="seven">
+            <div class="pulse-animation"></div>
+         </div>
+         <!-- <div class="kenjix1_point_dot is-small right-5" data-callout="eight">
+            <div class="pulse-animation"></div>
+         </div> -->
+      </div>
                 <!-- Kenji X1 information with tabulation section -->  
-    <section class="information_block_section standalone">
+    <section class="information_block_section standalone robodrive">
         <div class="information_block_left">
             <div class="information_block_left_content">
-                <h2>Information Block</h2>
-                <h4>Info</h4>
+                <h2>Robodrive</h2>
+                <h4>Information</h4>
                 <div class="information_block_tabs">
-                    <div class="information_block_tab" data-tab="0">Tab 1</div>
+                    <div class="information_block_tab" data-tab="0">Electric Motors</div>
                     <div class="separator"></div>
-                    <div class="information_block_tab" data-tab="1">Tab 2</div>
+                    <div class="information_block_tab" data-tab="1">Power Supply</div>
                     <div class="separator"></div>
-                    <div class="information_block_tab" data-tab="2">Tab 3</div>
+                    <div class="information_block_tab" data-tab="2">Programming</div>
                 </div>
                 <div class="information_block_tab_content" data-content="0">
                     <div class="information_block_tab_content_text">
@@ -720,7 +736,8 @@
     </section>
                 <!-- Section Video -->
     <section class="section_video">
-       <video autoplay muted loop src="./video/Baseboard_video.mp4"></video>
+       <!-- <video autoplay muted loop src="./video/COVC7357.MP4"></video> -->
+       <video autoplay muted loop src="./video/CAD_Animations_Rotation.mp4"></video>
         <!--<div class="section-inner">
             <h4>Welcome to Physalis Labs</h4>
             <h2>Our Mission</h2>
@@ -735,134 +752,13 @@
             </svg>
         </div>      
     </section>
-                    <!-- Kenji Big infographic section -->
-<section class="big-infographic-height">
-    <div class="infographic-section">
-        <div class="robot-container">
-          <div class="robot">
-            <!-- Gear images -->
-            <img src="./images/gear.png" alt="Cogwheel" class="cogwheel cogwheel-1" data-modal="modal-1">
-            <img src="./images/gear.png" alt="Cogwheel" class="cogwheel cogwheel-2" data-modal="modal-2">
-            <img src="./images/gear.png" alt="Cogwheel" class="cogwheel cogwheel-3" data-modal="modal-3">
-            <img src="./images/gear.png" alt="Cogwheel" class="cogwheel cogwheel-4" data-modal="modal-4">
-            <img src="./images/gear.png" alt="Cogwheel" class="cogwheel cogwheel-5" data-modal="modal-5">
-            <img src="./images/gear.png" alt="Cogwheel" class="cogwheel cogwheel-6" data-modal="modal-6">
-            <img src="./images/gear.png" alt="Cogwheel" class="cogwheel cogwheel-7" data-modal="modal-7">
-
-
-            <div class="modal" id="modal-1">
-              <!-- Modal content for dot 1 -->
-              <div class="modal-content">
-                  <button class="close-modal">×</button>
-                  <h2>Adjustable Grippers: Grab and Carry Objects</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel ultrices ante. Quisque volutpat, erat ac viverra ultrices, mi mauris malesuada nulla, et auctor ante magna rutrum elit.</p>
-                  <img src="./video/arm_craning_3_small.gif" alt="Image 1">
-              </div>
-            </div>
-            <div class="modal" id="modal-2">
-              <!-- Modal content for dot 2 -->
-              <div class="modal-content">
-                  <button class="close-modal">×</button>
-                  <h2>Offroad Agility</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel ultrices ante. Quisque volutpat, erat ac viverra ultrices, mi mauris malesuada nulla, et auctor ante magna rutrum elit.</p>
-                  <img src="./video/Kenji_X1_3.gif" alt="Image 1">
-              </div>
-            </div>
-            <div class="modal" id="modal-3">
-              <!-- Modal content for dot 3 -->
-              <div class="modal-content">
-                  <button class="close-modal">×</button>
-                  <h2>Robodrive console</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel ultrices ante. Quisque volutpat, erat ac viverra ultrices, mi mauris malesuada nulla, et auctor ante magna rutrum elit.</p>
-                <!--<img src="./images/kenji-x1/" alt="Image 3"> -->
-                <video autoplay muted loop controls>
-                    <source src="./video/video-console.mp4" type="video/mp4">
-                </video>
-              </div>
-            </div>
-            <div class="modal" id="modal-4">
-              <!-- Modal content for dot 4 -->
-              <!-- <img src="./images/kenji-x1/Kenji-6.jpg" alt="Image 4"> -->
-              <div class="modal-content">
-                  <button class="close-modal">×</button>
-                  <h2>Tracked Drivetrain</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel ultrices ante. Quisque volutpat, erat ac viverra ultrices, mi mauris malesuada nulla, et auctor ante magna rutrum elit.</p>
-                  <img src="./images/kenji-x1/driveterrain.JPG" alt="kenji x1 driveterrain">
-              </div>
-            </div>
-            <div class="modal" id="modal-5">
-              <div class="modal-content">
-                  <button class="close-modal">×</button>
-                  <h2>User-Programmable Movements</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel ultrices ante. Quisque volutpat, erat ac viverra ultrices, mi mauris malesuada nulla, et auctor ante magna rutrum elit.</p>
-                  <!-- <video autoplay muted loop controls>
-                    <source src="./video/video-console.mp4" type="video/mp4">
-                  </video> -->
-                  <img src="./video/Kenji_X1_Greeting_1.gif" alt="kenji x1 driveterrain">
-              </div>
-            </div>
-            <div class="modal" id="modal-6">
-              <!-- Modal content for dot 6 -->
-              <div class="modal-content">
-                  <button class="close-modal">×</button>
-                  <h2>Continuous 360° Rotation Mast</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel ultrices ante. Quisque volutpat, erat ac viverra ultrices, mi mauris malesuada nulla, et auctor ante magna rutrum elit.</p>
-                <!-- <video autoplay muted loop controls>
-                  <source src="./video/Lab_Application_1.gif.mp4" type="video/mp4">
-                </video> -->
-                <img src="./video/tower_rotation_smallsize.gif" alt="kenji_tower_rotation">
-              </div>
-            </div>
-            <div class="modal" id="modal-7">
-              <!-- Modal content for dot 7 -->
-              <div class="modal-content">
-                  <button class="close-modal">×</button>
-                  <h2>High Power Mecha-Arm v.1</h2>
-                  <p>Lorem ipsum dolor sit amet, In vel ultrices ante. elit. In vel ultrices ante. Quisque volutpat, erat ac viverra ultrices, mi mauris malesuada nulla, et auctor ante magna rutrum elit.</p>
-                  <img src="./video/arm_craning_2.gif" alt="arm_craning">
-              </div>
-            </div>
-        </div>
-        <div class="info-line">
-          <div class="info" data-dot="1"><span>1. Adaptive Gripper v.1</span>
-            <img src="./images/mecha-arm.png" alt="Logo 1" class="infographic-logo">
-            <p>KenjiX1 manipulators, (Left/Right), multiple degrees of freedom, several kilograms of load craning per arm.</p>
-          </div>
-          <div class="info" data-dot="2"><span>2. Offroad Agility</span>
-            <img src="./images/offoad.png" alt="Logo 2" class="infographic-logo">
-            <p>It can perform well in both situations outdoors where rough terrain and unpaved roads are expected, but also indoors.</p>
-          </div>
-          <div class="info" data-dot="3"><span>3. Robodrive console</span>
-            <img src="./images/console.png" alt="Logo 3" class="infographic-logo">
-            <p>Dragon separates from Falcon 9’s second stage and performs initial orbit activation and checkouts of propulsion, life support, and thermal control systems.</p>
-          </div>
-          <div class="info" data-dot="4"><span>4. Tracked Drivetrain</span>
-            <img src="./images/dc-motor.png" alt="Logo 4" class="infographic-logo">
-            <p>Dragon establishes a communication link with the International PhysalisLabs Station and performs its final orbit raising delta-velocity burn.</p>
-          </div>
-          <div class="info" data-dot="5"><span>5. User-Programmable Movements</span>
-            <img src="./images/user-programmable-movements.png" alt="Logo 5" class="infographic-logo">
-            <p>Dragon establishes relative navigation to the International Space Station and arrives along the docking axis, initiating an autonomous approach.</p>
-          </div>
-          <div class="info" data-dot="6"><span>6. Mast 360° Continuous Rotation</span>
-            <img src="./images/rotation-mast.png" alt="Logo 6" class="infographic-logo">
-            <p>Dragon establishes relative navigation to the International Space Station and arrives along the docking axis, initiating an autonomous approach.</p>
-          </div>
-          <div class="info" data-dot="7"><span>7. Mecha-Arm Manipulators v.1</span>
-            <img src="./images/mecha_arm_1.png" alt="Logo 7" class="infographic-logo">
-            <p>Dragon establishes a communication link with the International Space Station and performs its final orbit raising delta-velocity burn.</p>
-          </div>
-          <!-- Add more info elements -->
-        </div>
-    </div>
-</section>
                                 <!-- Section Our Mission -->
 <section class="kenji_mission_block_section">
     <div class="kenji_mission_block_left">
-        <img src="./images/kenji-x1/Baseboard_opened_Image_1.png" alt="Image">
+        <img src="./images/kenji-x1/Baseboard_opened_2024-Aug-20_06.png" alt="Image">
     </div>
     <div class="kenji_mission_block_right">
-        <h2>Kenji X1</h2>
+        <h2>Robodrive</h2>
         <h4>Our Mission</h4>
         <p>All Dragon and Starship missions have the ability to conduct scientific research to improve life back on Earth as well as raise awareness to a global audience. Lorem ipsum dolor sit amet, In vel ultrices ante. elit. In vel ultrices ante. Quisque volutpat, erat ac viverra ultrices, mi mauris malesuada nulla, et auctor ante magna rutrum elit.</p>
         <div class="kenji_mission_block_tabs">
@@ -1001,14 +897,35 @@
         <!-- Gallery Slider -->
         <div class="gallery-slider down_slider">
             <div class="slide">
-                <img src="./images/Kenji-6.jpg" alt="Slide 1">
+                <img src="./images/robodrive/robodrive-gallery-1.png" alt="Slide 1">
             </div>
             <div class="slide">
-                <img src="./images/Kenji-9.jpg" alt="Slide 2">
+                <img src="./images/robodrive/robodrive-gallery-2.png" alt="Slide 2">
             </div>
             <div class="slide">
-                <img src="./images/Kenji-2.jpg" alt="Slide 3">
+                <img src="./images/robodrive/robodrive-gallery-3.png" alt="Slide 3">
             </div>
+            <div class="slide">
+                <img src="./images/robodrive/robodrive-gallery-4.png" alt="Slide 4">
+            </div>
+            <div class="slide">
+                <img src="./images/robodrive/robodrive-gallery-5.png" alt="Slide 5">
+            </div>
+            <!-- <div class="slide">
+                <img src="./images/robodrive/Kenji-6.jpg" alt="Slide 6">
+            </div>
+            <div class="slide">
+                <img src="./images/robodrive/Kenji-7.jpg" alt="Slide 7">
+            </div>
+            <div class="slide">
+                <img src="./images/robodrive/Kenji-8.jpg" alt="Slide 8">
+            </div>
+            <div class="slide">
+                <img src="./images/robodrive/Kenji-9.jpg" alt="Slide 9">
+            </div>
+            <div class="slide">
+                <img src="./images/robodrive/Kenji-10.jpg" alt="Slide 10">
+            </div> -->
             <!-- Add more slides as needed -->
             <div class="slide-controls-wrapper">
                 <button class="prev-slide">&#10094;</button>
@@ -1016,6 +933,13 @@
                     <p>Loren ipsum dolor sit amet 1</p>
                     <p style="display: none;">Loren ipsum dolor sit amet 2</p>
                     <p style="display: none;">Loren ipsum dolor sit amet 3</p>
+                    <p style="display: none;">Loren ipsum dolor sit amet 4</p>
+                    <p style="display: none;">Loren ipsum dolor sit amet 5</p>
+                    <p style="display: none;">Loren ipsum dolor sit amet 6</p>
+                    <p style="display: none;">Loren ipsum dolor sit amet 7</p>
+                    <p style="display: none;">Loren ipsum dolor sit amet 8</p>
+                    <p style="display: none;">Loren ipsum dolor sit amet 9</p>
+                    <p style="display: none;">Loren ipsum dolor sit amet 10</p>
                     <!-- Add more slide information as needed -->
                 </div>
                 <button class="next-slide">&#10095;</button>
@@ -1047,7 +971,7 @@
                 <!-- Footer -->
     <footer>
         <ul>
-            <li>PhysalisLabs &copy; 2019-2024</li>
+            <li>F.A.R.M. Potsdam &copy; 2019-2024</li>
             <li><a href="https://www.linkedin.com/company/physalis-labs/" target="_blank">LinkedIn</a></li>
             <li><a href="https://www.youtube.com/@physalislabs9881" target="_blank">YouTube</a></li>
             <!--<li><a href="#" target="_blank">Instagram</a></li>
