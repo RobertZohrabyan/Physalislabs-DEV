@@ -288,12 +288,13 @@ body {
 
 /* Styles for the paragraph and table in tab content */
 .information_block_tab_content_text p {
-    font-size: 85%;
+    /*font-size: 16px;*/
+    font: 14px/24px sans-serif;
     word-wrap: break-word;
     max-width: calc(100% - 80px); 
     margin-top: -40px;
     text-align: justify;
-    line-height: 20px;
+    line-height: 25px;
 }
 
 .information_block_left_content h4 {
@@ -476,7 +477,8 @@ body {
 
 .slide-info p {
     text-transform: none;
-    font-size: 16px;
+    /*font-size: 16px;*/
+    font: 14px/24px sans-serif;
     margin: 0;
 }
 

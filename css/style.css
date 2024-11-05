@@ -146,11 +146,11 @@ section {
 }
 
 .section-c {
-	background-image: url('../images/geo-lab/Physalis_GEO.Lab_CAD.png');
+	background-image: url('../images/torch/Left_Mecha_Arm_version1a.png');
 }
 
 .section-d {
-	background-image: url('../images/torch/Left_Mecha_Arm_version1a.png');
+	background-image: url('../images/geo-lab/Physalis_GEO.Lab_CAD.png');
 }
 
 .section-e {
@@ -331,7 +331,7 @@ section {
 }
 
 .bg-torch {
-	background-image: url('../images/torch/TORCH_gen2_Render_A20.png');
+	background-image: url('../images/torch/TORCH_gen2_Render_A3 (2).png');
 }
 
 .bg-robodrive {
@@ -1068,7 +1068,8 @@ section.footer-two {
 }
 
 .footer-two-inner p {
-    font-size: 12px;
+    /*font-size: 12px;*/
+    font: 14px/24px sans-serif;
     font-weight: 200;
     opacity: 0;
     transform: translateY(20px);

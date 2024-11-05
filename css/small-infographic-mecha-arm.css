@@ -257,6 +257,7 @@ section {
     font-size: 12px;
     font-weight: 200;
     text-transform: none;
+    text-align: justify;
 }
 
 /* Dot styles */
