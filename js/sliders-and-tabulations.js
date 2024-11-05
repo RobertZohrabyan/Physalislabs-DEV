@@ -86,7 +86,7 @@ function initMainSlider() {
             3: { 0: './images/torch/left-mecha-arm-slide1-copy.png', 1: './images/torch/Left_Mecha_Arm_version1_10copy.PNG', 2: './video/arm_craning_1.gif' },
             4: { 0: './images/torch/torch-payload.png', 1: './images/website_images/RaspberryPi_B+.jpg', 2: './images/torch/Baseboard_opened_Render_1.PNG' },
             5: { 0: './video/kenji_positioning_2.gif', 1: './images/kenji-x1/Kenji-6.jpg', 2: './images/kenji-x1/Graph3.jpg' },
-            6: { 0: './images/torch/VR_Goggles_1.jpg', 1: './images/torch/Mixed_Reality_Goggles.jpg', 2: './images/website_images/Remote_Control.jpg' }
+            6: { 0: './images/torch/vr-googles.jpg', 1: './images/torch/Mixed_Reality_Goggles.jpg', 2: './images/website_images/Remote_Control.jpg' }
         }
     }
 
