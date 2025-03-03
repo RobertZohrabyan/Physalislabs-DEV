@@ -137,7 +137,7 @@
 	min-width: 40px;
 	height: 40px;
 	color: #fff;
-	background: #18b7ff;
+	background: #ff9f00;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -170,7 +170,7 @@
 .sci li a {
 	color: #fff;
 	font-size: 2em;
-	color: #ccc;
+	color: #ff9f00;
 }
 
 .sci li a:hover {

@@ -416,9 +416,10 @@ section {
 
 /* Documentation Footer */
 footer {
-  padding: 30px;
+  padding: 100px;
   text-align: center;
   color: #888;
+  /*margin-top: 100px;*/
 }
 
 /* Documentation Hamburger Menu Styles */
@@ -512,7 +513,6 @@ footer {
     overflow-y: scroll;
     scroll-behavior: smooth;
     margin-top: 100px;
-    text-align: justify;
     padding-right: 50px;
     line-height: 20px;
 }
@@ -522,12 +522,13 @@ footer {
 .techdoc_main_doc pre {
     margin: 22px 0;
     display: block;
+    line-height: 35px;
+    font-size: 30px;
 }
 
 .techdoc_main_section img {
     width: 700px;
     height: auto;
-    border: 1px solid green;
 }
 
 code {
@@ -539,6 +540,7 @@ code {
     line-height: 3;
     border-radius: 10px;
     padding: 10px;
+    overflow: scroll;
 }
 
 .techdoc_navbar_header:not(:first-child) h1 {
@@ -579,6 +581,11 @@ code {
     font-size: 12px;
     line-height: 1.5rem;
     font-family: 'Familjen Grotesk', sans-serif;
+}
+
+.techdoc_main_section p {
+    text-align: justify;
+    hyphens: auto;
 }
 
 @media (max-width: 1200px) {
@@ -1045,13 +1052,33 @@ section.rocket .rocket-body span.active:nth-child(1) {
 
 }
 
+@media (max-width: 960px){
+    .section-table-table {
+        width: 150%;
+    }
+    .w-100 {
+        width: 100% !important;
+    }
+}
+@media (max-width: 768px){
+    .section-table-table {
+        width: 120%;
+    }
+    
+}
+
+@media (max-width: 600px){
+    .section-table-table {
+        width: 100%;
+    }
+}
 /* section footer two */
 section.footer-two {
     display: flex;
     align-items: self-end;
     justify-content: center;
     position: relative;
-    height: 55vh;
+    height: 35vh;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1439,7 +1466,7 @@ a {
 /* Media queries */
 @media only screen and (max-width: 400px) {
   .our_suppliers_section {
-  	height: 67vh;/*height: 50vh;*/
+  	height: 72vh;/*height: 50vh;*/
   }	
 
   .our_suppliers_logo_row {
@@ -1531,10 +1558,19 @@ a {
     .section-table-table {
         width: 100%;
     }
+    .techdoc_main_section img {
+      width: 350px;
+    }
+    footer {
+	  margin-top: 100px;
+	}
 }
 
 @media (max-width: 390px) {
     .section-table-table {
         width: 100%;
+    }
+    .section-inner-center p {
+      font-size: 18px;
     }
 }

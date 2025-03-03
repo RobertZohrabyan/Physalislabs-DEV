@@ -523,3 +523,15 @@ body {
 }
 
 
+@media (max-width: 700px){ 
+    .main_slider-pre-container {
+        height: 20vh !important;
+    }
+    .main_slider-pre-left-content {
+        display: none !important;
+    }
+    .main_slider-pre-image-container {
+        display: none !important;
+    }
+
+}

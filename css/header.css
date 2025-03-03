@@ -94,12 +94,12 @@ ul {
 /* Desktop Submenu Styles */
 .desktop-main-menu ul .has-submenu .submenu {
     display: none;
-    position: absolute;
+/*    position: absolute;*/
     background-color: rgba(0, 0, 0, 0.7);
     width: 120px;
     left: 0;
-    top: 100%;
-    padding: 10px 0;
+/*    top: 100%;
+    padding: 10px 0;*/
 }
 
 .desktop-main-menu ul .has-submenu:hover .submenu {
@@ -304,6 +304,12 @@ ul {
 
 /* Media query for mobile devices */
 @media (max-width: 960px) {
+    .desktop-main-menu {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
     .desktop-main-menu {
         display: none;
     }

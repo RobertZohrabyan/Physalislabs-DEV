@@ -93,6 +93,7 @@ section.faq {
     font-size: 14px;
     padding: 2rem;
     text-transform: lowercase;
+    text-align: justify;
 }
 
 .accordion-item:target .answer {

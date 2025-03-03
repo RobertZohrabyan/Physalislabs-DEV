@@ -1,29 +1,3 @@
-/* TRUSTED SECTION */
-.trusted {
-    gap: 20px;
-}
-
-.trusted h1 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: var(--white-color);
-}
-
-.trustSwiper {
-    width: 80%;
-}
-
-.tehnology_used {
-    height: 85px;
-    padding: 5% 12%;
-    background-color: #060A14;
-}
-
-.swiper {
-  margin-left: 220px !important;
-  margin-top: -45px !important;
-}
-
 .team{
 	position: relative;
 	width: 100%;
@@ -110,8 +84,9 @@
     justify-content: center;
     align-items: center;
     gap: 1.5em;
-    background: linear-gradient(45deg, #101008, #13161c);
+    /*background: linear-gradient(45deg, #101008, #13161c);*/
     height: 70vh;
+    margin-top: 80px;
 }
 
 .accordion-item {
@@ -141,6 +116,16 @@
 .accordion-item:nth-child(4){
     --accent: #3eff7e;
     --gradient: #173921;
+}
+
+.accordion-item:nth-child(5){
+    --accent: #3effa3;
+    --gradient: #0c3f28;
+}
+
+.accordion-item:nth-child(6){
+    --accent: #ff9e3e;
+    --gradient: #3f2c0c;
 }
 
 .accordion-item::before {
@@ -197,8 +182,31 @@
 }
 
 .accordion-item h2 {
-    margin-bottom: 0.7em;
+    margin-bottom: 5px;
 }
+
+.accordion-item h5 {
+    margin-top: 0;
+    font-size: 1rem;
+}
+
+.accordion-item .icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.accordion-item .icons a i {
+    font-size: 1.5rem; /* Adjust icon size */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.accordion-item .icons a i:hover {
+    color: #EAAA00; 
+    transform: scale(1.2); 
+}
+
 
 .accordion-item p {
     line-height: 30px;
@@ -242,4 +250,28 @@
     .accordion-item {
         width: 100%;
     }
+    .accordion-item h2 {
+      font-size: 18px;
+    }
+    .accordion-item h5 {
+      font-size: 14px;
+    }
+    .accordion-item p {
+      line-height: 18px;
+      font-size: 0.8em;
+      text-transform: initial;
+    }
+    .accordion-item > div {
+      bottom: 0em;
+    }
+    .accordion {
+        height: auto;
+    }
+    .accordion-item .icons {
+        display: flex;
+        justify-content: center; /* Center the icons */
+        gap: 5px; /* Space between icons */
+        margin-top: 5px; /* Add some spacing above */
+    }
 }
+

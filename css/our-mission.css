@@ -337,4 +337,8 @@ table tr td {
     .kenji_mission_block_left img {
         margin-top: 10px;
     }
+
+    .section-inner-center .skills {
+        font-size: 18px;
+    }
 }

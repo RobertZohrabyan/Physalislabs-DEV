@@ -551,8 +551,35 @@ section {
     }
 }
 
-/* Media query for screens below 960px */
-@media (max-width: 960px) {
+/* Media query for screens below 480px */
+@media (max-width: 480px) {
+    /* Adjust dot positions for responsiveness */
+    .kenjix1_point_dot {
+        width: 12px;
+        height: 12px;
+    }
+
+    .kenjix1_point_dot.left-1 { top: 10% !important; left: 26% !important; }
+    .small_infographic_kenji .kenjix1_point_dot.left-2 { top: 36%; left: 41%  }
+    .small_infographic_kenji .kenjix1_point_dot.left-3 { top: 41%; left: 52%  }
+    .small_infographic_kenji .kenjix1_point_dot.left-4 { top: 36%; left: 61%; }
+    .small_infographic_kenji .kenjix1_point_dot.right-1 { top: 20%; left: 53%; }
+    .small_infographic_kenji .kenjix1_point_dot.right-2 { top: 20%; left: 63%; }
+    .kenjix1_point_dot.right-3 { bottom: 36.95% !important; right: 32.33% !important; }
+
+    /* Hide connection lines on mobile */
+    .kenjix1_point_dot::before, .kenjix1_point_dot::after {
+        display: none;
+    }
+
+    /* Hide white callouts on mobile */
+    .kenjix1_point_dot_callout {
+        display: none;
+    }
+}
+
+/* Media query for screens below 390px */
+@media (max-width: 390px) {
     .kenji_x1_image-container {
         width: 100%;
         max-width: 600px;
@@ -607,12 +634,13 @@ section {
         height: 12px;
     }
 
-    /*.kenjix1_point_dot.left-1 { top: 65% !important; left: 30% !important; }
-    .kenjix1_point_dot.left-2 { top: 50%; left: 25.83%; }
-    .kenjix1_point_dot.left-3 { top: 11.9%; left: 63.33%; }
-    .kenjix1_point_dot.right-1 { top: 50.24%; left: 68.33%; }
-    .kenjix1_point_dot.right-2 { top: 34.52%; left: 45.83%; }
-    .kenjix1_point_dot.right-3 { bottom: 36.95% !important; right: 32.33% !important; }*/
+    .kenjix1_point_dot.left-1 { top: 10% !important; left: 26% !important; }
+    .small_infographic_kenji .kenjix1_point_dot.left-2 { top: 28%; left: 40%  }
+    .small_infographic_kenji .kenjix1_point_dot.left-3 { top: 34%; left: 52%  }
+    .small_infographic_kenji .kenjix1_point_dot.left-4 { top: 28%; left: 60%; }
+    .small_infographic_kenji .kenjix1_point_dot.right-1 { top: 15%; left: 52%; }
+    .small_infographic_kenji .kenjix1_point_dot.right-2 { top: 16%; left: 64%; }
+    .kenjix1_point_dot.right-3 { bottom: 36.95% !important; right: 32.33% !important; }
 
     /* Hide connection lines on mobile */
     .kenjix1_point_dot::before, .kenjix1_point_dot::after {
