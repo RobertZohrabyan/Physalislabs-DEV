@@ -104,10 +104,10 @@ function initMainSlider() {
     if (slider.classList.contains('mecha-arm-slider')) {
         slideImages = {
             0: { 0: './images/torch/Left_Mecha_Arm_version1_4cooopy.png', 1: './images/torch/arm_illustration-mecha-arm.jpg', 2: './video/right_mecha_arm.gif' },
-            1: { 0: './images/torch/robot-servo.png', 1: './images/website_images/IMG_1556.jpg', 2: './images/website_images/one.jpg' },
+            1: { 0: './images/torch/robot-servo.png', 1: './images/mecha-arm/Right_Mecha_Arm_version1 v63_kenji-x1.png', 2: './images/mecha-arm/mecha,arm image_2024-11-05_18-56-41.png' },
             2: { 0: './video/arm_craning_3_small.gif', 1: './video/arm_craning_5.gif', 2: './video/arm_craning_2.gif' },
             3: { 0: './images/mecha-arm/mecha-arm-slide-4-1.png', 1: './images/mecha-arm/mecha-arm-slide-4-2.png', 2: './video/kenji_positioning_2.gif' },
-            4: { 0: './images/torch/', 1: './images/website_images/joystick.jpg', 2: './images/website_images/vr-googles.jpg' },
+            4: { 0: './images/mecha-arm/Picture1.png', 1: './images/website_images/joystick.jpg', 2: './images/website_images/vr-googles.jpg' },
             5: { 0: './images/torch/', 1: './images/torch/', 2: './images/torch/' }
         }
     }
